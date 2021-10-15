@@ -1,4 +1,5 @@
-assets/*
+.import/*
+.assets/*
 
 # Built application files
 *.apk
