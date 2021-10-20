@@ -10,22 +10,22 @@ script = ExtResource( 1 )
 position = Vector2( 113.587, 536 )
 
 [node name="D4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 362, 536 )
+position = Vector2( 353.333, 536 )
 
 [node name="E4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 611.47, 536 )
+position = Vector2( 593.45, 536 )
 
 [node name="F4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 860, 536 )
+position = Vector2( 834.891, 536 )
 
 [node name="G4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1110.93, 536 )
+position = Vector2( 1074.48, 536 )
 
 [node name="A4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1358.21, 536 )
+position = Vector2( 1315.17, 536 )
 
 [node name="B4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1609.29, 536 )
+position = Vector2( 1554.9, 536 )
 
 [node name="C5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1859.38, 536 )
+position = Vector2( 1795.57, 536 )
