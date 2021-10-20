@@ -20,6 +20,11 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "A4_unpressed",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
 "name": "B4_unpressed",
@@ -30,9 +35,9 @@ animations = [ {
 "name": "F4_unpressed",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ) ],
+"frames": [ ExtResource( 11 ) ],
 "loop": true,
-"name": "G4_unpressed",
+"name": "E4_unpressed",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ) ],
@@ -40,24 +45,19 @@ animations = [ {
 "name": "D4_unpressed",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ) ],
+"frames": [ ExtResource( 1 ) ],
 "loop": true,
-"name": "E4_unpressed",
+"name": "C5_unpressed",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ) ],
+"frames": [ ExtResource( 7 ) ],
 "loop": true,
-"name": "A4_unpressed",
+"name": "G4_unpressed",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "C4_unpressed",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 1 ) ],
-"loop": true,
-"name": "C5_unpressed",
 "speed": 5.0
 } ]
 
