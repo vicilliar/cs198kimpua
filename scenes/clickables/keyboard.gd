@@ -1,29 +1,57 @@
 extends Node2D
-# var Key = load("key.tcsn")
+signal reskin(interval)
+
+# TODO: keys overlap! find a way to fix this.
 var notes = ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5']
+var chroma_notes = ['C4', 'Db4', 'D4', 'Eb4', 'E4', 'F4', 'Gb4',
+					'G4', 'Ab4', 'A4', 'Bb4', 'B4', 'C5']
+
+# key represents 'note distance'
+var intervals = {
+					2: {'name': 'major_second', 	'folder': 2},
+					4: {'name': 'major_third', 		'folder': 3}, 
+					5: {'name': 'perfect_fourth', 	'folder': 4},
+					7: {'name': 'perfect_fifth', 	'folder': 5},
+					9: {'name': 'major_sixth', 		'folder': 6},
+					11: {'name': 'major_seventh', 	'folder': 7},
+					12: {'name': 'octave', 			'folder': 8}
+				}
+
+var currently_playing = []
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$C4.set_curr_key(0)
-	$D4.set_curr_key(1)
-	$E4.set_curr_key(2)
-	$F4.set_curr_key(3)
-	$G4.set_curr_key(4)
-	$A4.set_curr_key(5)
-	$B4.set_curr_key(6)
-	$C5.set_curr_key(7)
+	# Set curr_key for all 8 keys
+	for i in range(8):
+		get_node(notes[i]).set_curr_key(i)
 
 
-# func generate_key(i):
-	# var new_key = Key.instance()
-	# new_key.curr_key = i
-	
-	# This is what we have to figure out! Positioning how?
-	# new_key.position.x = 0
-	# new_key.position.y = 0
+func _on_any_key_touched(key):
+	if len(currently_playing) < 2:
+		# Only allow 2 keys to play at any time.
+		currently_playing.append(key)
+		get_node(key).play_key()
+		print("Currently Playing: " + str(currently_playing))
 		
-	# add_child(new_key)
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+		if len(currently_playing) == 2:
+			
+			# Calculate distance between 2 notes and determine interval.
+			var note_distance = abs(chroma_notes.find(currently_playing[1]) - chroma_notes.find(currently_playing[0]))
+			print("Note Distance = " + str(note_distance))
+			
+			if note_distance in intervals:
+				print("Interval triggered!")
+				print(intervals[note_distance])
+				# Execute all interval changes here.
+				emit_signal("reskin", intervals[note_distance])		# This is to alert parent (to change header skin)
+				# Reskin all 8 keys
+				for i in range(8):
+					get_node(notes[i]).reskin_key(intervals[note_distance])
+			
+			else:
+				print("No interval triggered.")
+				
+
+func _on_any_key_released(key):
+	currently_playing.erase(key)

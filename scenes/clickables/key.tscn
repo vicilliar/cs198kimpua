@@ -1,83 +1,23 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://assets/images/scenes/zen_mode/main/keys/C.png" type="Texture" id=1]
 [ext_resource path="res://scenes/clickables/key.gd" type="Script" id=2]
 [ext_resource path="res://assets/audio/sound_bytes/keys/C4.wav" type="AudioStream" id=3]
-[ext_resource path="res://scenes/clickables/key_area.gd" type="Script" id=4]
 [ext_resource path="res://assets/audio/sound_bytes/keys/D4.wav" type="AudioStream" id=5]
-[ext_resource path="res://assets/images/scenes/zen_mode/main/keys/F.png" type="Texture" id=6]
-[ext_resource path="res://assets/images/scenes/zen_mode/main/keys/G.png" type="Texture" id=7]
-[ext_resource path="res://assets/images/scenes/zen_mode/main/keys/D.png" type="Texture" id=8]
-[ext_resource path="res://assets/images/scenes/zen_mode/main/keys/A.png" type="Texture" id=9]
-[ext_resource path="res://assets/images/scenes/zen_mode/main/keys/B.png" type="Texture" id=10]
-[ext_resource path="res://assets/images/scenes/zen_mode/main/keys/E.png" type="Texture" id=11]
 [ext_resource path="res://assets/audio/sound_bytes/keys/B4.wav" type="AudioStream" id=12]
 [ext_resource path="res://assets/audio/sound_bytes/keys/A4.wav" type="AudioStream" id=13]
 [ext_resource path="res://assets/audio/sound_bytes/keys/E4.wav" type="AudioStream" id=14]
 [ext_resource path="res://assets/audio/sound_bytes/keys/F4.wav" type="AudioStream" id=15]
 [ext_resource path="res://assets/audio/sound_bytes/keys/C5.wav" type="AudioStream" id=16]
 [ext_resource path="res://assets/audio/sound_bytes/keys/G4.wav" type="AudioStream" id=17]
-[ext_resource path="res://assets/images/scenes/zen_mode/main/keys/C_1.png" type="Texture" id=18]
-
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "A4_unpressed",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "B4_unpressed",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "F4_unpressed",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 11 ) ],
-"loop": true,
-"name": "E4_unpressed",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "D4_unpressed",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 18 ) ],
-"loop": true,
-"name": "C5_unpressed",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "G4_unpressed",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 1 ) ],
-"loop": true,
-"name": "C4_unpressed",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 125.068, 563.834 )
+[ext_resource path="res://assets/images/scenes/zen_mode/1_main/keys/C4.png" type="Texture" id=19]
 
 [node name="key" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="key_area" type="Area2D" parent="."]
-script = ExtResource( 4 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="key_area"]
-frames = SubResource( 1 )
-animation = "C5_unpressed"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="key_area"]
-position = Vector2( 1.5874, -3.1748 )
-shape = SubResource( 2 )
+[node name="key_touch_button" type="TouchScreenButton" parent="."]
+position = Vector2( -135.5, -569.5 )
+normal = ExtResource( 19 )
+passby_press = true
 
 [node name="C4_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
@@ -103,4 +43,5 @@ stream = ExtResource( 12 )
 [node name="C5_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 16 )
 
-[connection signal="key_clicked" from="key_area" to="." method="_on_key_area_key_clicked"]
+[connection signal="pressed" from="key_touch_button" to="." method="_on_key_touch_button_pressed"]
+[connection signal="released" from="key_touch_button" to="." method="_on_key_touch_button_released"]

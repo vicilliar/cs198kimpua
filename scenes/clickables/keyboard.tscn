@@ -29,3 +29,20 @@ position = Vector2( 1554.9, 536 )
 
 [node name="C5" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1795.57, 536 )
+
+[connection signal="key_released" from="C4" to="." method="_on_any_key_released"]
+[connection signal="key_touched" from="C4" to="." method="_on_any_key_touched"]
+[connection signal="key_released" from="D4" to="." method="_on_any_key_released"]
+[connection signal="key_touched" from="D4" to="." method="_on_any_key_touched"]
+[connection signal="key_released" from="E4" to="." method="_on_any_key_released"]
+[connection signal="key_touched" from="E4" to="." method="_on_any_key_touched"]
+[connection signal="key_released" from="F4" to="." method="_on_any_key_released"]
+[connection signal="key_touched" from="F4" to="." method="_on_any_key_touched"]
+[connection signal="key_released" from="G4" to="." method="_on_any_key_released"]
+[connection signal="key_touched" from="G4" to="." method="_on_any_key_touched"]
+[connection signal="key_released" from="A4" to="." method="_on_any_key_released"]
+[connection signal="key_touched" from="A4" to="." method="_on_any_key_touched"]
+[connection signal="key_released" from="B4" to="." method="_on_any_key_released"]
+[connection signal="key_touched" from="B4" to="." method="_on_any_key_touched"]
+[connection signal="key_released" from="C5" to="." method="_on_any_key_released"]
+[connection signal="key_touched" from="C5" to="." method="_on_any_key_touched"]
