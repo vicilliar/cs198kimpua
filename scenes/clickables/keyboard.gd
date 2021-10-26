@@ -7,7 +7,12 @@ var notes = ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5']
 func _ready():
 	$C4.set_curr_key(0)
 	$D4.set_curr_key(1)
-
+	$E4.set_curr_key(2)
+	$F4.set_curr_key(3)
+	$G4.set_curr_key(4)
+	$A4.set_curr_key(5)
+	$B4.set_curr_key(6)
+	$C5.set_curr_key(7)
 
 
 # func generate_key(i):

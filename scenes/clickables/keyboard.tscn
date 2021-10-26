@@ -7,7 +7,25 @@
 script = ExtResource( 1 )
 
 [node name="C4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 136.517, 517.493 )
+position = Vector2( 113.587, 536 )
 
 [node name="D4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 396.851, 517.493 )
+position = Vector2( 353.333, 536 )
+
+[node name="E4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 593.45, 536 )
+
+[node name="F4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 834.891, 536 )
+
+[node name="G4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1074.48, 536 )
+
+[node name="A4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1315.17, 536 )
+
+[node name="B4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1554.9, 536 )
+
+[node name="C5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1795.57, 536 )
