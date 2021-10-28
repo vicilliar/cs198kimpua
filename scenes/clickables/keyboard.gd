@@ -3,6 +3,7 @@ signal reskin(interval)
 
 # TODO: keys overlap! find a way to fix this.
 var notes = ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5']
+var black_keys = ['C4#', 'D4#', 'F4#', 'G4#', 'A4#']
 var chroma_notes = ['C4', 'Db4', 'D4', 'Eb4', 'E4', 'F4', 'Gb4',
 					'G4', 'Ab4', 'A4', 'Bb4', 'B4', 'C5']
 
@@ -40,7 +41,7 @@ func _on_any_key_touched(key):
 			var note_distance = abs(chroma_notes.find(currently_playing[1]) - chroma_notes.find(currently_playing[0]))
 			print("Note Distance = " + str(note_distance))
 			
-			if note_distance in intervals:
+			if note_distance in intervals:	
 				print("Interval triggered!")
 				print(intervals[note_distance])
 				# Execute all interval changes here.
@@ -48,6 +49,8 @@ func _on_any_key_touched(key):
 				# Reskin all 8 keys
 				for i in range(8):
 					get_node(notes[i]).reskin_key(intervals[note_distance])
+				for i in range(5):
+					get_node(black_keys[i]).reskin_black_key(intervals[note_distance])
 			
 			else:
 				print("No interval triggered.")

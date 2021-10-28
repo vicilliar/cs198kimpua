@@ -1,20 +1,14 @@
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
+func reskin_header(interval):
+	var skins_folder = "res://assets/images/scenes/zen_mode/" + str(interval['folder']) + "_" + interval['name'] + "/"
+	var normal_texture = load(skins_folder + "header.png")
+	
+	$header_button.set_normal_texture(normal_texture)
+	$header_button.set_pressed_texture(normal_texture)
 
-# TODO make the header "consume" the input event. Kinda gave up HAHA but you can keep trying below.
-"""
-func _unhandled_input(event):
-	if event is InputEventScreenTouch:
-		print("Touch eaten! nomnomnom")
-		get_tree().set_input_as_handled()
-"""
+func _on_header_pressed():
+	print("Header Touched")
