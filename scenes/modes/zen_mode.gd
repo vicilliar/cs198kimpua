@@ -12,3 +12,6 @@ func _on_reskin(interval):
 	get_node("zen_mode_header").reskin_header(interval)
 	for x in self.get_children():
 		print(x.name)
+
+func on_home_pressed():
+	get_tree().change_scene("res://scenes/home.tscn")
