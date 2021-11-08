@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/images/scenes/home/button_settings.png" type="Texture" id=1]
 [ext_resource path="res://assets/images/scenes/home/background.png" type="Texture" id=2]
@@ -6,6 +6,18 @@
 [ext_resource path="res://assets/images/scenes/home/button_zen_mode.png" type="Texture" id=4]
 [ext_resource path="res://assets/images/scenes/home/button_game_mode.png" type="Texture" id=5]
 [ext_resource path="res://scenes/home.gd" type="Script" id=6]
+[ext_resource path="res://assets/images/scenes/home/logo_4.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/scenes/home/logo_5.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/scenes/home/logo_2.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/scenes/home/logo_3.png" type="Texture" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 6.0
+} ]
 
 [node name="home" type="Node2D"]
 script = ExtResource( 6 )
@@ -14,9 +26,11 @@ script = ExtResource( 6 )
 position = Vector2( 960, 540 )
 texture = ExtResource( 2 )
 
-[node name="logo" type="Sprite" parent="."]
+[node name="logo" type="AnimatedSprite" parent="."]
 position = Vector2( 635, 547 )
-texture = ExtResource( 3 )
+frames = SubResource( 1 )
+frame = 7
+playing = true
 
 [node name="button_game_mode" type="TouchScreenButton" parent="."]
 position = Vector2( 949, 383 )
