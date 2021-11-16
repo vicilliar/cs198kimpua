@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Reference",
+"class": "Consts",
+"language": "GDScript",
+"path": "res://scripts/consts.gd"
+} ]
+_global_script_class_icons={
+"Consts": ""
+}
+
 [application]
 
 config/name="CS198 Kim Pua"

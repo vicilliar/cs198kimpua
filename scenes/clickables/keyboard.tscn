@@ -31,19 +31,19 @@ position = Vector2( 1554.9, 536 )
 [node name="C5" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1795.57, 536 )
 
-[node name="C4#" parent="." instance=ExtResource( 3 )]
+[node name="Db4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 151, -33.5 )
 
-[node name="D4#" parent="." instance=ExtResource( 3 )]
+[node name="Eb4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 394.245, -33.5 )
 
-[node name="F4#" parent="." instance=ExtResource( 3 )]
+[node name="Gb4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 872.835, -33.5 )
 
-[node name="G4#" parent="." instance=ExtResource( 3 )]
+[node name="Ab4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1113.42, -33.5 )
 
-[node name="A4#" parent="." instance=ExtResource( 3 )]
+[node name="Bb4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1351.84, -33.5 )
 
 [connection signal="key_released" from="C4" to="." method="_on_any_key_released"]

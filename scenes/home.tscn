@@ -29,7 +29,7 @@ texture = ExtResource( 2 )
 [node name="logo" type="AnimatedSprite" parent="."]
 position = Vector2( 635, 547 )
 frames = SubResource( 1 )
-frame = 7
+frame = 4
 playing = true
 
 [node name="button_game_mode" type="TouchScreenButton" parent="."]
@@ -44,4 +44,5 @@ normal = ExtResource( 4 )
 position = Vector2( 949, 626 )
 normal = ExtResource( 1 )
 
+[connection signal="pressed" from="button_game_mode" to="." method="_on_button_game_mode_pressed"]
 [connection signal="pressed" from="button_zen_mode" to="." method="on_zen_mode_pressed"]

@@ -9,7 +9,7 @@ func _ready():
 
 func _on_reskin(interval):
 	print("Interval check: ", interval)
-	get_node("zen_mode_header").reskin_header(interval)
+	get_node("zen_mode_header").reskin_header(interval, "zen_mode")
 	for x in self.get_children():
 		print(x.name)
 
