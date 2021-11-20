@@ -1,4 +1,3 @@
-# Just a test. might delete this.
 class_name Consts
 const notes = ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5']
 const black_keys = ['Db4', 'Eb4', 'Gb4', 'Ab4', 'Bb4']
@@ -14,3 +13,6 @@ const intervals = {
 					11: {'name': 'major_seventh', 	'folder': 7},
 					12: {'name': 'octave', 			'folder': 8}
 				}
+
+const C4_click_position = 10
+const key_width = 100

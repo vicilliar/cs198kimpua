@@ -1,3 +1,48 @@
-[gd_scene format=2]
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/6.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/7.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/1.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/4.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/correct/1.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/5.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/3.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/8.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/correct/2.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/correct/3.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/correct/4.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/2.png" type="Texture" id=12]
+[ext_resource path="res://scenes/clickables/click_indicator.gd" type="Script" id=13]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": false,
+"name": "1_correct",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "1_wrong",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "1_timed_out",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ) ],
+"loop": false,
+"name": "1_default",
+"speed": 5.0
+} ]
 
 [node name="click_indicator" type="Node2D"]
+script = ExtResource( 13 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "1_wrong"
+playing = true
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Consts",
 "language": "GDScript",
 "path": "res://scripts/consts.gd"
+}, {
+"base": "Reference",
+"class": "Level_maps",
+"language": "GDScript",
+"path": "res://scripts/level_maps.gd"
 } ]
 _global_script_class_icons={
-"Consts": ""
+"Consts": "",
+"Level_maps": ""
 }
 
 [application]
