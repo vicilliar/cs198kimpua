@@ -8,4 +8,4 @@ func on_zen_mode_pressed():
 
 
 func _on_button_game_mode_pressed():
-	get_tree().change_scene("res://scenes/modes/game_mode.tscn")
+	get_tree().change_scene("res://scenes/level_selection.tscn")

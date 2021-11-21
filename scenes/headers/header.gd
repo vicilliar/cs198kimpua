@@ -5,7 +5,7 @@ func _ready():
 
 func reskin_header(interval, mode):
 	var skins_folder = "res://assets/images/scenes/" + mode + "/" + str(interval['folder']) + "_" + interval['name'] + "/"
-	var normal_texture = load(skins_folder + "header.png")
+	var normal_texture = load(skins_folder + "header_no_stripe.png")
 	
 	$header_button.set_normal_texture(normal_texture)
 	$header_button.set_pressed_texture(normal_texture)
@@ -16,6 +16,11 @@ func reskin_header(interval, mode):
 	bitmap.create_from_image_alpha(bitmap_img)
 	
 	$header_button.set_click_mask(bitmap)
+	
+	var stripe = str(interval['folder']) + "_" + interval['name']
+	var test = $stripe.play(stripe)
+	print("STRIPE CHANGE")
+	print(test)
 
 func _on_header_pressed():
 	print("Header Touched")
