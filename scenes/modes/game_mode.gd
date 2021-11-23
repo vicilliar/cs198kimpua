@@ -13,7 +13,8 @@ export (PackedScene) var Click_Indicator
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	play_level(1)
+	play_level(global.current_level)
+	get_node("game_mode_header").default_header("game_mode")
 
 
 func _on_reskin(interval):
@@ -44,12 +45,16 @@ func fill_next_notes(length, first_check):
 		else:
 			next_notes_to_spawn.append(i)
 			i += 1
+	
+	print("Next To Spawn: " + str(next_notes_to_spawn))
 		
 
 func initialize(level_num):
 	# reset all starting variables
 	note_list = Level_maps.levels[level_num]["notes"]
+	print("Note List: " + str(note_list))
 	score = 0
+	update_scoreboard()
 	combo_meter = 0
 	live_notes = []
 	next_notes_to_spawn = []
@@ -74,14 +79,14 @@ func generate_next_notes():
 		# TODO: set the interval_state properly
 		new_click_indicator.interval_state = 1
 		new_click_indicator.position.x = Consts.C4_click_position + (Consts.key_width * 	Consts.notes.find(note_name))		# x is factor of what note it is
-		new_click_indicator.position.y = 50			# constant y
+		new_click_indicator.position.y = Consts.click_y			# constant y
 		add_child(new_click_indicator)
 		
 		# spawn a timer for 2s
-		var new_click_timer = Timer.instance()
+		var new_click_timer = Timer.new()
 		add_child(new_click_timer)
-		new_click_timer.connect("timeout", self,"_on_click_timer_timeout")
-		new_click_timer.set_wait_time(2)
+		new_click_timer.connect("timeout", self,"_on_click_timer_timeout", [new_click_timer])
+		new_click_timer.set_wait_time(Consts.click_timer_length)
 		new_click_timer.start()
 		
 		# store the live note
@@ -89,16 +94,20 @@ func generate_next_notes():
 							"click_indicator": new_click_indicator,
 							"click_timer": new_click_timer
 							})
+		print("Spawned new note. Live Notes: " + str(live_notes))
 
 
 func update_scoreboard():
 	# TODO aimee: Implement scoreboard display here!
+	$temp_score.set_text("SCORE: " + str(score))
 	print("Current score: " + str(score))
 	
 
 func despawn_live_note(note, action):
+	print("Despawning " + str(note) + ". Reason: " + str(action))
 	note["click_indicator"].final_animation(action)	# kill indicator
 	live_notes.erase(note)							# despawn note
+	print("Live Notes: " + str(live_notes))
 	
 	
 func _on_spawn_timer_timeout():
@@ -112,21 +121,23 @@ func _on_spawn_timer_timeout():
 		$spawn_timer.start()
 	else:
 		print("Level Over! All notes spawned.")
+		$spawn_timer.stop()
 
 
 func _on_click_timer_timeout(timer):
 	# FAILED. find the appropriate live_notes item
 	for note in live_notes:
 		if timer == note["click_timer"]:
+			print("Timed Out!")
 			despawn_live_note(note, "timed_out")
-			return
+			break
 
 
 func _on_keyboard_key_played(key):
 	for note in live_notes:
 		if key == note["details"]["name"]:
 			# correct note was played! now check if it was in time.
-			if note["click_timer"].get_time_left() < 0.4:
+			if note["click_timer"].get_time_left() < Consts.correct_click_window:
 				print("Correct press!" + key)
 				score += 100
 				update_scoreboard()
@@ -134,11 +145,13 @@ func _on_keyboard_key_played(key):
 				return
 			else:
 				# Wrong: WRONG TIMING (kill all notes)
+				print("Wrong! Wrongly timed press.")
 				for note_to_despawn in live_notes:
 					despawn_live_note(note_to_despawn, "wrong")
 				return
 
 	# Wrong: WRONG NOTE PLAYED (kill all notes)
+	print("Wrong! Wrong note played.")
 	for note_to_despawn in live_notes:
 		despawn_live_note(note_to_despawn, "wrong")
 

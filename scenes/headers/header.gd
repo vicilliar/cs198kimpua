@@ -3,6 +3,14 @@ extends Node2D
 func _ready():
 	pass # Replace with function body.
 
+func default_header(mode):
+	var skins_folder = "res://assets/images/scenes/" + mode + "/1_main/"
+	var normal_texture = load(skins_folder + "header.png")
+	
+	$header_button.set_normal_texture(normal_texture)
+	$header_button.set_pressed_texture(normal_texture)
+	
+
 func reskin_header(interval, mode):
 	var skins_folder = "res://assets/images/scenes/" + mode + "/" + str(interval['folder']) + "_" + interval['name'] + "/"
 	var normal_texture = load(skins_folder + "header_no_stripe.png")

@@ -34,6 +34,16 @@ normal = ExtResource( 4 )
 
 [node name="spawn_timer" type="Timer" parent="."]
 
+[node name="temp_score" type="RichTextLabel" parent="."]
+margin_left = 1602.0
+margin_top = 56.0
+margin_right = 1775.0
+margin_bottom = 96.0
+text = "SCORE:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="key_played" from="keyboard" to="." method="_on_keyboard_key_played"]
 [connection signal="reskin" from="keyboard" to="." method="_on_reskin"]
 [connection signal="pressed" from="game_mode_header/button_home" to="." method="on_home_pressed"]

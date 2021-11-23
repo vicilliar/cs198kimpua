@@ -23,17 +23,17 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "1_wrong",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
 "name": "1_timed_out",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ) ],
 "loop": false,
 "name": "1_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "1_wrong",
 "speed": 5.0
 } ]
 
@@ -42,7 +42,6 @@ script = ExtResource( 13 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "1_wrong"
-playing = true
+animation = "1_default"
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

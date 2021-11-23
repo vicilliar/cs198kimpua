@@ -14,5 +14,9 @@ const intervals = {
 					12: {'name': 'octave', 			'folder': 8}
 				}
 
-const C4_click_position = 10
-const key_width = 100
+const C4_click_position = 120
+const click_y = 980
+const key_width = 240
+
+const click_timer_length = 2
+const correct_click_window = 0.8

@@ -6,7 +6,8 @@ func _ready():
 
 
 func _on_easy_button_pressed():
-	get_tree().change_scene("res://scenes/modes/zen_mode.tscn")
+	global.current_level = 1
+	get_tree().change_scene("res://scenes/modes/game_mode.tscn")
 
 
 func _on_back_pressed():

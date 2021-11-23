@@ -7,8 +7,8 @@ const levels = {
 		"notes":
 			[
 				{"name": "C4",	"hold": false, "start": 0.02, "end": 0},
-				{"name": "G4",	"hold": false, "start": 1, "end": 0},
-				{"name": "A4",	"hold": false, "start": 2, "end": 0}
+				{"name": "G4",	"hold": false, "start": 2, "end": 0},
+				{"name": "A4",	"hold": false, "start": 4, "end": 0}
 			]
 	},
 }

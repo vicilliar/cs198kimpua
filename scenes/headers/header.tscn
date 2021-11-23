@@ -20,26 +20,6 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "6_major_sixth",
-"speed": 2.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "7_major_seventh",
-"speed": 2.0
-}, {
-"frames": [ ExtResource( 17 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "2_major_second",
-"speed": 2.0
-}, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "3_major_third",
-"speed": 2.0
-}, {
 "frames": [ ExtResource( 10 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "5_perfect_fifth",
@@ -50,18 +30,38 @@ animations = [ {
 "name": "4_perfect_fourth",
 "speed": 2.0
 }, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "3_major_third",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "7_major_seventh",
+"speed": 2.0
+}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "1_main",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 17 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "2_major_second",
+"speed": 2.0
+}, {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "8_octave",
 "speed": 2.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "6_major_sixth",
+"speed": 2.0
 } ]
 
-[node name="game_mode_header" type="Node2D"]
+[node name="header" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="header_button" type="TextureButton" parent="."]
