@@ -5,7 +5,7 @@ func _ready():
 
 func default_header(mode):
 	var skins_folder = "res://assets/images/scenes/" + mode + "/1_main/"
-	var normal_texture = load(skins_folder + "header.png")
+	var normal_texture = load(skins_folder + "header_no_stripe.png")
 	
 	$header_button.set_normal_texture(normal_texture)
 	$header_button.set_pressed_texture(normal_texture)

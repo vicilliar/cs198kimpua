@@ -99,7 +99,11 @@ func generate_next_notes():
 
 func update_scoreboard():
 	# TODO aimee: Implement scoreboard display here!
-	$temp_score.set_text("SCORE: " + str(score))
+	# TODO aimee: Added score edit when combo meter is available
+	$temp_score.set_bbcode("[right]" + str(score) + "[/right]")
+	if (score != 0):
+		$added_score.set_bbcode("[right][wave amp=80]+100[/wave][/right]")
+		$added_score_timer.start()
 	print("Current score: " + str(score))
 	
 
@@ -123,7 +127,6 @@ func _on_spawn_timer_timeout():
 		print("Level Over! All notes spawned.")
 		$spawn_timer.stop()
 
-
 func _on_click_timer_timeout(timer):
 	# FAILED. find the appropriate live_notes item
 	for note in live_notes:
@@ -132,6 +135,8 @@ func _on_click_timer_timeout(timer):
 			despawn_live_note(note, "timed_out")
 			break
 
+func _on_added_score_timer_timeout():
+	$added_score.set_bbcode("")
 
 func _on_keyboard_key_played(key):
 	for note in live_notes:
