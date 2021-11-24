@@ -18,7 +18,7 @@ script = ExtResource( 2 )
 position = Vector2( 960, 540 )
 texture = ExtResource( 8 )
 
-[node name="easy_button" type="TouchScreenButton" parent="."]
+[node name="button_easy" type="TouchScreenButton" parent="."]
 position = Vector2( 155, 584 )
 normal = ExtResource( 4 )
 bitmask = ExtResource( 6 )
@@ -27,12 +27,12 @@ bitmask = ExtResource( 6 )
 position = Vector2( 412, 540 )
 texture = ExtResource( 5 )
 
-[node name="medium_button" type="TouchScreenButton" parent="."]
+[node name="button_medium" type="TouchScreenButton" parent="."]
 position = Vector2( 703, 584 )
 normal = ExtResource( 7 )
 bitmask = ExtResource( 6 )
 
-[node name="lock" type="Sprite" parent="medium_button"]
+[node name="lock" type="Sprite" parent="button_medium"]
 position = Vector2( 419, 173 )
 texture = ExtResource( 9 )
 
@@ -40,12 +40,12 @@ texture = ExtResource( 9 )
 position = Vector2( 960, 540 )
 texture = ExtResource( 10 )
 
-[node name="hard_button" type="TouchScreenButton" parent="."]
+[node name="button_hard" type="TouchScreenButton" parent="."]
 position = Vector2( 1251, 584 )
 normal = ExtResource( 3 )
 bitmask = ExtResource( 6 )
 
-[node name="lock" type="Sprite" parent="hard_button"]
+[node name="lock" type="Sprite" parent="button_hard"]
 position = Vector2( 419, 173 )
 texture = ExtResource( 9 )
 
@@ -63,5 +63,5 @@ position = Vector2( 933, 882 )
 scale = Vector2( 0.110417, 0.0574074 )
 normal = ExtResource( 1 )
 
-[connection signal="pressed" from="easy_button" to="." method="_on_easy_button_pressed"]
+[connection signal="pressed" from="button_easy" to="." method="_on_easy_button_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
