@@ -12,3 +12,4 @@ func _on_easy_button_pressed():
 
 func _on_back_pressed():
 	get_tree().change_scene("res://scenes/home.tscn")
+

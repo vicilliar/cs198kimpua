@@ -1,0 +1,123 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://assets/images/scenes/level_score/button_bitmap.png" type="BitMap" id=1]
+[ext_resource path="res://scenes/level_scores/1_easy.gd" type="Script" id=2]
+[ext_resource path="res://assets/images/scenes/level_score/2_medium/2_0.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/scenes/level_score/1_easy/button_home.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/scenes/level_score/1_easy/button_next.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/scenes/level_score/2_medium/0_5.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/scenes/level_score/2_medium/2_5.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/scenes/level_score/1_easy/background.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/scenes/level_score/1_easy/button_replay.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/scenes/level_score/2_medium/3_0.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/scenes/level_score/2_medium/1_0.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/scenes/level_score/0_0.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/scenes/level_score/2_medium/1_5.png" type="Texture" id=14]
+[ext_resource path="res://assets/fonts/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://assets/images/scenes/level_score/1_easy/button_next_locked.png" type="Texture" id=16]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 11 ) ],
+"loop": false,
+"name": "1_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": false,
+"name": "2_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": false,
+"name": "0_5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": false,
+"name": "3_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": false,
+"name": "1_5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": false,
+"name": "2_5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": false,
+"name": "0_0",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 44
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = 2
+font_data = ExtResource( 15 )
+
+[node name="1_easy" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 960, 542 )
+texture = ExtResource( 8 )
+
+[node name="button_home" type="TouchScreenButton" parent="."]
+position = Vector2( 431, 803 )
+normal = ExtResource( 4 )
+bitmask = ExtResource( 1 )
+
+[node name="button_replay" type="TouchScreenButton" parent="."]
+position = Vector2( 788, 803 )
+normal = ExtResource( 9 )
+bitmask = ExtResource( 1 )
+
+[node name="button_ next" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 1144, 803 )
+normal = ExtResource( 5 )
+bitmask = ExtResource( 1 )
+
+[node name="button_next_locked" type="Sprite" parent="."]
+position = Vector2( 1316, 876 )
+texture = ExtResource( 16 )
+
+[node name="score_stars" type="AnimatedSprite" parent="."]
+position = Vector2( 959, 352 )
+frames = SubResource( 1 )
+animation = "0_0"
+
+[node name="score" type="RichTextLabel" parent="."]
+margin_left = 920.0
+margin_top = 611.0
+margin_right = 1192.0
+margin_bottom = 667.0
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[right][color=black]0[/color][/right]"
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="streak" type="RichTextLabel" parent="."]
+margin_left = 920.0
+margin_top = 694.0
+margin_right = 1192.0
+margin_bottom = 750.0
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[right][color=black]0[/color][/right]"
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="button_home" to="." method="_on_button_home_pressed"]
+[connection signal="pressed" from="button_replay" to="." method="_on_button_replay_pressed"]
+[connection signal="pressed" from="button_ next" to="." method="_on_button__next_pressed"]

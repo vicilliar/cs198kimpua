@@ -7,6 +7,7 @@ var note_list			# list of dictionaries of level notes and their details
 var next_notes_to_spawn	# list of indices of note_list to spawn next
 var last_wait_time
 
+
 export (PackedScene) var Click_Indicator
 # TODO: Make sure header covers key buttons! It needs to CONSUME the event or something, before the key can.
 
