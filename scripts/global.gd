@@ -2,6 +2,13 @@
 extends Node
 
 var current_level = 1	# level 1 by default
+var current_score
+
+# Required scores to get star ratings
+# TODO: Change to actual star ranges
+var stars_scores_easy = {"3_0":300, "2_5":250, "2_0":200, "1_5":150, "1_0":100}
+var stars_scores_medium = {"3_0":300, "2_5":250, "2_0":200, "1_5":150, "1_0":100}
+var stars_scores_hard = {"3_0":300, "2_5":250, "2_0":200, "1_5":150, "1_0":100}
 
 var high_scores = {
 	"easy": 0,

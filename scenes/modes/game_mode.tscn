@@ -88,8 +88,11 @@ __meta__ = {
 
 [node name="added_score_timer" type="Timer" parent="."]
 
+[node name="level_music_timer" type="Timer" parent="."]
+
 [connection signal="key_played" from="keyboard" to="." method="_on_keyboard_key_played"]
 [connection signal="reskin" from="keyboard" to="." method="_on_reskin"]
 [connection signal="pressed" from="game_mode_header/button_home" to="." method="on_home_pressed"]
 [connection signal="timeout" from="spawn_timer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="added_score_timer" to="." method="_on_added_score_timer_timeout"]
+[connection signal="timeout" from="level_music_timer" to="." method="_on_level_music_timer_timeout"]

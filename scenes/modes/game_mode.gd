@@ -6,6 +6,8 @@ var live_notes			# list of dictionaries representing live notes: name, click_ind
 var note_list			# list of dictionaries of level notes and their details
 var next_notes_to_spawn	# list of indices of note_list to spawn next
 var last_wait_time
+var level_music_time	# bgm duration
+var level_name = {1:"easy", 2:"medium", 3:"hard"}
 
 
 export (PackedScene) var Click_Indicator
@@ -68,6 +70,10 @@ func play_level(level_num):
 	last_wait_time = note_list[next_notes_to_spawn[0]]["start"]
 	$spawn_timer.set_wait_time(last_wait_time)
 	$spawn_timer.start()
+	
+	level_music_time = 10
+	$level_music_timer.set_wait_time(level_music_time)
+	$level_music_timer.start()
 		
 
 func generate_next_notes():
@@ -164,3 +170,17 @@ func _on_keyboard_key_played(key):
 	
 # TODO: level high scores saved to FILE. if empty, default high score is 0. Also save to file if COMPLETED or not.
 
+
+
+func _on_level_music_timer_timeout():
+	$level_music_timer.stop()
+	
+	if score > global.high_scores[level_name[global.current_level]]:
+		global.high_scores[level_name[global.current_level]] = score
+		global.save_scores()
+		
+	global.current_score = score
+	
+	print("Showing level score...")
+	var level_score_screen = "res://scenes/level_scores/" + str(global.current_level) + "_" + level_name[global.current_level] + ".tscn"
+	get_tree().change_scene(level_score_screen)
