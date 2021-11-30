@@ -5,7 +5,7 @@ var combo_meter
 var live_notes			# list of dictionaries representing live notes: name, click_indicator, & click_timer. start and end also included just in case!
 var note_list			# list of dictionaries of level notes and their details
 var next_notes_to_spawn	# list of indices of note_list to spawn next
-var last_wait_time
+var last_spawn_time
 var level_music_time	# bgm duration
 var level_name = {1:"easy", 2:"medium", 3:"hard"}
 
@@ -21,10 +21,11 @@ func _ready():
 
 
 func _on_reskin(interval):
-	print("Interval check: ", interval)
+	# print("Interval check: ", interval)
 	get_node("game_mode_header").reskin_header(interval, "game_mode")
 	for x in self.get_children():
-		print(x.name)
+		pass
+		# print(x.name)
 
 
 func on_home_pressed():
@@ -52,9 +53,25 @@ func fill_next_notes(length, first_check):
 	print("Next To Spawn: " + str(next_notes_to_spawn))
 		
 
+func offset_note_timings(raw_note_list, offset):
+	var new_note_list = []
+	for note in raw_note_list:
+		new_note_list.append(
+			{
+				"name": note["name"],
+				"hold": note["hold"],
+				"start": note["start"] + offset - (Consts.click_timer_length - (Consts.correct_click_window / 2)),
+				"length": note["length"]
+			}
+		)
+	return new_note_list
+
+
 func initialize(level_num):
 	# reset all starting variables
-	note_list = Level_maps.levels[level_num]["notes"]
+	var raw_note_list = Level_maps.levels[level_num]["notes"]
+	note_list = offset_note_timings(raw_note_list, Level_maps.levels[level_num]["start_time_offset"])
+	
 	print("Note List: " + str(note_list))
 	score = 0
 	update_scoreboard()
@@ -62,18 +79,22 @@ func initialize(level_num):
 	live_notes = []
 	next_notes_to_spawn = []
 	
+	var curr_bgm = load(Level_maps.levels[level_num]["bg_music"])
+	$level_bgm_player.stream = curr_bgm
+	$level_bgm_player.play()
+	
+	$level_music_timer.set_wait_time(Level_maps.levels[level_num]["level_time"])
+	$level_music_timer.start()
+	
 	
 func play_level(level_num):
 	initialize(level_num)
 	fill_next_notes(len(note_list), 0)
 	
-	last_wait_time = note_list[next_notes_to_spawn[0]]["start"]
-	$spawn_timer.set_wait_time(last_wait_time)
+	last_spawn_time = note_list[next_notes_to_spawn[0]]["start"]
+	$spawn_timer.set_wait_time(last_spawn_time)
 	$spawn_timer.start()
 	
-	level_music_time = 10
-	$level_music_timer.set_wait_time(level_music_time)
-	$level_music_timer.start()
 		
 
 func generate_next_notes():
@@ -115,10 +136,10 @@ func update_scoreboard():
 	
 
 func despawn_live_note(note, action):
-	print("Despawning " + str(note) + ". Reason: " + str(action))
+	# print("Despawning " + str(note) + ". Reason: " + str(action))
 	note["click_indicator"].final_animation(action)	# kill indicator
 	live_notes.erase(note)							# despawn note
-	print("Live Notes: " + str(live_notes))
+	# print("Live Notes: " + str(live_notes))
 	
 	
 func _on_spawn_timer_timeout():
@@ -127,9 +148,11 @@ func _on_spawn_timer_timeout():
 	fill_next_notes(len(note_list), next_notes_to_spawn[-1] + 1)
 	
 	if not next_notes_to_spawn.empty():
-		last_wait_time = note_list[next_notes_to_spawn[0]]["start"] - last_wait_time
-		$spawn_timer.set_wait_time(last_wait_time)
+		var new_spawn_interval = note_list[next_notes_to_spawn[0]]["start"] - last_spawn_time
+		print("Next notes spawning in: " + str(new_spawn_interval) + "s.")
+		$spawn_timer.set_wait_time(new_spawn_interval)
 		$spawn_timer.start()
+		last_spawn_time = note_list[next_notes_to_spawn[0]]["start"]
 	else:
 		print("Level Over! All notes spawned.")
 		$spawn_timer.stop()
