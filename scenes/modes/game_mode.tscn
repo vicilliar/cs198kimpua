@@ -43,8 +43,6 @@ position = Vector2( 37.3755, 267.58 )
 scale = Vector2( 0.115915, 0.0512711 )
 normal = ExtResource( 4 )
 
-[node name="spawn_timer" type="Timer" parent="."]
-
 [node name="score_label" type="RichTextLabel" parent="."]
 margin_left = 1611.0
 margin_top = 109.0
@@ -95,6 +93,5 @@ __meta__ = {
 [connection signal="key_played" from="keyboard" to="." method="_on_keyboard_key_played"]
 [connection signal="reskin" from="keyboard" to="." method="_on_reskin"]
 [connection signal="pressed" from="game_mode_header/button_home" to="." method="on_home_pressed"]
-[connection signal="timeout" from="spawn_timer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="added_score_timer" to="." method="_on_added_score_timer_timeout"]
 [connection signal="timeout" from="level_music_timer" to="." method="_on_level_music_timer_timeout"]

@@ -4,10 +4,11 @@ var score
 var combo_meter
 var live_notes			# list of dictionaries representing live notes: name, click_indicator, & click_timer. start and end also included just in case!
 var note_list			# list of dictionaries of level notes and their details
-var next_notes_to_spawn	# list of indices of note_list to spawn next
 var last_spawn_time
+var elapsed_time
 var level_music_time	# bgm duration
 var level_name = {1:"easy", 2:"medium", 3:"hard"}
+var next_note_index
 
 
 export (PackedScene) var Click_Indicator
@@ -20,6 +21,15 @@ func _ready():
 	get_node("game_mode_header").default_header("game_mode")
 
 
+func _process(delta):
+	# Check if there's a note to spawn
+	elapsed_time = level_music_time - $level_music_timer.get_time_left()
+	while (next_note_index < len(note_list)) and (abs(elapsed_time - note_list[next_note_index]["start"]) < delta):
+		# Spawn the next note!
+		generate_new_note(note_list[next_note_index])
+		next_note_index += 1
+			
+	
 func _on_reskin(interval):
 	# print("Interval check: ", interval)
 	get_node("game_mode_header").reskin_header(interval, "game_mode")
@@ -30,27 +40,6 @@ func _on_reskin(interval):
 
 func on_home_pressed():
 	get_tree().change_scene("res://scenes/home.tscn")
-
-
-func fill_next_notes(length, first_check):
-	next_notes_to_spawn = []
-	var last_start_time
-	var i = first_check
-	if i < length:
-		last_start_time = note_list[i]["start"]
-		next_notes_to_spawn.append(i)
-		i += 1
-	
-	# Keep going while the start times are still the same.
-	while i < length:
-		# Cut the list off here.
-		if note_list[i]["start"] > last_start_time:
-			break
-		else:
-			next_notes_to_spawn.append(i)
-			i += 1
-	
-	print("Next To Spawn: " + str(next_notes_to_spawn))
 		
 
 func offset_note_timings(raw_note_list, offset):
@@ -77,52 +66,46 @@ func initialize(level_num):
 	update_scoreboard()
 	combo_meter = 0
 	live_notes = []
-	next_notes_to_spawn = []
+	next_note_index = 0
 	
 	var curr_bgm = load(Level_maps.levels[level_num]["bg_music"])
 	$level_bgm_player.stream = curr_bgm
 	$level_bgm_player.play()
 	
-	$level_music_timer.set_wait_time(Level_maps.levels[level_num]["level_time"])
+	level_music_time = Level_maps.levels[level_num]["level_time"]
+	$level_music_timer.set_wait_time(level_music_time)
 	$level_music_timer.start()
 	
 	
 func play_level(level_num):
 	initialize(level_num)
-	fill_next_notes(len(note_list), 0)
-	
-	last_spawn_time = note_list[next_notes_to_spawn[0]]["start"]
-	$spawn_timer.set_wait_time(last_spawn_time)
-	$spawn_timer.start()
 	
 		
-
-func generate_next_notes():
-	for i in next_notes_to_spawn:
-		# note is stored as: details (from note_list), click_indicator, & click_timer.
-		var note_name = note_list[i]["name"]
-		
-		# spawn a click_indicator
-		var new_click_indicator = Click_Indicator.instance()
-		# TODO: set the interval_state properly
-		new_click_indicator.interval_state = 1
-		new_click_indicator.position.x = Consts.C4_click_position + (Consts.key_width * 	Consts.notes.find(note_name))		# x is factor of what note it is
-		new_click_indicator.position.y = Consts.click_y			# constant y
-		add_child(new_click_indicator)
-		
-		# spawn a timer for 2s
-		var new_click_timer = Timer.new()
-		add_child(new_click_timer)
-		new_click_timer.connect("timeout", self,"_on_click_timer_timeout", [new_click_timer])
-		new_click_timer.set_wait_time(Consts.click_timer_length)
-		new_click_timer.start()
-		
-		# store the live note
-		live_notes.append({	"details": note_list[i],
-							"click_indicator": new_click_indicator,
-							"click_timer": new_click_timer
-							})
-		print("Spawned new note. Live Notes: " + str(live_notes))
+func generate_new_note(note):
+	# note is stored as: details (from note_list), click_indicator, & click_timer.
+	var note_name = note["name"]
+	
+	# spawn a click_indicator
+	var new_click_indicator = Click_Indicator.instance()
+	# TODO: set the interval_state properly
+	new_click_indicator.interval_state = 1
+	new_click_indicator.position.x = Consts.C4_click_position + (Consts.key_width * 	Consts.notes.find(note_name))		# x is factor of what note it is
+	new_click_indicator.position.y = Consts.click_y			# constant y
+	add_child(new_click_indicator)
+	
+	# spawn a timer for 2s
+	var new_click_timer = Timer.new()
+	add_child(new_click_timer)
+	new_click_timer.connect("timeout", self,"_on_click_timer_timeout", [new_click_timer])
+	new_click_timer.set_wait_time(Consts.click_timer_length)
+	new_click_timer.start()
+	
+	# store the live note
+	live_notes.append({	"details": note,
+						"click_indicator": new_click_indicator,
+						"click_timer": new_click_timer
+						})
+	print("Spawned new note. Live Notes: " + str(live_notes))
 
 
 func update_scoreboard():
@@ -141,21 +124,6 @@ func despawn_live_note(note, action):
 	live_notes.erase(note)							# despawn note
 	# print("Live Notes: " + str(live_notes))
 	
-	
-func _on_spawn_timer_timeout():
-	# In charge of spawning the next notes to play
-	generate_next_notes()
-	fill_next_notes(len(note_list), next_notes_to_spawn[-1] + 1)
-	
-	if not next_notes_to_spawn.empty():
-		var new_spawn_interval = note_list[next_notes_to_spawn[0]]["start"] - last_spawn_time
-		print("Next notes spawning in: " + str(new_spawn_interval) + "s.")
-		$spawn_timer.set_wait_time(new_spawn_interval)
-		$spawn_timer.start()
-		last_spawn_time = note_list[next_notes_to_spawn[0]]["start"]
-	else:
-		print("Level Over! All notes spawned.")
-		$spawn_timer.stop()
 
 func _on_click_timer_timeout(timer):
 	# FAILED. find the appropriate live_notes item
@@ -165,8 +133,10 @@ func _on_click_timer_timeout(timer):
 			despawn_live_note(note, "timed_out")
 			break
 
+
 func _on_added_score_timer_timeout():
 	$added_score.set_bbcode("")
+
 
 func _on_keyboard_key_played(key):
 	for note in live_notes:
@@ -189,12 +159,8 @@ func _on_keyboard_key_played(key):
 	print("Wrong! Wrong note played.")
 	for note_to_despawn in live_notes:
 		despawn_live_note(note_to_despawn, "wrong")
-
 	
 # TODO: level high scores saved to FILE. if empty, default high score is 0. Also save to file if COMPLETED or not.
-
-
-
 func _on_level_music_timer_timeout():
 	$level_music_timer.stop()
 	

@@ -4,11 +4,11 @@ const levels = {
 	1: {
 		"name": "easy",
 		"bg_music": "res://assets/audio/bgm/bgm_level_1.wav",
-		"level_time": 138, 									# time before level ends
+		"level_time": 136, 									# time before level ends
 		"start_time_offset": -3.227,								# offset between written start times and actual start times
 		# Required scores to get star ratings
 		# TODO: Change to actual star ranges
-		"star_scores": {"3_0":300, "2_5":250, "2_0":200, "1_5":150, "1_0":100},
+		"star_scores": {"3_0": 9400, "2_5": 8600, "2_0": 7900, "1_5": 7200, "1_0": 6500},
 		"notes":
 			[
 				# Verse 1
@@ -77,7 +77,7 @@ const levels = {
 				# Bridge
 				{"name": "D4",	"hold": false, "start": 77.508, "length": 0},
 				{"name": "B4",	"hold": false, "start": 77.508, "length": 0},
-				{"name": "D5",	"hold": false, "start": 79.796, "length": 0},
+				{"name": "D4",	"hold": false, "start": 79.796, "length": 0},
 				{"name": "G4",	"hold": false, "start": 80.546, "length": 0},
 				{"name": "C4",	"hold": false, "start": 81.238, "length": 0},
 				{"name": "C5",	"hold": false, "start": 81.238, "length": 0},
@@ -92,7 +92,7 @@ const levels = {
 				
 				{"name": "D4",	"hold": false, "start": 77.508 + 14.817, "length": 0},
 				{"name": "B4",	"hold": false, "start": 77.508 + 14.817, "length": 0},
-				{"name": "D5",	"hold": false, "start": 79.796 + 14.817, "length": 0},
+				{"name": "D4",	"hold": false, "start": 79.796 + 14.817, "length": 0},
 				{"name": "G4",	"hold": false, "start": 80.546 + 14.817, "length": 0},
 				{"name": "C4",	"hold": false, "start": 81.238 + 14.817, "length": 0},
 				{"name": "C5",	"hold": false, "start": 81.238 + 14.817, "length": 0},
