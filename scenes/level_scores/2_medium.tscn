@@ -1,6 +1,5 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://assets/images/scenes/level_score/button_bitmap.png" type="BitMap" id=1]
 [ext_resource path="res://scenes/level_scores/2_medium.gd" type="Script" id=2]
 [ext_resource path="res://assets/images/scenes/level_score/2_medium/2_0.png" type="Texture" id=3]
 [ext_resource path="res://assets/images/scenes/level_score/2_medium/button_home.png" type="Texture" id=4]
@@ -18,9 +17,19 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 12 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": false,
-"name": "1_0",
+"name": "2_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": false,
+"name": "0_5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": false,
+"name": "3_0",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ) ],
@@ -38,19 +47,9 @@ animations = [ {
 "name": "0_0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 12 ) ],
 "loop": false,
-"name": "3_0",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": false,
-"name": "2_0",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ) ],
-"loop": false,
-"name": "0_5",
+"name": "1_0",
 "speed": 5.0
 } ]
 
@@ -70,18 +69,15 @@ texture = ExtResource( 8 )
 [node name="button_home" type="TouchScreenButton" parent="."]
 position = Vector2( 431, 803 )
 normal = ExtResource( 4 )
-bitmask = ExtResource( 1 )
 
 [node name="button_replay" type="TouchScreenButton" parent="."]
 position = Vector2( 788, 803 )
 normal = ExtResource( 16 )
-bitmask = ExtResource( 1 )
 
-[node name="button_ next" type="TouchScreenButton" parent="."]
+[node name="button_next" type="TouchScreenButton" parent="."]
 visible = false
 position = Vector2( 1144, 803 )
 normal = ExtResource( 5 )
-bitmask = ExtResource( 1 )
 
 [node name="button_next_locked" type="Sprite" parent="."]
 position = Vector2( 1316, 876 )
@@ -120,4 +116,4 @@ __meta__ = {
 
 [connection signal="pressed" from="button_home" to="." method="_on_button_home_pressed"]
 [connection signal="pressed" from="button_replay" to="." method="_on_button_replay_pressed"]
-[connection signal="pressed" from="button_ next" to="." method="_on_button__next_pressed"]
+[connection signal="pressed" from="button_next" to="." method="_on_button__next_pressed"]

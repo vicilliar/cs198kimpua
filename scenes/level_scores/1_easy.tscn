@@ -1,33 +1,28 @@
 [gd_scene load_steps=17 format=2]
 
+[ext_resource path="res://assets/images/scenes/level_score/1_easy/2_5.png" type="Texture" id=1]
 [ext_resource path="res://scenes/level_scores/1_easy.gd" type="Script" id=2]
-[ext_resource path="res://assets/images/scenes/level_score/2_medium/2_0.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/scenes/level_score/1_easy/1_5.png" type="Texture" id=3]
 [ext_resource path="res://assets/images/scenes/level_score/1_easy/button_home.png" type="Texture" id=4]
 [ext_resource path="res://assets/images/scenes/level_score/1_easy/button_next.png" type="Texture" id=5]
-[ext_resource path="res://assets/images/scenes/level_score/2_medium/0_5.png" type="Texture" id=6]
-[ext_resource path="res://assets/images/scenes/level_score/2_medium/2_5.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/scenes/level_score/1_easy/2_0.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/scenes/level_score/1_easy/0_5.png" type="Texture" id=7]
 [ext_resource path="res://assets/images/scenes/level_score/1_easy/background.png" type="Texture" id=8]
 [ext_resource path="res://assets/images/scenes/level_score/1_easy/button_replay.png" type="Texture" id=9]
-[ext_resource path="res://assets/images/scenes/level_score/2_medium/3_0.png" type="Texture" id=10]
-[ext_resource path="res://assets/images/scenes/level_score/2_medium/1_0.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/scenes/level_score/1_easy/3_0.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/scenes/level_score/1_easy/1_0.png" type="Texture" id=11]
 [ext_resource path="res://assets/images/scenes/level_score/0_0.png" type="Texture" id=13]
-[ext_resource path="res://assets/images/scenes/level_score/2_medium/1_5.png" type="Texture" id=14]
 [ext_resource path="res://assets/fonts/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=15]
 [ext_resource path="res://assets/images/scenes/level_score/1_easy/button_next_locked.png" type="Texture" id=16]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 11 ) ],
-"loop": false,
-"name": "1_0",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": false,
 "name": "2_0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 7 ) ],
 "loop": false,
 "name": "0_5",
 "speed": 5.0
@@ -37,12 +32,12 @@ animations = [ {
 "name": "3_0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": false,
 "name": "1_5",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ) ],
+"frames": [ ExtResource( 1 ) ],
 "loop": false,
 "name": "2_5",
 "speed": 5.0
@@ -50,6 +45,11 @@ animations = [ {
 "frames": [ ExtResource( 13 ) ],
 "loop": false,
 "name": "0_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": false,
+"name": "1_0",
 "speed": 5.0
 } ]
 
@@ -74,7 +74,7 @@ normal = ExtResource( 4 )
 position = Vector2( 788, 803 )
 normal = ExtResource( 9 )
 
-[node name="button_ next" type="TouchScreenButton" parent="."]
+[node name="button_next" type="TouchScreenButton" parent="."]
 position = Vector2( 1144, 803 )
 normal = ExtResource( 5 )
 
@@ -115,4 +115,4 @@ __meta__ = {
 
 [connection signal="pressed" from="button_home" to="." method="_on_button_home_pressed"]
 [connection signal="pressed" from="button_replay" to="." method="_on_button_replay_pressed"]
-[connection signal="pressed" from="button_ next" to="." method="_on_button__next_pressed"]
+[connection signal="pressed" from="button_next" to="." method="_on_button__next_pressed"]

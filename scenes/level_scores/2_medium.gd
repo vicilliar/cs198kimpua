@@ -6,15 +6,16 @@ func _ready():
 	global.load_scores()
 	var high_score = global.high_scores.medium
 	var current_score = global.current_score
+	var level_high = Level_maps.levels[2]["star_scores"]
 	
 	# Star rating gets updated based on score for level that was just completed
-	for star in global.stars_scores_medium:
-		if current_score >= global.stars_scores_medium[star]:
+	for star in level_high:
+		if current_score >= level_high[star]:
 			$score_stars.set_animation(star)
 			break
 			
 	# Locking/unlocking of next level is based on high score
-	if high_score > global.stars_scores_medium["1_0"]:
+	if high_score > level_high["1_0"]:
 		$button_next_locked.hide()
 	else:
 		$button_next.hide()

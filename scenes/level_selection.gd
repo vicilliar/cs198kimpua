@@ -6,28 +6,32 @@ func _ready():
 	var easy = global.high_scores.easy
 	var medium = global.high_scores.medium
 	var hard = global.high_scores.hard
+	
+	var easy_stars = Level_maps.levels[1]["star_scores"]
+	var medium_stars = Level_maps.levels[2]["star_scores"]
+	var high_stars = Level_maps.levels[3]["star_scores"]
 
-	for star in global.stars_scores_easy:
-		if easy >= global.stars_scores_easy[star]:
+	for star in easy_stars:
+		if easy >= easy_stars[star]:
 			$easy_score.set_animation(star)
 			break
 			
-	for star in global.stars_scores_medium:
-		if medium >= global.stars_scores_medium[star]:
+	for star in medium_stars:
+		if medium >= medium_stars[star]:
 			$medium_score.set_animation(star)
 			break
-		elif easy >= global.stars_scores_easy["1_0"]:
+		elif easy >= easy_stars["1_0"]:
 			$medium_score.set_animation("0")
 			$button_medium_locked.hide()
 			$button_medium_locked/lock.hide()
 		else:
 			$button_medium.hide()
 
-	for star in global.stars_scores_hard:
-		if hard >= global.stars_scores_hard[star]:
+	for star in high_stars:
+		if hard >= high_stars[star]:
 			$hard_score.set_animation(star)
 			break
-		elif medium >= global.stars_scores_medium["1_0"]:
+		elif medium >= medium_stars["1_0"]:
 			$hard_score.set_animation("0")
 			$button_hard_locked.hide()
 			$button_hard_locked/lock.hide()
