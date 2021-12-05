@@ -9,6 +9,7 @@ var elapsed_time
 var level_music_time	# bgm duration
 var level_name = {1:"easy", 2:"medium", 3:"hard"}
 var next_note_index
+var current_interval_state = 1
 
 
 export (PackedScene) var Click_Indicator
@@ -33,6 +34,7 @@ func _process(delta):
 func _on_reskin(interval):
 	# print("Interval check: ", interval)
 	get_node("game_mode_header").reskin_header(interval, "game_mode")
+	current_interval_state = interval['folder']
 	for x in self.get_children():
 		pass
 		# print(x.name)
@@ -88,7 +90,7 @@ func generate_new_note(note):
 	# spawn a click_indicator
 	var new_click_indicator = Click_Indicator.instance()
 	# TODO: set the interval_state properly
-	new_click_indicator.interval_state = 1
+	new_click_indicator.interval_state = current_interval_state
 	new_click_indicator.position.x = Consts.C4_click_position + (Consts.key_width * 	Consts.notes.find(note_name))		# x is factor of what note it is
 	new_click_indicator.position.y = Consts.click_y			# constant y
 	add_child(new_click_indicator)

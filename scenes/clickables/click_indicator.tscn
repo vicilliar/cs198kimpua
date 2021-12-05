@@ -1,30 +1,30 @@
-[gd_scene load_steps=123 format=2]
+[gd_scene load_steps=139 format=2]
 
-[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/6.png" type="Texture" id=1]
-[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/7.png" type="Texture" id=2]
-[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/1.png" type="Texture" id=3]
-[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/4.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/scenes/game_mode/2_major_second/indicators/timeout/1.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/scenes/game_mode/2_major_second/indicators/wrong/1.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/scenes/game_mode/2_major_second/indicators/timeout/2.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/scenes/game_mode/2_major_second/indicators/timeout/3.png" type="Texture" id=4]
 [ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/correct/1.png" type="Texture" id=5]
-[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/5.png" type="Texture" id=6]
-[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/3.png" type="Texture" id=7]
-[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/8.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/scenes/game_mode/3_major_third/indicators/timeout/3.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/scenes/game_mode/4_perfect_fourth/indicators/timeout/2.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/scenes/game_mode/7_major_seventh/indicators/timeout/1.png" type="Texture" id=8]
 [ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/correct/2.png" type="Texture" id=9]
 [ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/correct/3.png" type="Texture" id=10]
 [ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/correct/4.png" type="Texture" id=11]
-[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/2.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/8.png" type="Texture" id=12]
 [ext_resource path="res://scenes/clickables/click_indicator.gd" type="Script" id=13]
-[ext_resource path="res://assets/images/scenes/game_mode/3_major_third/indicators/wrong/3.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/scenes/game_mode/7_major_seventh/indicators/timeout/3.png" type="Texture" id=14]
 [ext_resource path="res://assets/images/scenes/game_mode/4_perfect_fourth/indicators/wrong/2.png" type="Texture" id=15]
-[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/wrong/1.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/1.png" type="Texture" id=16]
 [ext_resource path="res://assets/images/scenes/game_mode/3_major_third/indicators/8.png" type="Texture" id=17]
-[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/wrong/3.png" type="Texture" id=18]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/3.png" type="Texture" id=18]
 [ext_resource path="res://assets/images/scenes/game_mode/2_major_second/indicators/7.png" type="Texture" id=19]
 [ext_resource path="res://assets/images/scenes/game_mode/3_major_third/indicators/1.png" type="Texture" id=20]
 [ext_resource path="res://assets/images/scenes/game_mode/3_major_third/indicators/6.png" type="Texture" id=21]
-[ext_resource path="res://assets/images/scenes/game_mode/2_major_second/indicators/wrong/1.png" type="Texture" id=22]
-[ext_resource path="res://assets/images/scenes/game_mode/4_perfect_fourth/indicators/wrong/3.png" type="Texture" id=23]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/6.png" type="Texture" id=22]
+[ext_resource path="res://assets/images/scenes/game_mode/4_perfect_fourth/indicators/timeout/1.png" type="Texture" id=23]
 [ext_resource path="res://assets/images/scenes/game_mode/5_perfect_fifth/indicators/wrong/1.png" type="Texture" id=24]
-[ext_resource path="res://assets/images/scenes/game_mode/5_perfect_fifth/indicators/wrong/3.png" type="Texture" id=25]
+[ext_resource path="res://assets/images/scenes/game_mode/4_perfect_fourth/indicators/timeout/3.png" type="Texture" id=25]
 [ext_resource path="res://assets/images/scenes/game_mode/3_major_third/indicators/correct/4.png" type="Texture" id=26]
 [ext_resource path="res://assets/images/scenes/game_mode/3_major_third/indicators/correct/3.png" type="Texture" id=27]
 [ext_resource path="res://assets/images/scenes/game_mode/3_major_third/indicators/4.png" type="Texture" id=28]
@@ -56,7 +56,7 @@
 [ext_resource path="res://assets/images/scenes/game_mode/4_perfect_fourth/indicators/correct/1.png" type="Texture" id=54]
 [ext_resource path="res://assets/images/scenes/game_mode/6_major_sixth/indicators/wrong/2.png" type="Texture" id=55]
 [ext_resource path="res://assets/images/scenes/game_mode/4_perfect_fourth/indicators/7.png" type="Texture" id=56]
-[ext_resource path="res://assets/images/scenes/game_mode/6_major_sixth/indicators/wrong/3.png" type="Texture" id=57]
+[ext_resource path="res://assets/images/scenes/game_mode/5_perfect_fifth/indicators/timeout/3.png" type="Texture" id=57]
 [ext_resource path="res://assets/images/scenes/game_mode/7_major_seventh/indicators/wrong/1.png" type="Texture" id=58]
 [ext_resource path="res://assets/images/scenes/game_mode/4_perfect_fourth/indicators/5.png" type="Texture" id=59]
 [ext_resource path="res://assets/images/scenes/game_mode/4_perfect_fourth/indicators/3.png" type="Texture" id=60]
@@ -77,7 +77,7 @@
 [ext_resource path="res://assets/images/scenes/game_mode/5_perfect_fifth/indicators/correct/4.png" type="Texture" id=75]
 [ext_resource path="res://assets/images/scenes/game_mode/5_perfect_fifth/indicators/2.png" type="Texture" id=76]
 [ext_resource path="res://assets/images/scenes/game_mode/5_perfect_fifth/indicators/7.png" type="Texture" id=77]
-[ext_resource path="res://assets/images/scenes/game_mode/7_major_seventh/indicators/wrong/3.png" type="Texture" id=78]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/7.png" type="Texture" id=78]
 [ext_resource path="res://assets/images/scenes/game_mode/6_major_sixth/indicators/correct/2.png" type="Texture" id=79]
 [ext_resource path="res://assets/images/scenes/game_mode/6_major_sixth/indicators/3.png" type="Texture" id=80]
 [ext_resource path="res://assets/images/scenes/game_mode/6_major_sixth/indicators/4.png" type="Texture" id=81]
@@ -101,14 +101,14 @@
 [ext_resource path="res://assets/images/scenes/game_mode/7_major_seventh/indicators/4.png" type="Texture" id=99]
 [ext_resource path="res://assets/images/scenes/game_mode/7_major_seventh/indicators/5.png" type="Texture" id=100]
 [ext_resource path="res://assets/images/scenes/game_mode/7_major_seventh/indicators/3.png" type="Texture" id=101]
-[ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/wrong/3.png" type="Texture" id=102]
+[ext_resource path="res://assets/images/scenes/game_mode/6_major_sixth/indicators/timeout/1.png" type="Texture" id=102]
 [ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/3.png" type="Texture" id=103]
 [ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/wrong/2.png" type="Texture" id=104]
 [ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/4.png" type="Texture" id=105]
 [ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/8.png" type="Texture" id=106]
 [ext_resource path="res://assets/images/scenes/game_mode/3_major_third/indicators/wrong/1.png" type="Texture" id=107]
 [ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/5.png" type="Texture" id=108]
-[ext_resource path="res://assets/images/scenes/game_mode/2_major_second/indicators/wrong/3.png" type="Texture" id=109]
+[ext_resource path="res://assets/images/scenes/game_mode/6_major_sixth/indicators/timeout/2.png" type="Texture" id=109]
 [ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/correct/3.png" type="Texture" id=110]
 [ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/2.png" type="Texture" id=111]
 [ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/correct/1.png" type="Texture" id=112]
@@ -121,107 +121,43 @@
 [ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/7.png" type="Texture" id=119]
 [ext_resource path="res://assets/images/scenes/game_mode/7_major_seventh/indicators/6.png" type="Texture" id=120]
 [ext_resource path="res://assets/images/scenes/game_mode/7_major_seventh/indicators/8.png" type="Texture" id=121]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/timeout/1.png" type="Texture" id=122]
+[ext_resource path="res://assets/images/scenes/game_mode/6_major_sixth/indicators/timeout/3.png" type="Texture" id=123]
+[ext_resource path="res://assets/images/scenes/game_mode/5_perfect_fifth/indicators/timeout/1.png" type="Texture" id=124]
+[ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/timeout/1.png" type="Texture" id=125]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/wrong/1.png" type="Texture" id=126]
+[ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/timeout/2.png" type="Texture" id=127]
+[ext_resource path="res://assets/images/scenes/game_mode/3_major_third/indicators/timeout/1.png" type="Texture" id=128]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/2.png" type="Texture" id=129]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/timeout/3.png" type="Texture" id=130]
+[ext_resource path="res://assets/images/scenes/game_mode/3_major_third/indicators/timeout/2.png" type="Texture" id=131]
+[ext_resource path="res://assets/images/scenes/game_mode/5_perfect_fifth/indicators/timeout/2.png" type="Texture" id=132]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/4.png" type="Texture" id=133]
+[ext_resource path="res://assets/images/scenes/game_mode/7_major_seventh/indicators/timeout/2.png" type="Texture" id=134]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/5.png" type="Texture" id=135]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/timeout/2.png" type="Texture" id=136]
+[ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/timeout/3.png" type="Texture" id=137]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 60 ), ExtResource( 48 ), ExtResource( 59 ), ExtResource( 47 ), ExtResource( 56 ), ExtResource( 49 ) ],
+"frames": [ ExtResource( 95 ), ExtResource( 98 ), ExtResource( 101 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 120 ), ExtResource( 97 ), ExtResource( 121 ) ],
 "loop": false,
-"name": "4_default",
+"name": "7_default",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 22 ), ExtResource( 117 ), ExtResource( 109 ) ],
-"loop": true,
-"name": "2_timed_out",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 44 ), ExtResource( 43 ), ExtResource( 41 ), ExtResource( 45 ) ],
-"loop": false,
-"name": "2_correct",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": false,
-"name": "1_correct",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 107 ), ExtResource( 114 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "3_wrong",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 69 ), ExtResource( 79 ), ExtResource( 88 ), ExtResource( 66 ) ],
-"loop": false,
-"name": "6_correct",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 58 ), ExtResource( 64 ), ExtResource( 78 ) ],
-"loop": true,
-"name": "7_wrong",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 22 ), ExtResource( 117 ), ExtResource( 109 ) ],
-"loop": true,
-"name": "2_wrong",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 20 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 28 ), ExtResource( 31 ), ExtResource( 21 ), ExtResource( 33 ), ExtResource( 17 ) ],
-"loop": false,
-"name": "3_default",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 112 ), ExtResource( 113 ), ExtResource( 110 ), ExtResource( 118 ) ],
-"loop": false,
-"name": "8_correct",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 107 ), ExtResource( 114 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "3_timed_out",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 46 ), ExtResource( 42 ), ExtResource( 40 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 19 ), ExtResource( 34 ) ],
-"loop": false,
-"name": "2_default",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 89 ), ExtResource( 63 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 90 ), ExtResource( 83 ), ExtResource( 62 ) ],
-"loop": false,
-"name": "6_default",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 36 ), ExtResource( 55 ), ExtResource( 57 ) ],
-"loop": true,
-"name": "6_timed_out",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 65 ), ExtResource( 15 ), ExtResource( 23 ) ],
-"loop": true,
-"name": "4_wrong",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 36 ), ExtResource( 55 ), ExtResource( 57 ) ],
-"loop": true,
-"name": "6_wrong",
-"speed": 20.0
 }, {
 "frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 27 ), ExtResource( 26 ) ],
 "loop": false,
 "name": "3_correct",
 "speed": 15.0
 }, {
-"frames": [ ExtResource( 87 ), ExtResource( 96 ), ExtResource( 102 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 117 ), ExtResource( 2 ), ExtResource( 117 ) ],
 "loop": true,
-"name": "8_timed_out",
+"name": "2_wrong",
 "speed": 20.0
 }, {
-"frames": [ ExtResource( 16 ), ExtResource( 104 ), ExtResource( 18 ) ],
+"frames": [ ExtResource( 23 ), ExtResource( 7 ), ExtResource( 25 ) ],
 "loop": true,
-"name": "1_wrong",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 24 ), ExtResource( 86 ), ExtResource( 25 ) ],
-"loop": true,
-"name": "5_wrong",
+"name": "4_timed_out",
 "speed": 20.0
 }, {
 "frames": [ ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ) ],
@@ -229,59 +165,139 @@ animations = [ {
 "name": "5_correct",
 "speed": 15.0
 }, {
+"frames": [ ExtResource( 8 ), ExtResource( 134 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "7_timed_out",
+"speed": 20.0
+}, {
 "frames": [ ExtResource( 115 ), ExtResource( 111 ), ExtResource( 103 ), ExtResource( 105 ), ExtResource( 108 ), ExtResource( 116 ), ExtResource( 119 ), ExtResource( 106 ) ],
 "loop": false,
 "name": "8_default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 87 ), ExtResource( 96 ), ExtResource( 102 ) ],
-"loop": true,
-"name": "8_wrong",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 95 ), ExtResource( 98 ), ExtResource( 101 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 120 ), ExtResource( 97 ), ExtResource( 121 ) ],
-"loop": false,
-"name": "7_default",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 67 ), ExtResource( 76 ), ExtResource( 68 ), ExtResource( 71 ), ExtResource( 84 ), ExtResource( 70 ), ExtResource( 77 ), ExtResource( 85 ) ],
-"loop": false,
-"name": "5_default",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 93 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 94 ) ],
-"loop": false,
-"name": "7_correct",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 24 ), ExtResource( 86 ), ExtResource( 25 ) ],
-"loop": true,
-"name": "5_timed_out",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 58 ), ExtResource( 64 ), ExtResource( 78 ) ],
-"loop": true,
-"name": "7_timed_out",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 16 ), ExtResource( 129 ), ExtResource( 18 ), ExtResource( 133 ), ExtResource( 135 ), ExtResource( 22 ), ExtResource( 78 ), ExtResource( 12 ) ],
 "loop": false,
 "name": "1_default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 65 ), ExtResource( 15 ), ExtResource( 23 ) ],
+"frames": [ ExtResource( 44 ), ExtResource( 43 ), ExtResource( 41 ), ExtResource( 45 ) ],
+"loop": false,
+"name": "2_correct",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 86 ), ExtResource( 24 ), ExtResource( 86 ) ],
 "loop": true,
-"name": "4_timed_out",
+"name": "5_wrong",
 "speed": 20.0
+}, {
+"frames": [ ExtResource( 46 ), ExtResource( 42 ), ExtResource( 40 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 19 ), ExtResource( 34 ) ],
+"loop": false,
+"name": "2_default",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 54 ), ExtResource( 61 ), ExtResource( 52 ), ExtResource( 53 ) ],
 "loop": false,
 "name": "4_correct",
 "speed": 15.0
 }, {
-"frames": [ ExtResource( 16 ), ExtResource( 104 ), ExtResource( 18 ) ],
+"frames": [ ExtResource( 107 ), ExtResource( 114 ), ExtResource( 107 ), ExtResource( 114 ) ],
+"loop": true,
+"name": "3_wrong",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "2_timed_out",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 65 ), ExtResource( 15 ), ExtResource( 65 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "4_wrong",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": false,
+"name": "1_correct",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 87 ), ExtResource( 96 ), ExtResource( 87 ), ExtResource( 96 ) ],
+"loop": true,
+"name": "8_wrong",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 93 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 94 ) ],
+"loop": false,
+"name": "7_correct",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 122 ), ExtResource( 136 ), ExtResource( 130 ) ],
 "loop": true,
 "name": "1_timed_out",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 128 ), ExtResource( 131 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "3_timed_out",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 67 ), ExtResource( 76 ), ExtResource( 68 ), ExtResource( 71 ), ExtResource( 84 ), ExtResource( 70 ), ExtResource( 77 ), ExtResource( 85 ) ],
+"loop": false,
+"name": "5_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 124 ), ExtResource( 132 ), ExtResource( 57 ) ],
+"loop": true,
+"name": "5_timed_out",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 125 ), ExtResource( 127 ), ExtResource( 137 ) ],
+"loop": true,
+"name": "8_timed_out",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 102 ), ExtResource( 109 ), ExtResource( 123 ) ],
+"loop": true,
+"name": "6_timed_out",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 89 ), ExtResource( 63 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 90 ), ExtResource( 83 ), ExtResource( 62 ) ],
+"loop": false,
+"name": "6_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 55 ), ExtResource( 36 ), ExtResource( 55 ) ],
+"loop": true,
+"name": "6_wrong",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 69 ), ExtResource( 79 ), ExtResource( 88 ), ExtResource( 66 ) ],
+"loop": false,
+"name": "6_correct",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 58 ), ExtResource( 64 ), ExtResource( 58 ), ExtResource( 64 ) ],
+"loop": true,
+"name": "7_wrong",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 28 ), ExtResource( 31 ), ExtResource( 21 ), ExtResource( 33 ), ExtResource( 17 ) ],
+"loop": false,
+"name": "3_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 60 ), ExtResource( 48 ), ExtResource( 59 ), ExtResource( 47 ), ExtResource( 56 ), ExtResource( 49 ) ],
+"loop": false,
+"name": "4_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 112 ), ExtResource( 113 ), ExtResource( 110 ), ExtResource( 118 ) ],
+"loop": false,
+"name": "8_correct",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 126 ), ExtResource( 104 ), ExtResource( 126 ), ExtResource( 104 ) ],
+"loop": true,
+"name": "1_wrong",
 "speed": 20.0
 } ]
 
@@ -290,6 +306,7 @@ script = ExtResource( 13 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "1_timed_out"
+animation = "2_timed_out"
+frame = 2
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
