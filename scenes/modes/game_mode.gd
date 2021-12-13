@@ -131,6 +131,7 @@ func _on_click_timer_timeout(timer):
 	# FAILED. find the appropriate live_notes item
 	for note in live_notes:
 		if timer == note["click_timer"]:
+			$text_feedback.final_animation("missed")
 			print("Timed Out!")
 			despawn_live_note(note, "timed_out")
 			break
@@ -149,16 +150,22 @@ func _on_keyboard_key_played(key):
 				score += 100
 				update_scoreboard()
 				despawn_live_note(note, "correct")
+				if note["click_timer"].get_time_left() <= 0.5:
+					$text_feedback.final_animation("perfect")
+				else:
+					$text_feedback.final_animation("great")
 				return
 			else:
 				# Wrong: WRONG TIMING (kill all notes)
 				print("Wrong! Wrongly timed press.")
+				$text_feedback.final_animation("early")
 				for note_to_despawn in live_notes:
 					despawn_live_note(note_to_despawn, "wrong")
 				return
 
 	# Wrong: WRONG NOTE PLAYED (kill all notes)
 	print("Wrong! Wrong note played.")
+	$text_feedback.final_animation("oops")
 	for note_to_despawn in live_notes:
 		despawn_live_note(note_to_despawn, "wrong")
 	

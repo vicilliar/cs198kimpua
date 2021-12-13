@@ -35,16 +35,6 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ) ],
-"loop": false,
-"name": "2_0",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 13 ) ],
-"loop": false,
-"name": "3_0",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 14 ) ],
 "loop": false,
 "name": "1_5",
@@ -59,6 +49,16 @@ animations = [ {
 "loop": false,
 "name": "1_0",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": false,
+"name": "3_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": false,
+"name": "2_0",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=2]
@@ -66,16 +66,6 @@ animations = [ {
 "frames": [ ExtResource( 10 ) ],
 "loop": false,
 "name": "default",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ) ],
-"loop": false,
-"name": "2_0",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 19 ) ],
-"loop": false,
-"name": "3_0",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ) ],
@@ -88,14 +78,24 @@ animations = [ {
 "name": "2_5",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 20 ) ],
+"loop": false,
+"name": "1_0",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 5 ) ],
 "loop": false,
 "name": "0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 20 ) ],
+"frames": [ ExtResource( 19 ) ],
 "loop": false,
-"name": "1_0",
+"name": "3_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": false,
+"name": "2_0",
 "speed": 5.0
 } ]
 
@@ -104,16 +104,6 @@ animations = [ {
 "frames": [ ExtResource( 10 ) ],
 "loop": false,
 "name": "default",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 22 ) ],
-"loop": false,
-"name": "2_0",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 25 ) ],
-"loop": false,
-"name": "3_0",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 21 ) ],
@@ -126,14 +116,24 @@ animations = [ {
 "name": "2_5",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 24 ) ],
+"loop": false,
+"name": "1_0",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 5 ) ],
 "loop": false,
 "name": "0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 24 ) ],
+"frames": [ ExtResource( 25 ) ],
 "loop": false,
-"name": "1_0",
+"name": "3_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ) ],
+"loop": false,
+"name": "2_0",
 "speed": 5.0
 } ]
 
