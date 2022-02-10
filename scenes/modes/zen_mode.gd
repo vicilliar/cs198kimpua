@@ -12,6 +12,21 @@ func _on_reskin(interval):
 	get_node("zen_mode_header").reskin_header(interval, "zen_mode")
 	for x in self.get_children():
 		print(x.name)
+		
 
 func on_home_pressed():
 	get_tree().change_scene("res://scenes/home.tscn")
+
+
+func _on_button_settings_pressed():
+	get_node("settings_screen").show()
+	get_node("keyboard").hide()
+	get_node("zen_mode_header").hide()
+	#get_node("keyboard").paused = true
+	#get_node("zen_mode_header").paused = true
+
+
+func _on_settings_screen_resume():
+	get_node("settings_screen").hide()
+	get_node("keyboard").show()
+	get_node("zen_mode_header").show()

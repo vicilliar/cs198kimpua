@@ -21,7 +21,7 @@ region_rect = Rect2( 0, 0, 549, 11 )
 texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 549, 11 )
 
-[node name="settings" type="Node2D"]
+[node name="settings_game_mode" type="Node2D"]
 
 [node name="Bg" type="Sprite" parent="."]
 position = Vector2( 960, 540 )
@@ -64,11 +64,11 @@ __meta__ = {
 }
 
 [node name="button_resume" type="TouchScreenButton" parent="."]
-position = Vector2( 550, 642 )
+position = Vector2( 550, 637 )
 normal = ExtResource( 2 )
 bitmask = ExtResource( 6 )
 
 [node name="button_end" type="TouchScreenButton" parent="."]
-position = Vector2( 961, 642 )
+position = Vector2( 961, 637 )
 normal = ExtResource( 5 )
 bitmask = ExtResource( 6 )

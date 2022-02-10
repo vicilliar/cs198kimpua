@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
+[ext_resource path="res://assets/images/scenes/key_bitmap.png" type="BitMap" id=1]
 [ext_resource path="res://scenes/clickables/key.gd" type="Script" id=2]
 [ext_resource path="res://assets/audio/sound_bytes/keys/C4.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/audio/sound_bytes/keys/D4.wav" type="AudioStream" id=5]
@@ -17,6 +18,7 @@ script = ExtResource( 2 )
 [node name="key_touch_button" type="TouchScreenButton" parent="."]
 position = Vector2( -135.5, -569.5 )
 normal = ExtResource( 19 )
+bitmask = ExtResource( 1 )
 passby_press = true
 
 [node name="C4_sound" type="AudioStreamPlayer" parent="."]
