@@ -22,6 +22,7 @@ texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 549, 11 )
 
 [node name="settings_game_mode" type="Node2D"]
+pause_mode = 2
 script = ExtResource( 5 )
 
 [node name="Bg" type="Sprite" parent="."]
