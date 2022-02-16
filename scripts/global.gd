@@ -3,6 +3,7 @@ extends Node
 
 var current_level = 1	# level 1 by default
 var current_score
+var current_highest_streak
 
 var high_scores = {
 	"easy": 0,

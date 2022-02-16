@@ -1,7 +1,10 @@
 extends Node2D
 
 var score
-var combo_meter
+var current_streak		# number of notes played correctly in succession
+var current_combo_score	# current score to be added based on combo meter
+var current_combo_multiplier
+var highest_streak		# longest streak
 var live_notes			# list of dictionaries representing live notes: name, click_indicator, & click_timer. start and end also included just in case!
 var note_list			# list of dictionaries of level notes and their details
 var last_spawn_time
@@ -10,7 +13,6 @@ var level_music_time	# bgm duration
 var level_name = {1:"easy", 2:"medium", 3:"hard"}
 var next_note_index
 var current_interval_state = 1
-
 
 export (PackedScene) var Click_Indicator
 # TODO: Make sure header covers key buttons! It needs to CONSUME the event or something, before the key can.
@@ -32,7 +34,7 @@ func _process(delta):
 			
 	
 func _on_reskin(interval):
-	# print("Interval check: ", interval)
+	# print("Interval check: ", interval):
 	get_node("game_mode_header").reskin_header(interval, "game_mode")
 	current_interval_state = interval['folder']
 	for x in self.get_children():
@@ -65,8 +67,13 @@ func initialize(level_num):
 	
 	print("Note List: " + str(note_list))
 	score = 0
+	current_streak = 0
+	highest_streak = 0
+	current_combo_score = 100
+	current_combo_multiplier = null
+	
 	update_scoreboard()
-	combo_meter = 0
+	
 	live_notes = []
 	next_note_index = 0
 	
@@ -113,10 +120,17 @@ func generate_new_note(note):
 func update_scoreboard():
 	# TODO aimee: Implement scoreboard display here!
 	# TODO aimee: Added score edit when combo meter is available
-	$temp_score.set_bbcode("[right]" + str(score) + "[/right]")
+	$temp_score.set_bbcode("[center]" + str(score) + "[/center]")
 	if (score != 0):
-		$added_score.set_bbcode("[right][wave amp=80]+100[/wave][/right]")
+		$added_score.set_bbcode("[center][wave amp=80]+ " + str(current_combo_score) + "[/wave][/center]")
 		$added_score_timer.start()
+		
+	if (current_streak > 0):
+		$streak.set_bbcode("[right]" + str(current_streak) + "[/right]")
+		
+	if (current_combo_multiplier != null):
+		$multiplier.set_bbcode("[right][shake rate=10 level=10] STREAK BONUS " + str(current_combo_multiplier) + "[/shake][/right]")
+		
 	print("Current score: " + str(score))
 	
 
@@ -132,6 +146,17 @@ func _on_click_timer_timeout(timer):
 	for note in live_notes:
 		if timer == note["click_timer"]:
 			$text_feedback.final_animation("missed")
+
+			# Check if current streak is the highest
+			if current_streak > highest_streak:
+				highest_streak = current_streak
+			# Reset streak numbers
+			current_streak = 0
+			current_combo_score = 100
+			current_combo_multiplier = null
+			$streak.set_bbcode("[right]0[/right]")
+			$multiplier.set_bbcode("")
+			
 			print("Timed Out!")
 			despawn_live_note(note, "timed_out")
 			break
@@ -147,7 +172,18 @@ func _on_keyboard_key_played(key):
 			# correct note was played! now check if it was in time.
 			if note["click_timer"].get_time_left() < Consts.correct_click_window:
 				print("Correct press!" + key)
-				score += 100
+				
+				# Update streak numbers
+				current_streak += 1
+				if current_streak in Consts.combo_meter:
+					current_combo_score = Consts.combo_meter[current_streak]['points']
+					current_combo_multiplier = Consts.combo_meter[current_streak]['multiplier']
+				
+				score += current_combo_score
+				
+				print("Current Combo Score: " + str(current_combo_score))
+				print("Current Streak: " + str(current_streak))
+				
 				update_scoreboard()
 				despawn_live_note(note, "correct")
 				if note["click_timer"].get_time_left() <= 0.5:
@@ -159,6 +195,17 @@ func _on_keyboard_key_played(key):
 				# Wrong: WRONG TIMING (kill all notes)
 				print("Wrong! Wrongly timed press.")
 				$text_feedback.final_animation("early")
+				
+				# Check if current streak is the highest
+				if current_streak > highest_streak:
+					highest_streak = current_streak
+				# Reset streak numbers
+				current_streak = 0
+				current_combo_score = 100
+				current_combo_multiplier = null
+				$streak.set_bbcode("[right]0[/right]")
+				$multiplier.set_bbcode("")
+
 				for note_to_despawn in live_notes:
 					despawn_live_note(note_to_despawn, "wrong")
 				return
@@ -166,6 +213,17 @@ func _on_keyboard_key_played(key):
 	# Wrong: WRONG NOTE PLAYED (kill all notes)
 	print("Wrong! Wrong note played.")
 	$text_feedback.final_animation("oops")
+	
+	# Check if current streak is the highest
+	if current_streak > highest_streak:
+		highest_streak = current_streak
+	# Reset streak numbers
+	current_streak = 0
+	current_combo_score = 100
+	current_combo_multiplier = null
+	$streak.set_bbcode("[right]0[/right]")
+	$multiplier.set_bbcode("")
+
 	for note_to_despawn in live_notes:
 		despawn_live_note(note_to_despawn, "wrong")
 	
@@ -173,11 +231,15 @@ func _on_keyboard_key_played(key):
 func _on_level_music_timer_timeout():
 	$level_music_timer.stop()
 	
+	if current_streak > highest_streak:
+		highest_streak = current_streak
+	
 	if score > global.high_scores[level_name[global.current_level]]:
 		global.high_scores[level_name[global.current_level]] = score
 		global.save_scores()
 		
 	global.current_score = score
+	global.current_highest_streak = highest_streak
 	
 	print("Showing level score...")
 	var level_score_screen = "res://scenes/level_scores/" + str(global.current_level) + "_" + level_name[global.current_level] + ".tscn"

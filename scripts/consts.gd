@@ -13,6 +13,15 @@ const intervals = {
 					11: {'name': 'major_seventh', 	'folder': 7},
 					12: {'name': 'octave', 			'folder': 8}
 				}
+				
+# Streak needed: {points to add, additional score multiplier value}
+const combo_meter = {
+	10: {'points': 200,		'multiplier': 'x2'},
+	15: {'points': 300,		'multiplier': 'x3'},
+	20: {'points': 400,		'multiplier': 'x4'},
+	30: {'points': 500,		'multiplier': 'x5'},
+	50: {'points': 800,		'multiplier': 'x8'}
+}
 
 const C4_click_position = 120
 const click_y = 980

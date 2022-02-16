@@ -6,6 +6,7 @@ func _ready():
 	var high_score = global.high_scores.easy
 	var current_score = global.current_score
 	var level_high = Level_maps.levels[1]["star_scores"]
+	var current_highest_streak = global.current_highest_streak
 	
 	# Star rating gets updated based on score for level that was just completed
 	for star in level_high:
@@ -20,8 +21,7 @@ func _ready():
 		$button_next.hide()
 	
 	$score.set_bbcode("[right][color=black]" + str(current_score) + "[/color][/right]")
-	#TODO: update streak/combo meter
-	#$streak.set_bbcode("[right][color=black]" + str(score) + "[/color][/right]")
+	$streak.set_bbcode("[right][color=black]" + str(current_highest_streak) + "[/color][/right]")
 
 func _on_button_home_pressed():
 	get_tree().change_scene("res://scenes/home.tscn")
