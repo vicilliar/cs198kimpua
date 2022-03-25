@@ -45,9 +45,6 @@ func _on_reskin(interval):
 
 
 func on_home_pressed():
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Keys"), 0)
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("BGM"), 0)
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), 0)
 	get_tree().change_scene("res://scenes/home.tscn")
 
 func offset_note_timings(raw_note_list, offset):

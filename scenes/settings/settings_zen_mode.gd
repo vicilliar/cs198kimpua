@@ -3,7 +3,12 @@ signal resume()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$slider_keys.value = AudioServer.get_bus_volume_db(
+		AudioServer.get_bus_index("Keys")
+	)
+	$slider_bgm.value = AudioServer.get_bus_volume_db(
+		AudioServer.get_bus_index("BGM")
+	)
 
 func _on_button_resume_pressed():
 	emit_signal("resume")
