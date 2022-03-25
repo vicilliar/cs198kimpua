@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/images/scenes/settings/slider.png" type="Texture" id=4]
 [ext_resource path="res://assets/images/scenes/settings/button_end.png" type="Texture" id=5]
 [ext_resource path="res://assets/images/scenes/settings/button_bitmap.png" type="BitMap" id=6]
-[ext_resource path="res://assets/images/scenes/settings/box.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/scenes/settings/box_game.png" type="Texture" id=7]
 [ext_resource path="res://assets/images/scenes/settings/slider_highlight.png" type="Texture" id=8]
 [ext_resource path="res://scenes/settings/settings_game_mode.gd" type="Script" id=9]
 
@@ -33,11 +33,29 @@ texture = ExtResource( 1 )
 position = Vector2( 960, 541 )
 texture = ExtResource( 7 )
 
-[node name="slider_music" type="HSlider" parent="."]
-margin_left = 800.0
-margin_top = 451.0
-margin_right = 1349.0
-margin_bottom = 522.0
+[node name="slider_keys" type="HSlider" parent="."]
+margin_left = 778.0
+margin_top = 431.0
+margin_right = 1327.0
+margin_bottom = 502.0
+custom_icons/grabber_disabled = ExtResource( 3 )
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = SubResource( 1 )
+custom_styles/grabber_area_highlight = SubResource( 2 )
+custom_styles/grabber_area = SubResource( 3 )
+min_value = -80.0
+max_value = 0.0
+rounded = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slider_bgm" type="HSlider" parent="."]
+margin_left = 778.0
+margin_top = 492.0
+margin_right = 1327.0
+margin_bottom = 563.0
 custom_icons/grabber_disabled = ExtResource( 3 )
 custom_icons/grabber_highlight = ExtResource( 3 )
 custom_icons/grabber = ExtResource( 3 )
@@ -52,10 +70,10 @@ __meta__ = {
 }
 
 [node name="slider_sfx" type="HSlider" parent="."]
-margin_left = 800.0
-margin_top = 534.0
-margin_right = 1349.0
-margin_bottom = 605.0
+margin_left = 778.0
+margin_top = 552.0
+margin_right = 1327.0
+margin_bottom = 623.0
 custom_icons/grabber_disabled = ExtResource( 3 )
 custom_icons/grabber_highlight = ExtResource( 3 )
 custom_icons/grabber = ExtResource( 3 )
@@ -70,15 +88,17 @@ __meta__ = {
 }
 
 [node name="button_resume" type="TouchScreenButton" parent="."]
-position = Vector2( 550, 637 )
+position = Vector2( 550, 651 )
 normal = ExtResource( 2 )
 bitmask = ExtResource( 6 )
 
 [node name="button_end" type="TouchScreenButton" parent="."]
-position = Vector2( 961, 637 )
+position = Vector2( 961, 651 )
 normal = ExtResource( 5 )
 bitmask = ExtResource( 6 )
 
-[connection signal="value_changed" from="slider_music" to="." method="_on_slider_music_value_changed"]
+[connection signal="value_changed" from="slider_keys" to="." method="_on_slider_keys_value_changed"]
+[connection signal="value_changed" from="slider_bgm" to="." method="_on_slider_bgm_value_changed"]
+[connection signal="value_changed" from="slider_sfx" to="." method="_on_slider_sfx_value_changed"]
 [connection signal="pressed" from="button_resume" to="." method="_on_button_resume_pressed"]
 [connection signal="pressed" from="button_end" to="." method="_on_button_end_pressed"]

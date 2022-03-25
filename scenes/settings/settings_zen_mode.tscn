@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/images/scenes/settings/slider.png" type="Texture" id=4]
 [ext_resource path="res://scenes/settings/settings_zen_mode.gd" type="Script" id=5]
 [ext_resource path="res://assets/images/scenes/settings/button_bitmap.png" type="BitMap" id=6]
-[ext_resource path="res://assets/images/scenes/settings/box.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/scenes/settings/box_zen.png" type="Texture" id=7]
 [ext_resource path="res://assets/images/scenes/settings/slider_highlight.png" type="Texture" id=8]
 
 [sub_resource type="StyleBoxTexture" id=1]
@@ -31,13 +31,13 @@ texture = ExtResource( 1 )
 offset = Vector2( 960, -159 )
 
 [node name="Box" type="Sprite" parent="."]
-position = Vector2( 960, 541 )
+position = Vector2( 960, 540 )
 texture = ExtResource( 7 )
 
-[node name="slider_music" type="HSlider" parent="."]
-margin_left = 800.0
+[node name="slider_keys" type="HSlider" parent="."]
+margin_left = 776.0
 margin_top = 451.0
-margin_right = 1349.0
+margin_right = 1325.0
 margin_bottom = 522.0
 custom_icons/grabber_disabled = ExtResource( 3 )
 custom_icons/grabber_highlight = ExtResource( 3 )
@@ -52,10 +52,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="slider_sfx" type="HSlider" parent="."]
-margin_left = 800.0
+[node name="slider_bgm" type="HSlider" parent="."]
+margin_left = 775.0
 margin_top = 534.0
-margin_right = 1349.0
+margin_right = 1324.0
 margin_bottom = 605.0
 custom_icons/grabber_disabled = ExtResource( 3 )
 custom_icons/grabber_highlight = ExtResource( 3 )
@@ -71,9 +71,10 @@ __meta__ = {
 }
 
 [node name="button_resume" type="TouchScreenButton" parent="."]
-position = Vector2( 752, 628 )
+position = Vector2( 752, 641 )
 normal = ExtResource( 2 )
 bitmask = ExtResource( 6 )
 
-[connection signal="value_changed" from="slider_music" to="." method="_on_slider_music_value_changed"]
+[connection signal="value_changed" from="slider_keys" to="." method="_on_slider_keys_value_changed"]
+[connection signal="value_changed" from="slider_bgm" to="." method="_on_slider_bgm_value_changed"]
 [connection signal="pressed" from="button_resume" to="." method="_on_button_resume_pressed"]

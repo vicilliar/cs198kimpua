@@ -13,6 +13,7 @@ var level_music_time	# bgm duration
 var level_name = {1:"easy", 2:"medium", 3:"hard"}
 var next_note_index
 var current_interval_state = 1
+var feedback_sound_correct
 
 export (PackedScene) var Click_Indicator
 # TODO: Make sure header covers key buttons! It needs to CONSUME the event or something, before the key can.
@@ -22,6 +23,7 @@ export (PackedScene) var Click_Indicator
 func _ready():
 	play_level(global.current_level)
 	get_node("game_mode_header").default_header("game_mode")
+	feedback_sound_correct = get_node("feedback_correct")
 
 
 func _process(delta):
@@ -43,8 +45,10 @@ func _on_reskin(interval):
 
 
 func on_home_pressed():
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Keys"), 0)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("BGM"), 0)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), 0)
 	get_tree().change_scene("res://scenes/home.tscn")
-		
 
 func offset_note_timings(raw_note_list, offset):
 	var new_note_list = []
@@ -186,6 +190,8 @@ func _on_keyboard_key_played(key):
 				
 				update_scoreboard()
 				despawn_live_note(note, "correct")
+				
+				feedback_sound_correct.play()
 				if note["click_timer"].get_time_left() <= 0.5:
 					$text_feedback.final_animation("perfect")
 				else:
@@ -244,7 +250,10 @@ func _on_level_music_timer_timeout():
 	print("Showing level score...")
 	var level_score_screen = "res://scenes/level_scores/" + str(global.current_level) + "_" + level_name[global.current_level] + ".tscn"
 	get_tree().change_scene(level_score_screen)
-
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Keys"), 0)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("BGM"), 0)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), 0)
+	
 
 func _on_button_settings_pressed():
 	get_node("settings_screen").show()
