@@ -250,9 +250,6 @@ func _on_level_music_timer_timeout():
 	print("Showing level score...")
 	var level_score_screen = "res://scenes/level_scores/" + str(global.current_level) + "_" + level_name[global.current_level] + ".tscn"
 	get_tree().change_scene(level_score_screen)
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Keys"), 0)
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("BGM"), 0)
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), 0)
 	
 
 func _on_button_settings_pressed():
