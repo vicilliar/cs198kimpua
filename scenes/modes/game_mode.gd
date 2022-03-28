@@ -36,7 +36,7 @@ func _process(delta):
 			
 	
 func _on_reskin(interval):
-	# print("Interval check: ", interval):
+	# print("Interval check: ", interval)
 	get_node("game_mode_header").reskin_header(interval, "game_mode")
 	current_interval_state = interval['folder']
 	for x in self.get_children():
@@ -146,6 +146,7 @@ func _on_click_timer_timeout(timer):
 	# FAILED. find the appropriate live_notes item
 	for note in live_notes:
 		if timer == note["click_timer"]:
+			get_node("keyboard").check_reskin(false)
 			$text_feedback.final_animation("missed")
 
 			# Check if current streak is the highest
@@ -173,6 +174,7 @@ func _on_keyboard_key_played(key):
 			# correct note was played! now check if it was in time.
 			if note["click_timer"].get_time_left() < Consts.correct_click_window:
 				print("Correct press!" + key)
+				get_node("keyboard").check_reskin(true)
 				
 				# Update streak numbers
 				current_streak += 1
@@ -197,6 +199,7 @@ func _on_keyboard_key_played(key):
 			else:
 				# Wrong: WRONG TIMING (kill all notes)
 				print("Wrong! Wrongly timed press.")
+				get_node("keyboard").check_reskin(false)
 				$text_feedback.final_animation("early")
 				
 				# Check if current streak is the highest
@@ -215,6 +218,7 @@ func _on_keyboard_key_played(key):
 
 	# Wrong: WRONG NOTE PLAYED (kill all notes)
 	print("Wrong! Wrong note played.")
+	get_node("keyboard").check_reskin(false)
 	$text_feedback.final_animation("oops")
 	
 	# Check if current streak is the highest
