@@ -40,14 +40,9 @@ animations = [ {
 "name": "1_0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 15 ) ],
+"frames": [ ExtResource( 14 ) ],
 "loop": false,
-"name": "2_5",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ) ],
-"loop": false,
-"name": "2_0",
+"name": "1_5",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 13 ) ],
@@ -55,9 +50,14 @@ animations = [ {
 "name": "3_0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 12 ) ],
 "loop": false,
-"name": "1_5",
+"name": "2_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": false,
+"name": "2_5",
 "speed": 5.0
 } ]
 
@@ -73,14 +73,9 @@ animations = [ {
 "name": "1_0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 16 ) ],
+"frames": [ ExtResource( 18 ) ],
 "loop": false,
-"name": "2_5",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ) ],
-"loop": false,
-"name": "2_0",
+"name": "1_5",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 19 ) ],
@@ -93,9 +88,14 @@ animations = [ {
 "name": "0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ) ],
+"frames": [ ExtResource( 17 ) ],
 "loop": false,
-"name": "1_5",
+"name": "2_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ) ],
+"loop": false,
+"name": "2_5",
 "speed": 5.0
 } ]
 
@@ -111,14 +111,9 @@ animations = [ {
 "name": "1_0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 23 ) ],
+"frames": [ ExtResource( 21 ) ],
 "loop": false,
-"name": "2_5",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 22 ) ],
-"loop": false,
-"name": "2_0",
+"name": "1_5",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 25 ) ],
@@ -131,9 +126,14 @@ animations = [ {
 "name": "0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 21 ) ],
+"frames": [ ExtResource( 22 ) ],
 "loop": false,
-"name": "1_5",
+"name": "2_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": false,
+"name": "2_5",
 "speed": 5.0
 } ]
 
@@ -193,4 +193,5 @@ scale = Vector2( 0.0854167, 0.0574074 )
 normal = ExtResource( 1 )
 
 [connection signal="pressed" from="button_easy" to="." method="_on_easy_button_pressed"]
+[connection signal="pressed" from="button_medium" to="." method="_on_medium_button_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]

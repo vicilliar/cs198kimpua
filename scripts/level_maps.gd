@@ -5,7 +5,7 @@ const levels = {
 		"name": "easy",
 		"bg_music": "res://assets/audio/bgm/bgm_level_1.wav",
 		"level_time": 136, 									# time before level ends
-		"start_time_offset": -3.227,								# offset between written start times and actual start times
+		"start_time_offset": -3.227,						# offset between written start times and actual start times
 		# Required scores to get star ratings
 		# TODO: Change to actual star ranges
 		"star_scores": {"3_0": 9400, "2_5": 8600, "2_0": 7900, "1_5": 7200, "1_0": 6500},
@@ -125,15 +125,193 @@ const levels = {
 	
 	2: {
 		"name": "medium",
-		"bg_music": "res://???",
+		"bg_music": "res://assets/audio/bgm/bgm_level_2.wav",
+		"level_time": 133, 									# time before level ends
+		"start_time_offset": -424.61,						# offset between written start times and actual start times
 		# Required scores to get star ratings
 		# TODO: Change to actual star ranges
 		"star_scores": {"3_0":300, "2_5":250, "2_0":200, "1_5":150, "1_0":100},
 		"notes":
 			[
-				{"name": "C4",	"hold": false, "start": 0.02, "length": 0},
-				{"name": "G4",	"hold": false, "start": 2, "length": 0},
-				{"name": "A4",	"hold": false, "start": 4, "length": 0}
+				# Chorus 1
+				# A
+				{"name": "C4",	"hold": false, "start": 420 + 17.564, "length": 0},
+				{"name": "B4",	"hold": false, "start": 420 + 17.564, "length": 0},
+				{"name": "C5",	"hold": false, "start": 420 + 17.804, "length": 0},
+				{"name": "G4",	"hold": false, "start": 420 + 18.324, "length": 0},
+				{"name": "C5",	"hold": false, "start": 420 + 18.324, "length": 0},
+				{"name": "A4",	"hold": false, "start": 420 + 18.995, "length": 0},
+				{"name": "C5",	"hold": false, "start": 420 + 18.995, "length": 0},
+				{"name": "E4",	"hold": false, "start": 420 + 19.7, "length": 0},
+				{"name": "C5",	"hold": false, "start": 420 + 19.7, "length": 0},
+				
+				# B
+				{"name": "C4",	"hold": false, "start": 420 + 23.203, "length": 0},
+				{"name": "B4",	"hold": false, "start": 420 + 23.203, "length": 0},
+				{"name": "C5",	"hold": false, "start": 420 + 23.424, "length": 0},
+				{"name": "C4",	"hold": false, "start": 420 + 23.939, "length": 0},
+				{"name": "G4",	"hold": false, "start": 420 + 23.939, "length": 0},
+				{"name": "C4",	"hold": false, "start": 420 + 24.639, "length": 0},
+				{"name": "E4",	"hold": false, "start": 420 + 24.639, "length": 0},
+				{"name": "C4",	"hold": false, "start": 420 + 25.350, "length": 0},
+				{"name": "D4",	"hold": false, "start": 420 + 25.350, "length": 0},
+				
+				# C
+				{"name": "C4",	"hold": false, "start": 420 + 28.859, "length": 0},
+				{"name": "B4",	"hold": false, "start": 420 + 28.859, "length": 0},
+				{"name": "C5",	"hold": false, "start": 420 + 29.092, "length": 0},
+				{"name": "G4",	"hold": false, "start": 420 + 29.578, "length": 0},
+				{"name": "C5",	"hold": false, "start": 420 + 29.578, "length": 0},
+				{"name": "A4",	"hold": false, "start": 420 + 30.265, "length": 0},
+				{"name": "C5",	"hold": false, "start": 420 + 30.265, "length": 0},
+				{"name": "E4",	"hold": false, "start": 420 + 30.979, "length": 0},
+				{"name": "C5",	"hold": false, "start": 420 + 30.979, "length": 0},
+				
+				# D
+				{"name": "C4",	"hold": false, "start": 420 + 34.149, "length": 0},
+				{"name": "F4",	"hold": false, "start": 420 + 34.149, "length": 0},
+				{"name": "C4",	"hold": false, "start": 420 + 34.849, "length": 0},
+				{"name": "E4",	"hold": false, "start": 420 + 34.849, "length": 0},
+				{"name": "D4",	"hold": false, "start": 420 + 35.535, "length": 0},
+				{"name": "E4",	"hold": false, "start": 420 + 36.240, "length": 0},
+				{"name": "C4",	"hold": false, "start": 420 + 36.595, "length": 0},
+				{"name": "D4",	"hold": false, "start": 420 + 36.595, "length": 0},
+				
+				# Verse
+				# A
+				{"name": "D4",	"hold": false, "start": 420 + 49.645, "length": 0},
+				{"name": "E4",	"hold": false, "start": 420 + 49.872, "length": 0},
+				{"name": "G4",	"hold": false, "start": 420 + 50.408, "length": 0},
+				{"name": "A4",	"hold": false, "start": 420 + 50.611, "length": 0},
+				
+				{"name": "G4",	"hold": false, "start": 420 + 51.105, "length": 0},
+				{"name": "C5",	"hold": false, "start": 420 + 51.105, "length": 0},
+				
+				{"name": "G4",	"hold": false, "start": 420 + 52.842, "length": 0},
+				{"name": "A4",	"hold": false, "start": 420 + 52.842, "length": 0},
+				
+				{"name": "E4",	"hold": false, "start": 420 + 53.548, "length": 0},
+				{"name": "G4",	"hold": false, "start": 420 + 53.548, "length": 0},
+				
+				{"name": "E4",	"hold": false, "start": 420 + 55.633, "length": 0},
+				{"name": "A4" ,	"hold": false, "start": 420 + 55.633, "length": 0},
+				
+				{"name": "D4",	"hold": false, "start": 420 + 56.396, "length": 0},
+				{"name": "G4",	"hold": false, "start": 420 + 56.396, "length": 0},
+				
+				# B
+				{"name": "C4",	"hold": false, "start": 480 + 0.959, "length": 0},
+				{"name": "D4",	"hold": false, "start": 480 + 1.162, "length": 0},
+				{"name": "G4",	"hold": false, "start": 480 + 1.654, "length": 0},
+				{"name": "A4",	"hold": false, "start": 480 + 1.856, "length": 0},
+				
+				{"name": "G4",	"hold": false, "start": 480 + 2.409, "length": 0},
+				{"name": "C5",	"hold": false, "start": 480 + 2.409, "length": 0},
+				
+				{"name": "B4",	"hold": false, "start": 480 + 4.111, "length": 0},
+				{"name": "A4",	"hold": false, "start": 480 + 4.312, "length": 0},
+				{"name": "G4",	"hold": false, "start": 480 + 4.820, "length": 0},
+				{"name": "E4",	"hold": false, "start": 480 + 5.018, "length": 0},
+				
+				{"name": "G4",	"hold": false, "start": 480 + 6.953, "length": 0},
+				{"name": "A4",	"hold": false, "start": 480 + 7.129, "length": 0},
+				{"name": "G4",	"hold": false, "start": 480 + 7.644, "length": 0},
+				{"name": "D4" ,	"hold": false, "start": 480 + 7.644, "length": 0},
+				
+				{"name": "E4",	"hold": false, "start": 480 + 9.809, "length": 0},
+				{"name": "C4",	"hold": false, "start": 480 + 10.530, "length": 0},
+				{"name": "D4",	"hold": false, "start": 480 + 10.530, "length": 0},
+				
+				{"name": "C4",	"hold": false, "start": 480 + 12.958, "length": 0},
+				{"name": "B4",	"hold": false, "start": 480 + 12.958, "length": 0},
+				{"name": "C4",	"hold": false, "start": 480 + 13.664, "length": 0},
+				{"name": "C5",	"hold": false, "start": 480 + 13.664, "length": 0},
+				
+				{"name": "C4",	"hold": false, "start": 480 + 18.614, "length": 0},
+				{"name": "B4",	"hold": false, "start": 480 + 18.614, "length": 0},
+				{"name": "C4",	"hold": false, "start": 480 + 19.313, "length": 0},
+				{"name": "C5",	"hold": false, "start": 480 + 19.313, "length": 0},
+				
+				# Bridge
+				{"name": "G4",	"hold": false, "start": 480 + 22.130, "length": 0},
+				{"name": "C5 ",	"hold": false, "start": 480 + 22.130, "length": 0},
+				{"name": "A4",	"hold": false, "start": 480 + 22.829, "length": 0},
+				{"name": "E4",	"hold": false, "start": 480 + 23.535, "length": 0},
+				{"name": "D4",	"hold": false, "start": 480 + 24.270, "length": 0},
+				{"name": "G4",	"hold": false, "start": 480 + 24.270, "length": 0},
+				{"name": "C4",	"hold": false, "start": 480 + 25.006, "length": 0},
+				{"name": "G4",	"hold": false, "start": 480 + 25.006, "length": 0},
+				
+				{"name": "C4",	"hold": false, "start": 480 + 27.806, "length": 0},
+				{"name": "F4",	"hold": false, "start": 480 + 27.806, "length": 0},
+				{"name": "C4",	"hold": false, "start": 480 + 28.872, "length": 0},
+				{"name": "E4",	"hold": false, "start": 480 + 28.872, "length": 0},
+				{"name": "C4",	"hold": false, "start": 480 + 29.916, "length": 0},
+				{"name": "B4",	"hold": false, "start": 480 + 29.916, "length": 0},
+				{"name": "C4",	"hold": false, "start": 480 + 30.675, "length": 0},
+				{"name": "C5",	"hold": false, "start": 480 + 30.675, "length": 0},
+				
+				{"name": "B4",	"hold": false, "start": 480 + 31.679, "length": 0},
+				{"name": "G4",	"hold": false, "start": 480 + 32.750, "length": 0},
+				{"name": "C4",	"hold": false, "start": 480 + 33.444, "length": 0},
+				{"name": "E4",	"hold": false, "start": 480 + 33.444, "length": 0},
+				{"name": "C4",	"hold": false, "start": 480 + 34.503, "length": 0},
+				{"name": "D4",	"hold": false, "start": 480 + 34.503, "length": 0},
+				{"name": "D4",	"hold": false, "start": 480 + 35.538, "length": 0},
+				{"name": "E4",	"hold": false, "start": 480 + 35.773, "length": 0},
+				{"name": "C4",	"hold": false, "start": 480 + 35.914, "length": 0},
+				
+				# Chorus 2 COPY PASTED
+				# A
+				{"name": "C4",	"hold": false, "start": 79.058 + 420 + 17.564, "length": 0},
+				{"name": "B4",	"hold": false, "start": 79.058 + 420 + 17.564, "length": 0},
+				{"name": "C5",	"hold": false, "start": 79.058 + 420 + 17.804, "length": 0},
+				{"name": "G4",	"hold": false, "start": 79.058 + 420 + 18.324, "length": 0},
+				{"name": "C5",	"hold": false, "start": 79.058 + 420 + 18.324, "length": 0},
+				{"name": "A4",	"hold": false, "start": 79.058 + 420 + 18.995, "length": 0},
+				{"name": "C5",	"hold": false, "start": 79.058 + 420 + 18.995, "length": 0},
+				{"name": "E4",	"hold": false, "start": 79.058 + 420 + 19.7, "length": 0},
+				{"name": "C5",	"hold": false, "start": 79.058 + 420 + 19.7, "length": 0},
+				
+				# B
+				{"name": "C4",	"hold": false, "start": 79.058 + 420 + 23.203, "length": 0},
+				{"name": "B4",	"hold": false, "start": 79.058 + 420 + 23.203, "length": 0},
+				{"name": "C5",	"hold": false, "start": 79.058 + 420 + 23.424, "length": 0},
+				{"name": "C4",	"hold": false, "start": 79.058 + 420 + 23.939, "length": 0},
+				{"name": "G4",	"hold": false, "start": 79.058 + 420 + 23.939, "length": 0},
+				{"name": "C4",	"hold": false, "start": 79.058 + 420 + 24.639, "length": 0},
+				{"name": "E4",	"hold": false, "start": 79.058 + 420 + 24.639, "length": 0},
+				{"name": "C4",	"hold": false, "start": 79.058 + 420 + 25.350, "length": 0},
+				{"name": "D4",	"hold": false, "start": 79.058 + 420 + 25.350, "length": 0},
+				
+				# C
+				{"name": "C4",	"hold": false, "start": 79.058 + 420 + 28.859, "length": 0},
+				{"name": "B4",	"hold": false, "start": 79.058 + 420 + 28.859, "length": 0},
+				{"name": "C5",	"hold": false, "start": 79.058 + 420 + 29.092, "length": 0},
+				{"name": "G4",	"hold": false, "start": 79.058 + 420 + 29.578, "length": 0},
+				{"name": "C5",	"hold": false, "start": 79.058 + 420 + 29.578, "length": 0},
+				{"name": "A4",	"hold": false, "start": 79.058 + 420 + 30.265, "length": 0},
+				{"name": "C5",	"hold": false, "start": 79.058 + 420 + 30.265, "length": 0},
+				{"name": "E4",	"hold": false, "start": 79.058 + 420 + 30.979, "length": 0},
+				{"name": "C5",	"hold": false, "start": 79.058 + 420 + 30.979, "length": 0},
+				
+				# D
+				{"name": "C4",	"hold": false, "start": 79.058 + 420 + 34.149, "length": 0},
+				{"name": "F4",	"hold": false, "start": 79.058 + 420 + 34.149, "length": 0},
+				{"name": "C4",	"hold": false, "start": 79.058 + 420 + 34.849, "length": 0},
+				{"name": "E4",	"hold": false, "start": 79.058 + 420 + 34.849, "length": 0},
+				{"name": "D4",	"hold": false, "start": 79.058 + 420 + 35.535, "length": 0},
+				{"name": "E4",	"hold": false, "start": 79.058 + 420 + 36.240, "length": 0},
+				{"name": "C4",	"hold": false, "start": 79.058 + 420 + 36.595, "length": 0},
+				{"name": "D4",	"hold": false, "start": 79.058 + 420 + 36.595, "length": 0},
+				
+				{"name": "C4",	"hold": false, "start": 480 + 58.144, "length": 0},
+				{"name": "B4",	"hold": false, "start": 480 + 58.144, "length": 0},
+				{"name": "C4",	"hold": false, "start": 480 + 58.878, "length": 0},
+				{"name": "C5",	"hold": false, "start": 480 + 58.878, "length": 0},
+				
+				
+				
 			]
 	},
 	

@@ -21,7 +21,7 @@ font_data = ExtResource( 8 )
 size = 85
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=3]
 size = 30
 font_data = ExtResource( 8 )
 
@@ -29,11 +29,11 @@ font_data = ExtResource( 8 )
 size = 55
 font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=5]
 size = 35
 font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=6]
 size = 30
 font_data = ExtResource( 11 )
 
@@ -106,7 +106,7 @@ margin_top = 127.0
 margin_right = 1725.0
 margin_bottom = 189.0
 rect_pivot_offset = Vector2( 134, 15 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 3 )
 bbcode_enabled = true
 bbcode_text = "[right]STREAK[/right]"
 text = "STREAK"
@@ -136,7 +136,7 @@ margin_right = 1843.0
 margin_bottom = 270.0
 rect_pivot_offset = Vector2( 134, 15 )
 rect_clip_content = false
-custom_fonts/normal_font = SubResource( 6 )
+custom_fonts/normal_font = SubResource( 5 )
 bbcode_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -149,7 +149,7 @@ margin_right = 1061.0
 margin_bottom = 231.0
 rect_pivot_offset = Vector2( 134, 15 )
 rect_clip_content = false
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 6 )
 bbcode_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false
