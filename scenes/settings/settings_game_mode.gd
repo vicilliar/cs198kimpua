@@ -27,4 +27,12 @@ func _on_slider_sfx_value_changed(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), value)
 
 func _on_button_end_pressed():
+	get_node("confirm_action").show()
+
+func _on_confirm_action_cancel_end_game():
+	get_node("confirm_action").hide()
+	emit_signal("resume")
+
+func _on_confirm_action_confirm_end_game():
+	get_node("confirm_action").hide()
 	emit_signal("end_game")

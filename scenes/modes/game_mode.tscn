@@ -12,10 +12,7 @@
 [ext_resource path="res://scenes/settings/settings_game_mode.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/fonts/Montserrat-Medium.ttf" type="DynamicFontData" id=11]
 [ext_resource path="res://assets/audio/sound_bytes/feedback/sfx_correct.wav" type="AudioStream" id=12]
-
-[sub_resource type="DynamicFont" id=1]
-size = 36
-font_data = ExtResource( 8 )
+[ext_resource path="res://scenes/settings/confirm_action.tscn" type="PackedScene" id=13]
 
 [sub_resource type="DynamicFont" id=2]
 size = 85
@@ -70,21 +67,6 @@ position = Vector2( 969, 351 )
 stream = ExtResource( 12 )
 volume_db = -10.0
 bus = "SFX"
-
-[node name="score_label" type="RichTextLabel" parent="."]
-visible = false
-margin_left = 1574.0
-margin_top = 108.0
-margin_right = 1815.0
-margin_bottom = 170.0
-rect_pivot_offset = Vector2( 134, 15 )
-custom_fonts/normal_font = SubResource( 1 )
-bbcode_enabled = true
-bbcode_text = "[right]SCORE[/right]"
-text = "SCORE"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="temp_score" type="RichTextLabel" parent="."]
 margin_left = 646.0
@@ -166,11 +148,17 @@ bus = "BGM"
 pause_mode = 2
 visible = false
 
+[node name="confirm_action" parent="." instance=ExtResource( 13 )]
+pause_mode = 2
+visible = false
+
 [connection signal="key_played" from="keyboard" to="." method="_on_keyboard_key_played"]
 [connection signal="reskin" from="keyboard" to="." method="_on_reskin"]
-[connection signal="pressed" from="game_mode_header/button_home" to="." method="on_home_pressed"]
+[connection signal="pressed" from="game_mode_header/button_home" to="." method="_on_button_home_pressed"]
 [connection signal="pressed" from="game_mode_header/button_settings" to="." method="_on_button_settings_pressed"]
 [connection signal="timeout" from="added_score_timer" to="." method="_on_added_score_timer_timeout"]
 [connection signal="timeout" from="level_music_timer" to="." method="_on_level_music_timer_timeout"]
 [connection signal="end_game" from="settings_screen" to="." method="_on_settings_screen_end_game"]
 [connection signal="resume" from="settings_screen" to="." method="_on_settings_screen_resume"]
+[connection signal="cancel_end_game" from="confirm_action" to="." method="_on_cancel_end_game"]
+[connection signal="confirm_end_game" from="confirm_action" to="." method="_on_confirm_end_game"]
