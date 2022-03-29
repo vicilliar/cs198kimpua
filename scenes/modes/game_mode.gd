@@ -14,6 +14,7 @@ var level_name = {1:"easy", 2:"medium", 3:"hard"}
 var next_note_index
 var current_interval_state = 1
 var feedback_sound_correct
+var exit_type = ""
 
 export (PackedScene) var Click_Indicator
 # TODO: Make sure header covers key buttons! It needs to CONSUME the event or something, before the key can.
