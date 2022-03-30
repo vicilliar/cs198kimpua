@@ -14,6 +14,7 @@ var level_name = {1:"easy", 2:"medium", 3:"hard"}
 var next_note_index
 var current_interval_state = 1
 var feedback_sound_correct
+var exit_type = ""
 
 export (PackedScene) var Click_Indicator
 # TODO: Make sure header covers key buttons! It needs to CONSUME the event or something, before the key can.
@@ -43,9 +44,6 @@ func _on_reskin(interval):
 		pass
 		# print(x.name)
 
-
-func on_home_pressed():
-	get_tree().change_scene("res://scenes/home.tscn")
 
 func offset_note_timings(raw_note_list, offset):
 	var new_note_list = []
@@ -251,18 +249,35 @@ func _on_level_music_timer_timeout():
 	print("Showing level score...")
 	var level_score_screen = "res://scenes/level_scores/" + str(global.current_level) + "_" + level_name[global.current_level] + ".tscn"
 	get_tree().change_scene(level_score_screen)
+
+
+func _on_button_home_pressed():
+	get_node("confirm_action").show()
+	get_tree().set_deferred("paused", true)
 	
+func _on_cancel_end_game():
+	get_node("confirm_action").hide()
+	get_tree().set_deferred("paused", false)
+
+func _on_confirm_end_game():
+	get_node("confirm_action").hide()
+	get_tree().set_deferred("paused", false)
+	get_tree().change_scene("res://scenes/home.tscn")
 
 func _on_button_settings_pressed():
 	get_node("settings_screen").show()
 	get_tree().set_deferred("paused", true)
 
-
 func _on_settings_screen_resume():
 	get_node("settings_screen").hide()
 	get_tree().set_deferred("paused", false)
 
-
 func _on_settings_screen_end_game():
 	get_tree().set_deferred("paused", false)
 	_on_level_music_timer_timeout()
+
+
+
+
+
+	
