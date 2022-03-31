@@ -38,18 +38,12 @@ func _ready():
 		else:
 			$button_hard.hide()
 
-func _on_easy_button_pressed():
-	global.current_level = 1
-	get_tree().change_scene("res://scenes/modes/game_mode.tscn")
 
-func _on_medium_button_pressed():
-	global.current_level = 2
+func _on_level_button_pressed(clicked_level):
+	global.current_level = clicked_level
 	get_tree().change_scene("res://scenes/modes/game_mode.tscn")
+	get_tree().get_root().get_node("persistent/main_menu_music").stop()
 	
-func _on_hard_button_pressed():
-	global.current_level = 3
-	get_tree().change_scene("res://scenes/modes/game_mode.tscn")
 	
 func _on_back_pressed():
 	get_tree().change_scene("res://scenes/home.tscn")
-

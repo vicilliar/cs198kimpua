@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/audio/bgm/bgm_main_menu.mp3" type="AudioStream" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="main_menu_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -1.0
+autoplay = true
+
+[node name="button_sfx" type="AudioStreamPlayer" parent="."]
