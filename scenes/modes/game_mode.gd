@@ -252,6 +252,7 @@ func _on_level_music_timer_timeout():
 
 
 func _on_button_home_pressed():
+	get_tree().get_root().get_node("persistent/sfx_pause_button").play()
 	get_node("confirm_action").show()
 	get_tree().set_deferred("paused", true)
 	
@@ -265,6 +266,7 @@ func _on_confirm_end_game():
 	get_tree().change_scene("res://scenes/home.tscn")
 
 func _on_button_settings_pressed():
+	get_tree().get_root().get_node("persistent/sfx_pause_button").play()
 	get_node("settings_screen").show()
 	get_tree().set_deferred("paused", true)
 

@@ -40,10 +40,12 @@ func _ready():
 
 
 func _on_level_button_pressed(clicked_level):
+	get_tree().get_root().get_node("persistent/sfx_button").play()
 	global.current_level = clicked_level
 	get_tree().change_scene("res://scenes/modes/game_mode.tscn")
 	get_tree().get_root().get_node("persistent/main_menu_music").stop()
 	
 	
 func _on_back_pressed():
+	get_tree().get_root().get_node("persistent/sfx_pause_button").play()
 	get_tree().change_scene("res://scenes/home.tscn")
