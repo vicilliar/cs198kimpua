@@ -18,6 +18,7 @@ func _ready():
 
 func _on_button_resume_pressed():
 	emit_signal("resume")
+	get_tree().get_root().get_node("persistent/sfx_button_2").play()
 
 func _on_slider_bgm_value_changed(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("BGM"), value)
@@ -29,6 +30,7 @@ func _on_slider_sfx_value_changed(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), value)
 
 func _on_button_end_pressed():
+	get_tree().get_root().get_node("persistent/sfx_button_3").play()
 	exit_type = "exit"
 	get_node("confirm_action").show()
 
@@ -41,6 +43,7 @@ func _on_confirm_action_confirm_end_game():
 	emit_signal("end_game")
 
 func _on_button_restart_pressed():
+	get_tree().get_root().get_node("persistent/sfx_button_3").play()
 	exit_type = "restart"
 	get_node("confirm_action").show()
 

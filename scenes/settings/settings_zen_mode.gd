@@ -11,6 +11,7 @@ func _ready():
 	)
 
 func _on_button_resume_pressed():
+	get_tree().get_root().get_node("persistent/sfx_button_2").play()
 	emit_signal("resume")
 
 func _on_slider_bgm_value_changed(value):

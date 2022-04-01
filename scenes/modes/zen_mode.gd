@@ -15,13 +15,16 @@ func _on_reskin(interval):
 		
 
 func on_home_pressed():
+	get_tree().get_root().get_node("persistent/sfx_button_3").play()
 	get_tree().change_scene("res://scenes/home.tscn")
+	get_tree().get_root().get_node("persistent/main_menu_music").play()
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Keys"), 0)
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("BGM"), 0)
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), 0)
 	
 
 func _on_button_settings_pressed():
+	get_tree().get_root().get_node("persistent/sfx_pause_button").play()
 	get_node("settings_screen").show()
 	get_tree().set_deferred("paused", true)
 

@@ -264,6 +264,7 @@ func _on_confirm_end_game():
 	get_node("confirm_action").hide()
 	get_tree().set_deferred("paused", false)
 	get_tree().change_scene("res://scenes/home.tscn")
+	get_tree().get_root().get_node("persistent/main_menu_music").play()
 
 func _on_button_settings_pressed():
 	get_tree().get_root().get_node("persistent/sfx_pause_button").play()

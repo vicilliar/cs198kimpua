@@ -26,14 +26,18 @@ func _ready():
 
 
 func _on_button_home_pressed():
+	get_tree().get_root().get_node("persistent/sfx_button_3").play()
 	get_tree().change_scene("res://scenes/home.tscn")
+	get_tree().get_root().get_node("persistent/main_menu_music").play()
 
 
 func _on_button_replay_pressed():
+	get_tree().get_root().get_node("persistent/sfx_button_1").play()
 	global.current_level = 2
 	get_tree().change_scene("res://scenes/modes/game_mode.tscn")
 
 
 func _on_button__next_pressed():
+	get_tree().get_root().get_node("persistent/sfx_button_2").play()
 	global.current_level = 3
 	get_tree().change_scene("res://scenes/modes/game_mode.tscn")
