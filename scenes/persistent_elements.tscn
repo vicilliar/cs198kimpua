@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/audio/bgm/bgm_main_menu.mp3" type="AudioStream" id=1]
 [ext_resource path="res://assets/audio/sound_bytes/feedback/sfx_button_click.wav" type="AudioStream" id=2]
 [ext_resource path="res://assets/audio/sound_bytes/feedback/sfx_zen_button.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/audio/sound_bytes/feedback/sfx_pause.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/audio/sound_bytes/feedback/sfx_lose_game.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/audio/sound_bytes/feedback/sfx_win_1_star.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/audio/sound_bytes/feedback/sfx_win_2_star.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/audio/sound_bytes/feedback/sfx_win_3_star.wav" type="AudioStream" id=8]
 
 [node name="Node2D" type="Node2D"]
 
@@ -22,4 +26,20 @@ volume_db = -2.0
 
 [node name="sfx_pause_button" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -2.0
+
+[node name="sfx_lose_game" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -2.0
+
+[node name="sfx_win_1_star" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -2.0
+
+[node name="sfx_win_2_star" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -2.0
+
+[node name="sfx_win_3_star" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
 volume_db = -2.0
