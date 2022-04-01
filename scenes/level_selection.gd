@@ -19,6 +19,8 @@ func _ready():
 	for star in medium_stars:
 		if medium >= medium_stars[star]:
 			$medium_score.set_animation(star)
+			$button_medium_locked.hide()
+			$button_medium_locked/lock.hide()
 			break
 		elif easy >= easy_stars["1_0"]:
 			$medium_score.set_animation("0")
@@ -30,6 +32,8 @@ func _ready():
 	for star in high_stars:
 		if hard >= high_stars[star]:
 			$hard_score.set_animation(star)
+			$button_hard_locked.hide()
+			$button_hard_locked/lock.hide()
 			break
 		elif medium >= medium_stars["1_0"]:
 			$hard_score.set_animation("0")

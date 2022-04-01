@@ -17,7 +17,9 @@ func _ready():
 	# Locking/unlocking of next level is based on high score
 	if high_score > level_high["1_0"]:
 		$button_next_locked.hide()
+		$button_next.show()
 	else:
+		$button_next_locked.show()
 		$button_next.hide()
 	
 	$score.set_bbcode("[right][color=black]" + str(current_score) + "[/color][/right]")

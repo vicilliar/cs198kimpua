@@ -13,11 +13,6 @@ func _ready():
 			$score_stars.set_animation(star)
 			break
 			
-	# Locking/unlocking of next level is based on high score
-	if high_score > level_high["1_0"]:
-		$button_next_locked.hide()
-	else:
-		$button_next.hide()
 	
 	$score.set_bbcode("[right][color=black]" + str(current_score) + "[/color][/right]")
 	#TODO: update streak/combo meter

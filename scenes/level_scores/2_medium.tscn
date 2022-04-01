@@ -17,9 +17,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 3 ) ],
+"frames": [ ExtResource( 11 ) ],
 "loop": false,
-"name": "2_0",
+"name": "2_5",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 10 ) ],
@@ -37,9 +37,9 @@ animations = [ {
 "name": "1_5",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": false,
-"name": "2_5",
+"name": "2_0",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 13 ) ],
@@ -89,10 +89,10 @@ frames = SubResource( 1 )
 animation = "0_0"
 
 [node name="score" type="RichTextLabel" parent="."]
-margin_left = 920.0
+margin_left = 875.0
 margin_top = 611.0
 margin_right = 1192.0
-margin_bottom = 667.0
+margin_bottom = 680.0
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "[right][color=black]0[/color][/right]"
@@ -102,10 +102,10 @@ __meta__ = {
 }
 
 [node name="streak" type="RichTextLabel" parent="."]
-margin_left = 920.0
+margin_left = 891.0
 margin_top = 694.0
 margin_right = 1192.0
-margin_bottom = 750.0
+margin_bottom = 757.0
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "[right][color=black]0[/color][/right]"

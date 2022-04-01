@@ -22,9 +22,9 @@ animations = [ {
 "name": "2_5",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 7 ) ],
 "loop": false,
-"name": "2_0",
+"name": "0_5",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 10 ) ],
@@ -32,24 +32,24 @@ animations = [ {
 "name": "3_0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ) ],
-"loop": false,
-"name": "1_0",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": false,
 "name": "1_5",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": false,
-"name": "0_5",
+"name": "2_0",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 13 ) ],
 "loop": false,
 "name": "0_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": false,
+"name": "1_0",
 "speed": 5.0
 } ]
 
@@ -88,10 +88,10 @@ frames = SubResource( 1 )
 animation = "0_0"
 
 [node name="score" type="RichTextLabel" parent="."]
-margin_left = 920.0
+margin_left = 868.0
 margin_top = 611.0
 margin_right = 1192.0
-margin_bottom = 667.0
+margin_bottom = 679.0
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "[right][color=black]0[/color][/right]"
@@ -101,10 +101,10 @@ __meta__ = {
 }
 
 [node name="streak" type="RichTextLabel" parent="."]
-margin_left = 920.0
+margin_left = 888.0
 margin_top = 694.0
 margin_right = 1192.0
-margin_bottom = 750.0
+margin_bottom = 763.0
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "[right][color=black]0[/color][/right]"
