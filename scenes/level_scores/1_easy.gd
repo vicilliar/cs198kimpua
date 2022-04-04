@@ -43,6 +43,7 @@ func _ready():
 	
 	$score.set_bbcode("[right][color=black]" + str(current_score) + "[/color][/right]")
 	$streak.set_bbcode("[right][color=black]" + str(current_highest_streak) + "[/color][/right]")
+	$high_score.set_bbcode("[right][color=black]" + str(high_score) + "[/color][/right]")
 
 func stop_sounds():
 	if sfx_0.is_playing():
