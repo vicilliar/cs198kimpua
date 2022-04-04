@@ -40,24 +40,24 @@ animations = [ {
 "name": "2_5",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ) ],
-"loop": false,
-"name": "2_0",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 13 ) ],
 "loop": false,
 "name": "3_0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ) ],
-"loop": false,
-"name": "1_0",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 14 ) ],
 "loop": false,
 "name": "1_5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": false,
+"name": "2_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": false,
+"name": "1_0",
 "speed": 5.0
 } ]
 
@@ -68,19 +68,9 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ) ],
-"loop": false,
-"name": "0",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 16 ) ],
 "loop": false,
 "name": "2_5",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ) ],
-"loop": false,
-"name": "2_0",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 19 ) ],
@@ -88,14 +78,24 @@ animations = [ {
 "name": "3_0",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 18 ) ],
+"loop": false,
+"name": "1_5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": false,
+"name": "2_0",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 20 ) ],
 "loop": false,
 "name": "1_0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": false,
-"name": "1_5",
+"name": "0",
 "speed": 5.0
 } ]
 
@@ -106,19 +106,9 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ) ],
-"loop": false,
-"name": "0",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 23 ) ],
 "loop": false,
 "name": "2_5",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 22 ) ],
-"loop": false,
-"name": "2_0",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 25 ) ],
@@ -126,14 +116,24 @@ animations = [ {
 "name": "3_0",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 21 ) ],
+"loop": false,
+"name": "1_5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ) ],
+"loop": false,
+"name": "2_0",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 24 ) ],
 "loop": false,
 "name": "1_0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 21 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": false,
-"name": "1_5",
+"name": "0",
 "speed": 5.0
 } ]
 

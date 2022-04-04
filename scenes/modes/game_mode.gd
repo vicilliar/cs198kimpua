@@ -117,8 +117,6 @@ func generate_new_note(note):
 
 
 func update_scoreboard():
-	# TODO aimee: Implement scoreboard display here!
-	# TODO aimee: Added score edit when combo meter is available
 	$temp_score.set_bbcode("[center]" + str(score) + "[/center]")
 	if (score != 0):
 		$added_score.set_bbcode("[center][wave amp=80]+ " + str(current_combo_score) + "[/wave][/center]")
@@ -232,7 +230,6 @@ func _on_keyboard_key_played(key):
 	for note_to_despawn in live_notes:
 		despawn_live_note(note_to_despawn, "wrong")
 	
-# TODO: level high scores saved to FILE. if empty, default high score is 0. Also save to file if COMPLETED or not.
 func _on_level_music_timer_timeout():
 	$level_music_timer.stop()
 	
