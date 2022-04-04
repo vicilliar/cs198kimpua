@@ -19,6 +19,9 @@ func set_curr_key(i):
 	# $key_area/AnimatedSprite.play(notes[curr_key] + "_unpressed")
 	# $key_area/AnimatedSprite.play(notes[curr_key] + "_unpressed")
 	
+	var pressed_texture = load("res://assets/images/scenes/zen_mode/1_main/keys/pressed.png")
+	$key_touch_button.set_texture_pressed(pressed_texture)
+	
 
 func _on_key_touch_button_pressed():
 	# Send to keyboard first!
