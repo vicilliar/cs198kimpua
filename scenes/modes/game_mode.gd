@@ -14,6 +14,7 @@ var level_name = {1:"easy", 2:"medium", 3:"hard"}
 var next_note_index
 var current_interval_state = 1
 var feedback_sound_correct
+var feedback_sound_wrong
 var exit_type = ""
 
 export (PackedScene) var Click_Indicator
@@ -25,6 +26,7 @@ func _ready():
 	play_level(global.current_level)
 	get_node("game_mode_header").default_header("game_mode")
 	feedback_sound_correct = get_node("feedback_correct")
+	feedback_sound_wrong = get_node("feedback_wrong")
 
 
 func _process(delta):
@@ -186,7 +188,6 @@ func _on_keyboard_key_played(key):
 				update_scoreboard()
 				despawn_live_note(note, "correct")
 				
-				feedback_sound_correct.play()
 				if note["click_timer"].get_time_left() <= 0.5:
 					$text_feedback.final_animation("perfect")
 				else:
@@ -207,9 +208,11 @@ func _on_keyboard_key_played(key):
 				current_combo_multiplier = null
 				$streak.set_bbcode("[right]0[/right]")
 				$multiplier.set_bbcode("")
-
-				for note_to_despawn in live_notes:
-					despawn_live_note(note_to_despawn, "wrong")
+				
+				feedback_sound_wrong.play()
+				# TODO: maybe we don't want to despawn all notes after wrong press?
+				#for note_to_despawn in live_notes:
+				#	despawn_live_note(note_to_despawn, "wrong")
 				return
 
 	# Wrong: WRONG NOTE PLAYED (kill all notes)
@@ -226,9 +229,12 @@ func _on_keyboard_key_played(key):
 	current_combo_multiplier = null
 	$streak.set_bbcode("[right]0[/right]")
 	$multiplier.set_bbcode("")
+	
+	feedback_sound_wrong.play()
 
-	for note_to_despawn in live_notes:
-		despawn_live_note(note_to_despawn, "wrong")
+	# TODO: maybe we don't want to despawn all notes after wrong press?
+	#for note_to_despawn in live_notes:
+	#	despawn_live_note(note_to_despawn, "wrong")
 	
 func _on_level_music_timer_timeout():
 	$level_music_timer.stop()
