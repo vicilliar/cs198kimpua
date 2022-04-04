@@ -55,6 +55,7 @@ func _on_reskin(interval):
 	for x in self.get_children():
 		pass
 		# print(x.name)
+	$keyboard_reset.start()
 
 
 func offset_note_timings(raw_note_list, offset):
@@ -289,7 +290,6 @@ func _on_settings_screen_end_game():
 	_on_level_music_timer_timeout()
 
 
-
-
-
-	
+func _on_keyboard_reset_timeout():
+	get_node("keyboard").reset_keyboard()
+	get_node("game_mode_header").reskin_header(Consts.intervals[0], "game_mode")

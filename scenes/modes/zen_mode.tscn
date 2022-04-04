@@ -40,7 +40,11 @@ stream = ExtResource( 7 )
 autoplay = true
 bus = "BGM"
 
+[node name="keyboard_reset" type="Timer" parent="."]
+wait_time = 3.0
+
 [connection signal="reskin" from="keyboard" to="." method="_on_reskin"]
 [connection signal="pressed" from="zen_mode_header/button_home" to="." method="on_home_pressed"]
 [connection signal="pressed" from="zen_mode_header/button_settings" to="." method="_on_button_settings_pressed"]
 [connection signal="resume" from="settings_screen" to="." method="_on_settings_screen_resume"]
+[connection signal="timeout" from="keyboard_reset" to="." method="_on_keyboard_reset_timeout"]
