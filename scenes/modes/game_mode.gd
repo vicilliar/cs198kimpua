@@ -186,11 +186,15 @@ func _on_keyboard_key_played(key):
 				print("Correct press!" + key)
 				get_node("keyboard").check_reskin(true)
 				
-				# Update streak numbers
+				# Update streak numbers (if milestone reached)
 				current_streak += 1
 				if current_streak in Consts.combo_meter:
 					current_combo_score = Consts.combo_meter[current_streak]['points']
 					current_combo_multiplier = Consts.combo_meter[current_streak]['multiplier']
+				
+				# Play consistent streak sound
+				if current_streak >= 10:
+					feedback_sound_correct.play()
 				
 				score += current_combo_score
 				
