@@ -53,3 +53,10 @@ func _on_any_key_touched(key):
 
 func _on_any_key_released(key):
 	currently_playing.erase(key)
+
+func reset_keyboard():
+	for i in range(8):
+		get_node(Consts.notes[i]).reset_key(i)
+	for i in range(5):
+		get_node(Consts.black_keys[i]).reset_black_key(i)
+	

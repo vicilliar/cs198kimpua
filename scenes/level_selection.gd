@@ -14,6 +14,7 @@ func _ready():
 	for star in easy_stars:
 		if easy >= easy_stars[star]:
 			$easy_score.set_animation(star)
+			$easy_hs.set_bbcode("[center][color=black]HIGH SCORE: " + str(easy) + "[/color][/center]")
 			break
 			
 	for star in medium_stars:
@@ -21,6 +22,8 @@ func _ready():
 			$medium_score.set_animation(star)
 			$button_medium_locked.hide()
 			$button_medium_locked/lock.hide()
+			$medium_hs.show()
+			$medium_hs.set_bbcode("[center][color=black]HIGH SCORE: " + str(medium) + "[/color][/center]")
 			break
 		elif easy >= easy_stars["1_0"]:
 			$medium_score.set_animation("0")
@@ -34,6 +37,8 @@ func _ready():
 			$hard_score.set_animation(star)
 			$button_hard_locked.hide()
 			$button_hard_locked/lock.hide()
+			$hard_hs.show()
+			$hard_hs.set_bbcode("[center][color=black]HIGH SCORE: " + str(hard) + "[/color][/center]")
 			break
 		elif medium >= medium_stars["1_0"]:
 			$hard_score.set_animation("0")

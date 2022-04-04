@@ -1,7 +1,9 @@
 extends Node
 
 func _ready():
-	pass
+	global.high_scores.easy = 20000
+	global.save_scores()
+	
 
 func on_zen_mode_pressed():
 	get_tree().get_root().get_node("persistent/sfx_button_3").play()

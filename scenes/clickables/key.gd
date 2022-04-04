@@ -48,6 +48,12 @@ func reskin_key(interval):
 	$key_touch_button.set_texture(normal_texture)
 	$key_touch_button.set_texture_pressed(pressed_texture)
 
+func reset_key(curr_key):
+	var normal_texture = load("res://assets/images/scenes/zen_mode/1_main/keys/" + Consts.notes[curr_key] + ".png")
+	$key_touch_button.set_texture(normal_texture)
+	var pressed_texture = load("res://assets/images/scenes/zen_mode/1_main/keys/pressed.png")
+	$key_touch_button.set_texture_pressed(pressed_texture)
+
 
 """
 func _on_key_area_key_clicked():

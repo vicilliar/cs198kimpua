@@ -12,6 +12,7 @@ func _on_reskin(interval):
 	get_node("zen_mode_header").reskin_header(interval, "zen_mode")
 	for x in self.get_children():
 		print(x.name)
+	$keyboard_reset.start()
 		
 
 func on_home_pressed():
@@ -32,3 +33,8 @@ func _on_button_settings_pressed():
 func _on_settings_screen_resume():
 	get_node("settings_screen").hide()
 	get_tree().set_deferred("paused", false)
+
+
+func _on_keyboard_reset_timeout():
+	get_node("keyboard").reset_keyboard()
+	get_node("zen_mode_header").reskin_header(Consts.intervals[0], "zen_mode")

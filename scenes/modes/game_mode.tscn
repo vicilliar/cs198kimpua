@@ -205,6 +205,9 @@ visible = false
 pause_mode = 2
 visible = false
 
+[node name="keyboard_reset" type="Timer" parent="."]
+wait_time = 3.0
+
 [connection signal="key_played" from="keyboard" to="." method="_on_keyboard_key_played"]
 [connection signal="reskin" from="keyboard" to="." method="_on_reskin"]
 [connection signal="pressed" from="game_mode_header/button_home" to="." method="_on_button_home_pressed"]
@@ -215,3 +218,4 @@ visible = false
 [connection signal="resume" from="settings_screen" to="." method="_on_settings_screen_resume"]
 [connection signal="cancel_end_game" from="confirm_action" to="." method="_on_cancel_end_game"]
 [connection signal="confirm_end_game" from="confirm_action" to="." method="_on_confirm_end_game"]
+[connection signal="timeout" from="keyboard_reset" to="." method="_on_keyboard_reset_timeout"]

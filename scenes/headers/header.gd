@@ -10,13 +10,20 @@ func default_header(mode):
 	$header_button.set_normal_texture(normal_texture)
 	$header_button.set_pressed_texture(normal_texture)
 	
+	var stripe = "1_main"
+	$stripe.play(stripe)
+	
 
 func reskin_header(interval, mode):
-	var skins_folder = "res://assets/images/scenes/" + mode + "/" + str(interval['folder']) + "_" + interval['name'] + "/"
-	var normal_texture = load(skins_folder + "header_no_stripe.png")
-	
-	$header_button.set_normal_texture(normal_texture)
-	$header_button.set_pressed_texture(normal_texture)
+	var skins_folder
+	var normal_texture
+	if interval['folder'] == 1:
+		default_header(mode)
+	else:
+		skins_folder = "res://assets/images/scenes/" + mode + "/" + str(interval['folder']) + "_" + interval['name'] + "/"
+		normal_texture = load(skins_folder + "header_no_stripe.png")
+		$header_button.set_normal_texture(normal_texture)
+		$header_button.set_pressed_texture(normal_texture)
 	
 	var bitmap_img = Image.new()
 	bitmap_img.load("res://assets/images/scenes/" + mode + "/header_bitmap.png")

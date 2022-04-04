@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://assets/images/scenes/transparent_area.png" type="Texture" id=1]
 [ext_resource path="res://scenes/level_selection.gd" type="Script" id=2]
@@ -27,6 +27,11 @@
 [ext_resource path="res://assets/images/scenes/level_selection/stars/3_hard/3_0.png" type="Texture" id=25]
 [ext_resource path="res://assets/images/scenes/level_selection/unlocked_3.png" type="Texture" id=26]
 [ext_resource path="res://assets/images/scenes/level_selection/unlocked_2.png" type="Texture" id=27]
+[ext_resource path="res://assets/fonts/Montserrat-Bold.ttf" type="DynamicFontData" id=28]
+
+[sub_resource type="DynamicFont" id=4]
+size = 28
+font_data = ExtResource( 28 )
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -35,14 +40,9 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 15 ) ],
+"frames": [ ExtResource( 11 ) ],
 "loop": false,
-"name": "2_5",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 13 ) ],
-"loop": false,
-"name": "3_0",
+"name": "1_0",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ) ],
@@ -55,9 +55,14 @@ animations = [ {
 "name": "2_0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ) ],
+"frames": [ ExtResource( 15 ) ],
 "loop": false,
-"name": "1_0",
+"name": "2_5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": false,
+"name": "3_0",
 "speed": 5.0
 } ]
 
@@ -68,14 +73,14 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 16 ) ],
+"frames": [ ExtResource( 20 ) ],
 "loop": false,
-"name": "2_5",
+"name": "1_0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 19 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": false,
-"name": "3_0",
+"name": "0",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ) ],
@@ -88,14 +93,14 @@ animations = [ {
 "name": "2_0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 20 ) ],
+"frames": [ ExtResource( 16 ) ],
 "loop": false,
-"name": "1_0",
+"name": "2_5",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 19 ) ],
 "loop": false,
-"name": "0",
+"name": "3_0",
 "speed": 5.0
 } ]
 
@@ -106,14 +111,14 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 23 ) ],
+"frames": [ ExtResource( 24 ) ],
 "loop": false,
-"name": "2_5",
+"name": "1_0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 25 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": false,
-"name": "3_0",
+"name": "0",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 21 ) ],
@@ -126,48 +131,98 @@ animations = [ {
 "name": "2_0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 24 ) ],
+"frames": [ ExtResource( 23 ) ],
 "loop": false,
-"name": "1_0",
+"name": "2_5",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 25 ) ],
 "loop": false,
-"name": "0",
+"name": "3_0",
 "speed": 5.0
 } ]
 
 [node name="level_selection" type="Node2D"]
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 537.0 ]
+}
 
 [node name="background" type="Sprite" parent="."]
 position = Vector2( 960, 540 )
 texture = ExtResource( 8 )
 
 [node name="button_easy" type="TouchScreenButton" parent="."]
-position = Vector2( 155, 618 )
+position = Vector2( 155, 650 )
 normal = ExtResource( 4 )
 bitmask = ExtResource( 6 )
 
+[node name="easy_hs" type="RichTextLabel" parent="."]
+margin_left = 185.0
+margin_top = 512.0
+margin_right = 641.0
+margin_bottom = 757.0
+rect_pivot_offset = Vector2( 308, 29 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center]HIGH SCORE: 0[/center]"
+text = "HIGH SCORE: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="easy_score" type="AnimatedSprite" parent="."]
-position = Vector2( 412, 574 )
+position = Vector2( 412, 606 )
 frames = SubResource( 1 )
 
+[node name="medium_hs" type="RichTextLabel" parent="."]
+visible = false
+margin_left = 732.0
+margin_top = 512.0
+margin_right = 1188.0
+margin_bottom = 757.0
+rect_pivot_offset = Vector2( 308, 29 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center]HIGH SCORE: 0[/center]"
+text = "HIGH SCORE: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="medium_score" type="AnimatedSprite" parent="."]
-position = Vector2( 960, 574 )
+position = Vector2( 960, 606 )
 frames = SubResource( 2 )
 
+[node name="hard_hs" type="RichTextLabel" parent="."]
+visible = false
+margin_left = 1278.0
+margin_top = 512.0
+margin_right = 1734.0
+margin_bottom = 757.0
+rect_pivot_offset = Vector2( 308, 29 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center]HIGH SCORE: 0[/center]"
+text = "HIGH SCORE: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="hard_score" type="AnimatedSprite" parent="."]
-position = Vector2( 1508, 574 )
+position = Vector2( 1508, 606 )
 frames = SubResource( 3 )
 
 [node name="button_medium" type="TouchScreenButton" parent="."]
-position = Vector2( 703, 618 )
+position = Vector2( 703, 650 )
 normal = ExtResource( 27 )
 bitmask = ExtResource( 6 )
 
 [node name="button_medium_locked" type="Sprite" parent="."]
-position = Vector2( 960, 711 )
+position = Vector2( 960, 743 )
 texture = ExtResource( 7 )
 
 [node name="lock" type="Sprite" parent="button_medium_locked"]
@@ -175,12 +230,12 @@ position = Vector2( 162, 80 )
 texture = ExtResource( 9 )
 
 [node name="button_hard" type="TouchScreenButton" parent="."]
-position = Vector2( 1250, 617 )
+position = Vector2( 1250, 649 )
 normal = ExtResource( 26 )
 bitmask = ExtResource( 6 )
 
 [node name="button_hard_locked" type="Sprite" parent="."]
-position = Vector2( 1507, 710 )
+position = Vector2( 1507, 742 )
 texture = ExtResource( 3 )
 
 [node name="lock" type="Sprite" parent="button_hard_locked"]
