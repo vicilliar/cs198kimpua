@@ -17,9 +17,9 @@ const intervals = {
 # Streak needed: {points to add, additional score multiplier value}
 # Following Guitar Hero streak mechanic
 const combo_meter = {
-	10: {'points': 200,		'multiplier': 'x2'},
-	20: {'points': 300,		'multiplier': 'x3'},
-	30: {'points': 400,		'multiplier': 'x4'},
+	10: {'points': 200,		'multiplier': 2},
+	20: {'points': 300,		'multiplier': 3},
+	30: {'points': 400,		'multiplier': 4},
 }
 
 const C4_click_position = 120

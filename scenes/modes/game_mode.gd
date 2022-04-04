@@ -140,7 +140,7 @@ func update_scoreboard():
 		$streak.set_bbcode("[right]" + str(current_streak) + "[/right]")
 		
 	if (current_combo_multiplier != null):
-		$multiplier.set_bbcode("[right][shake rate=10 level=10] STREAK BONUS " + str(current_combo_multiplier) + "[/shake][/right]")
+		$multiplier.set_bbcode("[right][shake rate=10 level=10] STREAK BONUS x" + str(current_combo_multiplier) + "[/shake][/right]")
 		
 	print("Current score: " + str(score))
 	
@@ -152,6 +152,15 @@ func despawn_live_note(note, action):
 	# print("Live Notes: " + str(live_notes))
 	
 
+func kill_streak():
+	if current_streak >= 10:
+		$feedback_streak_lost.play()
+	current_streak = 0
+	current_combo_score = 100
+	current_combo_multiplier = null
+	$streak.set_bbcode("[right]0[/right]")
+	$multiplier.set_bbcode("")
+	
 func _on_click_timer_timeout(timer):
 	# FAILED. find the appropriate live_notes item
 	for note in live_notes:
@@ -162,12 +171,7 @@ func _on_click_timer_timeout(timer):
 			# Check if current streak is the highest
 			if current_streak > highest_streak:
 				highest_streak = current_streak
-			# Reset streak numbers
-			current_streak = 0
-			current_combo_score = 100
-			current_combo_multiplier = null
-			$streak.set_bbcode("[right]0[/right]")
-			$multiplier.set_bbcode("")
+			kill_streak()
 			
 			print("Timed Out!")
 			despawn_live_note(note, "timed_out")
@@ -191,6 +195,7 @@ func _on_keyboard_key_played(key):
 				if current_streak in Consts.combo_meter:
 					current_combo_score = Consts.combo_meter[current_streak]['points']
 					current_combo_multiplier = Consts.combo_meter[current_streak]['multiplier']
+					get_node("feedback_streak_" + str(current_combo_multiplier)).play()
 				
 				# Play consistent streak sound
 				if current_streak >= 10:
@@ -218,12 +223,7 @@ func _on_keyboard_key_played(key):
 				# Check if current streak is the highest
 				if current_streak > highest_streak:
 					highest_streak = current_streak
-				# Reset streak numbers
-				current_streak = 0
-				current_combo_score = 100
-				current_combo_multiplier = null
-				$streak.set_bbcode("[right]0[/right]")
-				$multiplier.set_bbcode("")
+				kill_streak()
 				
 				feedback_sound_wrong.play()
 				# TODO: maybe we don't want to despawn all notes after wrong press?
@@ -239,12 +239,7 @@ func _on_keyboard_key_played(key):
 	# Check if current streak is the highest
 	if current_streak > highest_streak:
 		highest_streak = current_streak
-	# Reset streak numbers
-	current_streak = 0
-	current_combo_score = 100
-	current_combo_multiplier = null
-	$streak.set_bbcode("[right]0[/right]")
-	$multiplier.set_bbcode("")
+	kill_streak()
 	
 	feedback_sound_wrong.play()
 
