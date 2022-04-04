@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/images/scenes/level_score/3_hard/1_5.png" type="Texture" id=1]
 [ext_resource path="res://scenes/level_scores/3_hard.gd" type="Script" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://assets/images/scenes/level_score/3_hard/2_5.png" type="Texture" id=4]
 [ext_resource path="res://assets/images/scenes/level_score/3_hard/2_0.png" type="Texture" id=5]
 [ext_resource path="res://assets/images/scenes/level_score/3_hard/3_0.png" type="Texture" id=6]
-[ext_resource path="res://assets/images/scenes/level_score/3_hard/0_5.png" type="Texture" id=7]
 [ext_resource path="res://assets/images/scenes/level_score/3_hard/button_replay.png" type="Texture" id=9]
 [ext_resource path="res://assets/images/scenes/level_score/3_hard/background.png" type="Texture" id=10]
 [ext_resource path="res://assets/images/scenes/level_score/3_hard/button_home.png" type="Texture" id=11]
@@ -15,9 +14,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 4 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": false,
-"name": "2_5",
+"name": "1_0",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ) ],
@@ -30,27 +29,19 @@ animations = [ {
 "name": "3_0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ) ],
-"loop": false,
-"name": "1_0",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": false,
 "name": "1_5",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ) ],
-"loop": false,
-"name": "0_5",
-"frames": [ ExtResource( 5 ) ],
-"loop": false,
-"name": "2_0",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 13 ) ],
 "loop": false,
 "name": "0_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": false,
+"name": "2_5",
 "speed": 5.0
 } ]
 

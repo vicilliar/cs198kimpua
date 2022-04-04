@@ -25,6 +25,16 @@ func _ready():
 	play_level(global.current_level)
 	get_node("game_mode_header").default_header("game_mode")
 	feedback_sound_correct = get_node("feedback_correct")
+	
+	# Set level name
+	if global.current_level == 1:
+		$game_level.set_bbcode("EASY")
+	elif global.current_level == 2:
+		$game_level.set_bbcode("MEDIUM")
+	elif global.current_level == 3:
+		$game_level.set_bbcode("HARD")
+	
+	$timer_progress_bar.max_value = level_music_time
 
 
 func _process(delta):
@@ -34,7 +44,9 @@ func _process(delta):
 		# Spawn the next note!
 		generate_new_note(note_list[next_note_index])
 		next_note_index += 1
-			
+		
+	# Attach progress bar to timer
+	$timer_progress_bar.value = elapsed_time
 	
 func _on_reskin(interval):
 	# print("Interval check: ", interval)
