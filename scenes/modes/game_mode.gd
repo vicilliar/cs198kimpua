@@ -79,7 +79,7 @@ func initialize(level_num):
 	var raw_note_list = Level_maps.levels[level_num]["notes"]
 	note_list = offset_note_timings(raw_note_list, Level_maps.levels[level_num]["start_time_offset"])
 	
-	print("Note List: " + str(note_list))
+	print("Number of notes: " + str(len(raw_note_list)))
 	score = 0
 	current_streak = 0
 	highest_streak = 0

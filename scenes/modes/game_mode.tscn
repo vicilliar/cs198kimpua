@@ -206,7 +206,7 @@ pause_mode = 2
 visible = false
 
 [node name="keyboard_reset" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 5.0
 
 [connection signal="key_played" from="keyboard" to="." method="_on_keyboard_key_played"]
 [connection signal="reskin" from="keyboard" to="." method="_on_reskin"]

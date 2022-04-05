@@ -41,7 +41,7 @@ autoplay = true
 bus = "BGM"
 
 [node name="keyboard_reset" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 5.0
 
 [connection signal="reskin" from="keyboard" to="." method="_on_reskin"]
 [connection signal="pressed" from="zen_mode_header/button_home" to="." method="on_home_pressed"]
