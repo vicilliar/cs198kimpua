@@ -8,7 +8,8 @@ const levels = {
 		"start_time_offset": -3.227,						# offset between written start times and actual start times
 		# Required scores to get star ratings
 		# TODO: Change to actual star ranges
-		"star_scores": {"3_0": 9400, "2_5": 8600, "2_0": 7900, "1_5": 7200, "1_0": 6500},
+		"max_score": 31900,
+		"star_scores": {"3_0": 0.9, "2_5": 0.8, "2_0": 0.7, "1_5": 0.6, "1_0": 0.5},
 		"notes":
 			[
 				# Verse 1
@@ -129,8 +130,8 @@ const levels = {
 		"level_time": 133, 									# time before level ends
 		"start_time_offset": -424.55,						# offset between written start times and actual start times
 		# Required scores to get star ratings
-		# TODO: Change to actual star ranges
-		"star_scores": {"3_0":300, "2_5":250, "2_0":200, "1_5":150, "1_0":100},
+		"max_score": 49500,
+		"star_scores": {"3_0": 0.9, "2_5": 0.8, "2_0": 0.7, "1_5": 0.6, "1_0": 0.5},
 		"notes":
 			[
 				# Chorus 1
@@ -322,7 +323,8 @@ const levels = {
 		"start_time_offset": -202.45,						# offset between written start times and actual start times
 		# Required scores to get star ratings
 		# TODO: Change to actual star ranges
-		"star_scores": {"3_0":300, "2_5":250, "2_0":200, "1_5":150, "1_0":100},
+		"max_score": 113900,
+		"star_scores": {"3_0": 0.9, "2_5": 0.8, "2_0": 0.7, "1_5": 0.6, "1_0": 0.5},
 		"notes":
 			[
 				# Verse 1

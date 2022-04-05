@@ -10,7 +10,13 @@ func _ready():
 	global.load_scores()
 	var high_score = global.high_scores.medium
 	var current_score = global.current_score
-	var level_high = Level_maps.levels[2]["star_scores"]
+	
+	var star_percent = Level_maps.levels[2]["star_scores"]
+	var level_high = {}
+	for star in star_percent:
+		level_high[star] = floor(star_percent[star] * Level_maps.levels[2]["max_score"])
+	print("Star Scores: " + str(level_high))
+	
 	var current_highest_streak = global.current_highest_streak
 	sfx_0 = get_tree().get_root().get_node("persistent/sfx_lose_game")
 	sfx_1 = get_tree().get_root().get_node("persistent/sfx_win_1_star")
