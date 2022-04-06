@@ -31,6 +31,8 @@ func _ready():
 			$button_medium_locked/lock.hide()
 		else:
 			$button_medium.hide()
+			$button_medium_locked.show()
+			$button_medium_locked/lock.show()
 
 	for star in high_stars:
 		if hard >= high_stars[star]:
@@ -46,6 +48,8 @@ func _ready():
 			$button_hard_locked/lock.hide()
 		else:
 			$button_hard.hide()
+			$button_hard_locked.show()
+			$button_hard_locked/lock.show()
 
 
 func _on_level_button_pressed(clicked_level):
