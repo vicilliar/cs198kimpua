@@ -296,5 +296,6 @@ func _on_settings_screen_end_game():
 
 
 func _on_keyboard_reset_timeout():
+	current_interval_state = 1
 	get_node("keyboard").reset_keyboard()
 	get_node("game_mode_header").reskin_header(Consts.intervals[0], "game_mode")
