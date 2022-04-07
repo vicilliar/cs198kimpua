@@ -391,7 +391,7 @@ const levels = {
 				{"name": "A4",	"hold": false, "start": 180 + 44.585, "length": 0},
 				
 				{"name": "B4",	"hold": false, "start": 180 + 45.329, "length": 0},
-				{"name": "A5",	"hold": false, "start": 180 + 45.853, "length": 0},
+				{"name": "A4",	"hold": false, "start": 180 + 45.853, "length": 0},
 				{"name": "G4",	"hold": false, "start": 180 + 46.314, "length": 0},
 				{"name": "D4",	"hold": false, "start": 180 + 46.582, "length": 0},
 				{"name": "G4",	"hold": false, "start": 180 + 46.814, "length": 0},
@@ -501,7 +501,7 @@ const levels = {
 				{"name": "A4",	"hold": false, "start": 31.993 + 180 + 44.585, "length": 0},
 				
 				{"name": "B4",	"hold": false, "start": 31.993 + 180 + 45.329, "length": 0},
-				{"name": "A5",	"hold": false, "start": 31.993 + 180 + 45.853, "length": 0},
+				{"name": "A4",	"hold": false, "start": 31.993 + 180 + 45.853, "length": 0},
 				{"name": "G4",	"hold": false, "start": 31.993 + 180 + 46.314, "length": 0},
 				{"name": "D4",	"hold": false, "start": 31.993 + 180 + 46.582, "length": 0},
 				{"name": "G4",	"hold": false, "start": 31.993 + 180 + 46.814, "length": 0},
@@ -648,7 +648,7 @@ const levels = {
 				{"name": "A4",	"hold": false, "start": 95.993 + 180 + 44.585, "length": 0},
 				
 				{"name": "B4",	"hold": false, "start": 95.993 + 180 + 45.329, "length": 0},
-				{"name": "A5",	"hold": false, "start": 95.993 + 180 + 45.853, "length": 0},
+				{"name": "A4",	"hold": false, "start": 95.993 + 180 + 45.853, "length": 0},
 				{"name": "G4",	"hold": false, "start": 95.993 + 180 + 46.314, "length": 0},
 				{"name": "D4",	"hold": false, "start": 95.993 + 180 + 46.582, "length": 0},
 				{"name": "G4",	"hold": false, "start": 95.993 + 180 + 46.814, "length": 0},
