@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready():
-	pass # Replace with function body.
+	$name.hide() # Replace with function body.
 
 func default_header(mode):
 	var skins_folder = "res://assets/images/scenes/" + mode + "/1_main/"
@@ -12,6 +12,7 @@ func default_header(mode):
 	
 	var stripe = "1_main"
 	$stripe.play(stripe)
+	$name.hide()
 	
 
 func reskin_header(interval, mode):
@@ -20,10 +21,14 @@ func reskin_header(interval, mode):
 	if interval['folder'] == 1:
 		default_header(mode)
 	else:
+		var stripe = str(interval['folder']) + "_" + interval['name']
 		skins_folder = "res://assets/images/scenes/" + mode + "/" + str(interval['folder']) + "_" + interval['name'] + "/"
 		normal_texture = load(skins_folder + "header_no_stripe.png")
 		$header_button.set_normal_texture(normal_texture)
 		$header_button.set_pressed_texture(normal_texture)
+		$stripe.play(stripe)
+		$name.show()
+		$name.play(stripe)
 	
 	var bitmap_img = Image.new()
 	bitmap_img.load("res://assets/images/scenes/" + mode + "/header_bitmap.png")
@@ -32,10 +37,10 @@ func reskin_header(interval, mode):
 	
 	$header_button.set_click_mask(bitmap)
 	
-	var stripe = str(interval['folder']) + "_" + interval['name']
-	var test = $stripe.play(stripe)
-	print("STRIPE CHANGE")
-	print(test)
 
 func _on_header_pressed():
 	print("Header Touched")
+
+func _on_name_animation_finished():
+	$name.stop()
+	$name.hide()
