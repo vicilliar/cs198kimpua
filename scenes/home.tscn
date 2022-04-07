@@ -29,7 +29,7 @@ texture = ExtResource( 2 )
 [node name="logo" type="AnimatedSprite" parent="."]
 position = Vector2( 635, 547 )
 frames = SubResource( 1 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="button_game_mode" type="TouchScreenButton" parent="."]
