@@ -52,6 +52,7 @@ func _process(delta):
 	
 func _on_reskin(interval):
 	# print("Interval check: ", interval)
+	$interval_popup.final_animation(interval['folder'])
 	get_node("game_mode_header").reskin_header(interval, "game_mode")
 	current_interval_state = interval['folder']
 	for x in self.get_children():
@@ -298,3 +299,4 @@ func _on_settings_screen_end_game():
 func _on_keyboard_reset_timeout():
 	get_node("keyboard").reset_keyboard()
 	get_node("game_mode_header").reskin_header(Consts.intervals[0], "game_mode")
+	current_interval_state = 1

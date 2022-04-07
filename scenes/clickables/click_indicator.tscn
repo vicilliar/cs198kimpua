@@ -1,4 +1,4 @@
-[gd_scene load_steps=160 format=2]
+[gd_scene load_steps=211 format=2]
 
 [ext_resource path="res://assets/images/scenes/game_mode/2_major_second/indicators/timeout/1.png" type="Texture" id=1]
 [ext_resource path="res://assets/images/scenes/game_mode/2_major_second/indicators/wrong/1.png" type="Texture" id=2]
@@ -158,6 +158,57 @@
 [ext_resource path="res://assets/images/scenes/game_mode/3_major_third/indicators/9.png" type="Texture" id=156]
 [ext_resource path="res://assets/images/scenes/game_mode/3_major_third/indicators/14.png" type="Texture" id=157]
 [ext_resource path="res://assets/images/scenes/game_mode/3_major_third/indicators/15.png" type="Texture" id=158]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/16.png" type="Texture" id=159]
+[ext_resource path="res://assets/images/scenes/game_mode/1_main/indicators/correct/5.png" type="Texture" id=161]
+[ext_resource path="res://assets/images/scenes/game_mode/7_major_seventh/indicators/10.png" type="Texture" id=162]
+[ext_resource path="res://assets/images/scenes/game_mode/3_major_third/indicators/correct/5.png" type="Texture" id=164]
+[ext_resource path="res://assets/images/scenes/game_mode/5_perfect_fifth/indicators/12.png" type="Texture" id=165]
+[ext_resource path="res://assets/images/scenes/game_mode/4_perfect_fourth/indicators/15.png" type="Texture" id=166]
+[ext_resource path="res://assets/images/scenes/game_mode/7_major_seventh/indicators/9.png" type="Texture" id=167]
+[ext_resource path="res://assets/images/scenes/game_mode/5_perfect_fifth/indicators/9.png" type="Texture" id=168]
+[ext_resource path="res://assets/images/scenes/game_mode/7_major_seventh/indicators/correct/5.png" type="Texture" id=169]
+[ext_resource path="res://assets/images/scenes/game_mode/7_major_seventh/indicators/12.png" type="Texture" id=170]
+[ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/15.png" type="Texture" id=171]
+[ext_resource path="res://assets/images/scenes/game_mode/4_perfect_fourth/indicators/correct/5.png" type="Texture" id=172]
+[ext_resource path="res://assets/images/scenes/game_mode/5_perfect_fifth/indicators/correct/5.png" type="Texture" id=173]
+[ext_resource path="res://assets/images/scenes/game_mode/6_major_sixth/indicators/9.png" type="Texture" id=174]
+[ext_resource path="res://assets/images/scenes/game_mode/6_major_sixth/indicators/10.png" type="Texture" id=175]
+[ext_resource path="res://assets/images/scenes/game_mode/6_major_sixth/indicators/16.png" type="Texture" id=177]
+[ext_resource path="res://assets/images/scenes/game_mode/4_perfect_fourth/indicators/9.png" type="Texture" id=178]
+[ext_resource path="res://assets/images/scenes/game_mode/5_perfect_fifth/indicators/10.png" type="Texture" id=179]
+[ext_resource path="res://assets/images/scenes/game_mode/5_perfect_fifth/indicators/15.png" type="Texture" id=180]
+[ext_resource path="res://assets/images/scenes/game_mode/6_major_sixth/indicators/15.png" type="Texture" id=181]
+[ext_resource path="res://assets/images/scenes/game_mode/7_major_seventh/indicators/13.png" type="Texture" id=182]
+[ext_resource path="res://assets/images/scenes/game_mode/7_major_seventh/indicators/14.png" type="Texture" id=183]
+[ext_resource path="res://assets/images/scenes/game_mode/6_major_sixth/indicators/11.png" type="Texture" id=184]
+[ext_resource path="res://assets/images/scenes/game_mode/7_major_seventh/indicators/11.png" type="Texture" id=185]
+[ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/correct/5.png" type="Texture" id=186]
+[ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/9.png" type="Texture" id=187]
+[ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/12.png" type="Texture" id=188]
+[ext_resource path="res://assets/images/scenes/game_mode/6_major_sixth/indicators/correct/5.png" type="Texture" id=189]
+[ext_resource path="res://assets/images/scenes/game_mode/6_major_sixth/indicators/14.png" type="Texture" id=190]
+[ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/11.png" type="Texture" id=192]
+[ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/10.png" type="Texture" id=193]
+[ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/14.png" type="Texture" id=194]
+[ext_resource path="res://assets/images/scenes/game_mode/5_perfect_fifth/indicators/13.png" type="Texture" id=196]
+[ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/13.png" type="Texture" id=197]
+[ext_resource path="res://assets/images/scenes/game_mode/4_perfect_fourth/indicators/16.png" type="Texture" id=198]
+[ext_resource path="res://assets/images/scenes/game_mode/6_major_sixth/indicators/12.png" type="Texture" id=199]
+[ext_resource path="res://assets/images/scenes/game_mode/4_perfect_fourth/indicators/10.png" type="Texture" id=200]
+[ext_resource path="res://assets/images/scenes/game_mode/5_perfect_fifth/indicators/14.png" type="Texture" id=201]
+[ext_resource path="res://assets/images/scenes/game_mode/6_major_sixth/indicators/13.png" type="Texture" id=202]
+[ext_resource path="res://assets/images/scenes/game_mode/4_perfect_fourth/indicators/11.png" type="Texture" id=203]
+[ext_resource path="res://assets/images/scenes/game_mode/2_major_second/indicators/16.png" type="Texture" id=204]
+[ext_resource path="res://assets/images/scenes/game_mode/4_perfect_fourth/indicators/13.png" type="Texture" id=205]
+[ext_resource path="res://assets/images/scenes/game_mode/5_perfect_fifth/indicators/11.png" type="Texture" id=206]
+[ext_resource path="res://assets/images/scenes/game_mode/5_perfect_fifth/indicators/16.png" type="Texture" id=207]
+[ext_resource path="res://assets/images/scenes/game_mode/4_perfect_fourth/indicators/12.png" type="Texture" id=208]
+[ext_resource path="res://assets/images/scenes/game_mode/4_perfect_fourth/indicators/14.png" type="Texture" id=210]
+[ext_resource path="res://assets/images/scenes/game_mode/7_major_seventh/indicators/16.png" type="Texture" id=211]
+[ext_resource path="res://assets/images/scenes/game_mode/3_major_third/indicators/16.png" type="Texture" id=213]
+[ext_resource path="res://assets/images/scenes/game_mode/8_octave/indicators/16.png" type="Texture" id=215]
+[ext_resource path="res://assets/images/scenes/game_mode/7_major_seventh/indicators/15.png" type="Texture" id=216]
+[ext_resource path="res://assets/images/scenes/game_mode/2_major_second/indicators/correct/5.png" type="Texture" id=217]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -166,14 +217,124 @@ animations = [ {
 "name": "5_timed_out",
 "speed": 20.0
 }, {
-"frames": [ ExtResource( 20 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 28 ), ExtResource( 31 ), ExtResource( 21 ), ExtResource( 33 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 156 ), ExtResource( 155 ), ExtResource( 152 ), ExtResource( 154 ), ExtResource( 153 ), ExtResource( 157 ), ExtResource( 158 ) ],
+"frames": [ ExtResource( 122 ), ExtResource( 136 ), ExtResource( 130 ) ],
+"loop": true,
+"name": "1_timed_out",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 58 ), ExtResource( 64 ), ExtResource( 58 ), ExtResource( 64 ) ],
+"loop": true,
+"name": "7_wrong",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "2_timed_out",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 67 ), ExtResource( 67 ), ExtResource( 67 ), ExtResource( 76 ), ExtResource( 68 ), ExtResource( 71 ), ExtResource( 84 ), ExtResource( 70 ), ExtResource( 77 ), ExtResource( 85 ), ExtResource( 168 ), ExtResource( 179 ), ExtResource( 206 ), ExtResource( 165 ), ExtResource( 196 ), ExtResource( 201 ), ExtResource( 180 ), ExtResource( 207 ) ],
 "loop": false,
-"name": "3_default",
-"speed": 10.0
+"name": "5_default",
+"speed": 13.0
 }, {
 "frames": [ ExtResource( 126 ), ExtResource( 104 ), ExtResource( 126 ), ExtResource( 104 ) ],
 "loop": true,
 "name": "1_wrong",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 129 ), ExtResource( 18 ), ExtResource( 133 ), ExtResource( 135 ), ExtResource( 22 ), ExtResource( 78 ), ExtResource( 12 ), ExtResource( 138 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 142 ), ExtResource( 141 ), ExtResource( 145 ), ExtResource( 146 ), ExtResource( 159 ) ],
+"loop": false,
+"name": "1_default",
+"speed": 13.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 161 ) ],
+"loop": false,
+"name": "1_correct",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 173 ) ],
+"loop": false,
+"name": "5_correct",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 112 ), ExtResource( 113 ), ExtResource( 110 ), ExtResource( 118 ), ExtResource( 186 ) ],
+"loop": false,
+"name": "8_correct",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 102 ), ExtResource( 109 ), ExtResource( 123 ) ],
+"loop": true,
+"name": "6_timed_out",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 87 ), ExtResource( 96 ), ExtResource( 87 ), ExtResource( 96 ) ],
+"loop": true,
+"name": "8_wrong",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 7 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "4_timed_out",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 107 ), ExtResource( 114 ), ExtResource( 107 ), ExtResource( 114 ) ],
+"loop": true,
+"name": "3_wrong",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 44 ), ExtResource( 43 ), ExtResource( 41 ), ExtResource( 45 ), ExtResource( 217 ) ],
+"loop": false,
+"name": "2_correct",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 46 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 42 ), ExtResource( 40 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 19 ), ExtResource( 34 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 147 ), ExtResource( 151 ), ExtResource( 150 ), ExtResource( 148 ), ExtResource( 149 ), ExtResource( 204 ) ],
+"loop": false,
+"name": "2_default",
+"speed": 13.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 55 ), ExtResource( 36 ), ExtResource( 55 ) ],
+"loop": true,
+"name": "6_wrong",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 164 ) ],
+"loop": false,
+"name": "3_correct",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 128 ), ExtResource( 131 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "3_timed_out",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 93 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 94 ), ExtResource( 169 ) ],
+"loop": false,
+"name": "7_correct",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 134 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "7_timed_out",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 28 ), ExtResource( 31 ), ExtResource( 21 ), ExtResource( 33 ), ExtResource( 17 ), ExtResource( 156 ), ExtResource( 155 ), ExtResource( 152 ), ExtResource( 154 ), ExtResource( 153 ), ExtResource( 157 ), ExtResource( 158 ), ExtResource( 213 ) ],
+"loop": false,
+"name": "3_default",
+"speed": 13.0
+}, {
+"frames": [ ExtResource( 89 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 63 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 90 ), ExtResource( 83 ), ExtResource( 62 ), ExtResource( 174 ), ExtResource( 175 ), ExtResource( 184 ), ExtResource( 199 ), ExtResource( 202 ), ExtResource( 190 ), ExtResource( 181 ), ExtResource( 177 ) ],
+"loop": false,
+"name": "6_default",
+"speed": 13.0
+}, {
+"frames": [ ExtResource( 115 ), ExtResource( 115 ), ExtResource( 115 ), ExtResource( 111 ), ExtResource( 103 ), ExtResource( 105 ), ExtResource( 108 ), ExtResource( 116 ), ExtResource( 119 ), ExtResource( 106 ), ExtResource( 187 ), ExtResource( 193 ), ExtResource( 192 ), ExtResource( 188 ), ExtResource( 197 ), ExtResource( 194 ), ExtResource( 171 ), ExtResource( 215 ) ],
+"loop": false,
+"name": "8_default",
+"speed": 13.0
+}, {
+"frames": [ ExtResource( 65 ), ExtResource( 15 ), ExtResource( 65 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "4_wrong",
 "speed": 20.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 117 ), ExtResource( 2 ), ExtResource( 117 ) ],
@@ -181,145 +342,35 @@ animations = [ {
 "name": "2_wrong",
 "speed": 20.0
 }, {
-"frames": [ ExtResource( 95 ), ExtResource( 98 ), ExtResource( 101 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 120 ), ExtResource( 97 ), ExtResource( 121 ) ],
-"loop": false,
-"name": "7_default",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 107 ), ExtResource( 114 ), ExtResource( 107 ), ExtResource( 114 ) ],
-"loop": true,
-"name": "3_wrong",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 115 ), ExtResource( 111 ), ExtResource( 103 ), ExtResource( 105 ), ExtResource( 108 ), ExtResource( 116 ), ExtResource( 119 ), ExtResource( 106 ) ],
-"loop": false,
-"name": "8_default",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 24 ), ExtResource( 86 ), ExtResource( 24 ), ExtResource( 86 ) ],
 "loop": true,
 "name": "5_wrong",
 "speed": 20.0
 }, {
-"frames": [ ExtResource( 112 ), ExtResource( 113 ), ExtResource( 110 ), ExtResource( 118 ) ],
+"frames": [ ExtResource( 95 ), ExtResource( 95 ), ExtResource( 95 ), ExtResource( 98 ), ExtResource( 101 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 120 ), ExtResource( 97 ), ExtResource( 121 ), ExtResource( 167 ), ExtResource( 162 ), ExtResource( 185 ), ExtResource( 170 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 216 ), ExtResource( 211 ) ],
 "loop": false,
-"name": "8_correct",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 87 ), ExtResource( 96 ), ExtResource( 87 ), ExtResource( 96 ) ],
-"loop": true,
-"name": "8_wrong",
-"speed": 20.0
+"name": "7_default",
+"speed": 13.0
 }, {
 "frames": [ ExtResource( 125 ), ExtResource( 127 ), ExtResource( 137 ) ],
 "loop": true,
 "name": "8_timed_out",
 "speed": 20.0
 }, {
-"frames": [ ExtResource( 93 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 94 ) ],
-"loop": false,
-"name": "7_correct",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "2_timed_out",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 46 ), ExtResource( 42 ), ExtResource( 40 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 19 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 147 ), ExtResource( 151 ), ExtResource( 150 ), ExtResource( 148 ), ExtResource( 149 ) ],
-"loop": false,
-"name": "2_default",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 23 ), ExtResource( 7 ), ExtResource( 25 ) ],
-"loop": true,
-"name": "4_timed_out",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": false,
-"name": "1_correct",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 58 ), ExtResource( 64 ), ExtResource( 58 ), ExtResource( 64 ) ],
-"loop": true,
-"name": "7_wrong",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 44 ), ExtResource( 43 ), ExtResource( 41 ), ExtResource( 45 ) ],
-"loop": false,
-"name": "2_correct",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 65 ), ExtResource( 15 ), ExtResource( 65 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "4_wrong",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 69 ), ExtResource( 79 ), ExtResource( 88 ), ExtResource( 66 ) ],
+"frames": [ ExtResource( 69 ), ExtResource( 79 ), ExtResource( 88 ), ExtResource( 66 ), ExtResource( 189 ) ],
 "loop": false,
 "name": "6_correct",
 "speed": 15.0
 }, {
-"frames": [ ExtResource( 36 ), ExtResource( 55 ), ExtResource( 36 ), ExtResource( 55 ) ],
-"loop": true,
-"name": "6_wrong",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 102 ), ExtResource( 109 ), ExtResource( 123 ) ],
-"loop": true,
-"name": "6_timed_out",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 16 ), ExtResource( 129 ), ExtResource( 18 ), ExtResource( 133 ), ExtResource( 135 ), ExtResource( 22 ), ExtResource( 78 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 138 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 142 ), ExtResource( 141 ), ExtResource( 145 ), ExtResource( 146 ) ],
+"frames": [ ExtResource( 50 ), ExtResource( 50 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 60 ), ExtResource( 48 ), ExtResource( 59 ), ExtResource( 47 ), ExtResource( 56 ), ExtResource( 49 ), ExtResource( 178 ), ExtResource( 200 ), ExtResource( 203 ), ExtResource( 208 ), ExtResource( 205 ), ExtResource( 210 ), ExtResource( 166 ), ExtResource( 198 ) ],
 "loop": false,
-"name": "1_default",
-"speed": 10.0
+"name": "4_default",
+"speed": 13.0
 }, {
-"frames": [ ExtResource( 128 ), ExtResource( 131 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "3_timed_out",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ) ],
-"loop": false,
-"name": "5_correct",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 54 ), ExtResource( 61 ), ExtResource( 52 ), ExtResource( 53 ) ],
+"frames": [ ExtResource( 54 ), ExtResource( 61 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 172 ) ],
 "loop": false,
 "name": "4_correct",
 "speed": 15.0
-}, {
-"frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 27 ), ExtResource( 26 ) ],
-"loop": false,
-"name": "3_correct",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 67 ), ExtResource( 76 ), ExtResource( 68 ), ExtResource( 71 ), ExtResource( 84 ), ExtResource( 70 ), ExtResource( 77 ), ExtResource( 85 ) ],
-"loop": false,
-"name": "5_default",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 89 ), ExtResource( 63 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 90 ), ExtResource( 83 ), ExtResource( 62 ) ],
-"loop": false,
-"name": "6_default",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 134 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "7_timed_out",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 122 ), ExtResource( 136 ), ExtResource( 130 ) ],
-"loop": true,
-"name": "1_timed_out",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 60 ), ExtResource( 48 ), ExtResource( 59 ), ExtResource( 47 ), ExtResource( 56 ), ExtResource( 49 ) ],
-"loop": false,
-"name": "4_default",
-"speed": 5.0
 } ]
 
 [node name="click_indicator" type="Node2D"]
@@ -327,7 +378,6 @@ script = ExtResource( 13 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "2_timed_out"
-frame = 2
+animation = "1_default"
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
