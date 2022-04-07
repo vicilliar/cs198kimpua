@@ -1,41 +1,36 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://scenes/interval_popup.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/scenes/interval_names/2/4.png" type="Texture" id=2]
-[ext_resource path="res://assets/images/scenes/interval_names/2/1.png" type="Texture" id=3]
-[ext_resource path="res://assets/images/scenes/interval_names/2/2.png" type="Texture" id=4]
-[ext_resource path="res://assets/images/scenes/interval_names/2/3.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/scenes/interval_names/3/1.png" type="Texture" id=3]
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Node2D
+
+var to_remove
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	to_remove = false
+	$interval.hide()
+
+func final_animation(anim):
+	$interval.show()
+	$interval.set_animation(str(anim))
+	$interval.play()
+	to_remove = true
+
+
+func _on_feedback_animation_finished():
+	if to_remove:
+		$interval.stop()
+		$interval.hide()
+"
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [  ],
 "loop": true,
-"name": "1",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ],
-"loop": true,
-"name": "2",
-"speed": 15.0
-}, {
-"frames": [  ],
-"loop": true,
-"name": "8",
-"speed": 5.0
-}, {
-"frames": [  ],
-"loop": true,
 "name": "7",
-"speed": 5.0
-}, {
-"frames": [  ],
-"loop": true,
-"name": "6",
-"speed": 5.0
-}, {
-"frames": [  ],
-"loop": true,
-"name": "3",
 "speed": 5.0
 }, {
 "frames": [  ],
@@ -47,10 +42,35 @@ animations = [ {
 "loop": true,
 "name": "5",
 "speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "1",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "8",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "3",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "6",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "2",
+"speed": 10.0
 } ]
 
 [node name="interval_popup" type="Node2D"]
-script = ExtResource( 1 )
+script = SubResource( 2 )
 
 [node name="interval" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )

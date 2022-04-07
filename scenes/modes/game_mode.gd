@@ -52,7 +52,6 @@ func _process(delta):
 	
 func _on_reskin(interval):
 	# print("Interval check: ", interval)
-	$interval_popup.final_animation(interval['folder'])
 	get_node("game_mode_header").reskin_header(interval, "game_mode")
 	current_interval_state = interval['folder']
 	for x in self.get_children():
