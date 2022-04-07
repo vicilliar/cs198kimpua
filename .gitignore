@@ -1,5 +1,6 @@
 .import/*
 assets/*
+exports/*
 
 # Built application files
 *.apk
