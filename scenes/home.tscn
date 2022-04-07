@@ -23,13 +23,13 @@ animations = [ {
 script = ExtResource( 6 )
 
 [node name="background" type="Sprite" parent="."]
-position = Vector2( 962, 540 )
+position = Vector2( 960, 540 )
 texture = ExtResource( 2 )
 
 [node name="logo" type="AnimatedSprite" parent="."]
 position = Vector2( 635, 547 )
 frames = SubResource( 1 )
-frame = 1
+frame = 7
 playing = true
 
 [node name="button_game_mode" type="TouchScreenButton" parent="."]

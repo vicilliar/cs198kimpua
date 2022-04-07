@@ -15,7 +15,11 @@ func _on_button_resume_pressed():
 	emit_signal("resume")
 
 func _on_slider_bgm_value_changed(value):
+	if (value == -40):
+		value = -80
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("BGM"), value)
 
 func _on_slider_keys_value_changed(value):
+	if (value == -40):
+		value = -80
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Keys"), value)
