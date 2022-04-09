@@ -235,7 +235,7 @@ const levels = {
 				
 				# Bridge
 				{"name": "G4",	"hold": false, "start": 480 + 22.130, "length": 0},
-				{"name": "C5 ",	"hold": false, "start": 480 + 22.130, "length": 0},
+				{"name": "C5",	"hold": false, "start": 480 + 22.130, "length": 0},
 				{"name": "A4",	"hold": false, "start": 480 + 22.829, "length": 0},
 				{"name": "E4",	"hold": false, "start": 480 + 23.535, "length": 0},
 				{"name": "D4",	"hold": false, "start": 480 + 24.270, "length": 0},
