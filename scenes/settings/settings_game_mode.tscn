@@ -46,9 +46,9 @@ custom_icons/grabber = ExtResource( 3 )
 custom_styles/slider = SubResource( 1 )
 custom_styles/grabber_area_highlight = SubResource( 2 )
 custom_styles/grabber_area = SubResource( 3 )
-min_value = -40.0
-max_value = 0.0
-rounded = true
+max_value = 1.0
+step = 0.01
+value = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -64,9 +64,9 @@ custom_icons/grabber = ExtResource( 3 )
 custom_styles/slider = SubResource( 1 )
 custom_styles/grabber_area_highlight = SubResource( 2 )
 custom_styles/grabber_area = SubResource( 3 )
-min_value = -40.0
-max_value = 0.0
-rounded = true
+max_value = 1.0
+step = 0.01
+value = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -82,9 +82,9 @@ custom_icons/grabber = ExtResource( 3 )
 custom_styles/slider = SubResource( 1 )
 custom_styles/grabber_area_highlight = SubResource( 2 )
 custom_styles/grabber_area = SubResource( 3 )
-min_value = -40.0
-max_value = 0.0
-rounded = true
+max_value = 1.0
+step = 0.01
+value = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -6,34 +6,28 @@ var exit_type
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$slider_keys.value = AudioServer.get_bus_volume_db(
+	$slider_keys.value = db2linear(AudioServer.get_bus_volume_db(
 		AudioServer.get_bus_index("Keys")
-	)
-	$slider_bgm.value = AudioServer.get_bus_volume_db(
+	))
+	$slider_bgm.value = db2linear(AudioServer.get_bus_volume_db(
 		AudioServer.get_bus_index("BGM")
-	)
-	$slider_sfx.value = AudioServer.get_bus_volume_db(
+	))
+	$slider_sfx.value = db2linear(AudioServer.get_bus_volume_db(
 		AudioServer.get_bus_index("SFX")
-	)
+	))
 
 func _on_button_resume_pressed():
 	emit_signal("resume")
 	get_tree().get_root().get_node("persistent/sfx_button_2").play()
 
 func _on_slider_bgm_value_changed(value):
-	if (value == -40):
-		value = -80
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("BGM"), value)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("BGM"), linear2db(value))
 
 func _on_slider_keys_value_changed(value):
-	if (value == -40):
-		value = -80
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Keys"), value)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Keys"), linear2db(value))
 
 func _on_slider_sfx_value_changed(value):
-	if (value == -40):
-		value = -80
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), value)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear2db(value))
 
 func _on_button_end_pressed():
 	get_tree().get_root().get_node("persistent/sfx_button_3").play()
