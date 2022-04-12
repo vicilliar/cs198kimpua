@@ -86,18 +86,22 @@ bus = "SFX"
 [node name="feedback_streak_2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 21 )
 volume_db = -6.0
+bus = "SFX"
 
 [node name="feedback_streak_3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 20 )
 volume_db = -6.0
+bus = "SFX"
 
 [node name="feedback_streak_4" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 18 )
 volume_db = -6.0
+bus = "SFX"
 
 [node name="feedback_streak_lost" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 19 )
 volume_db = -4.0
+bus = "SFX"
 
 [node name="timer_progress_bar" type="TextureProgress" parent="."]
 margin_left = 1545.0

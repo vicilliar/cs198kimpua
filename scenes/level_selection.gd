@@ -17,11 +17,11 @@ func _ready():
 		
 	var level_high_2 = {}
 	for star in medium_stars:
-		level_high_2[star] = floor(medium_stars[star] * Level_maps.levels[1]["max_score"])
+		level_high_2[star] = floor(medium_stars[star] * Level_maps.levels[2]["max_score"])
 		
 	var level_high_3 = {}
 	for star in high_stars:
-		level_high_3[star] = floor(high_stars[star] * Level_maps.levels[1]["max_score"])
+		level_high_3[star] = floor(high_stars[star] * Level_maps.levels[3]["max_score"])
 	
 	
 

@@ -48,7 +48,7 @@ func _process(delta):
 	# new approach
 	elapsed_time = $level_bgm_player.get_playback_position() + AudioServer.get_time_since_last_mix() - AudioServer.get_output_latency()
 	
-	while (next_note_index < len(note_list)) and (abs(elapsed_time - note_list[next_note_index]["start"]) < delta):
+	while (next_note_index < len(note_list)) and (abs(elapsed_time - note_list[next_note_index]["start"]) < delta*1.8):
 		# Spawn the next note!
 		generate_new_note(note_list[next_note_index])
 		next_note_index += 1
