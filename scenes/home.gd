@@ -1,8 +1,7 @@
 extends Node
 
 func _ready():
-	global.high_scores.medium = 49500
-	global.save_scores()
+	pass
 	
 
 func on_zen_mode_pressed():
