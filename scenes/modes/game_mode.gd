@@ -41,7 +41,13 @@ func _ready():
 
 func _process(delta):
 	# Check if there's a note to spawn
-	elapsed_time = level_music_time - $level_music_timer.get_time_left()
+	
+	# old approach
+	# elapsed_time = level_music_time - $level_music_timer.get_time_left()
+	
+	# new approach
+	elapsed_time = $level_bgm_player.get_playback_position() + AudioServer.get_time_since_last_mix() - AudioServer.get_output_latency()
+	
 	while (next_note_index < len(note_list)) and (abs(elapsed_time - note_list[next_note_index]["start"]) < delta):
 		# Spawn the next note!
 		generate_new_note(note_list[next_note_index])
@@ -116,7 +122,7 @@ func generate_new_note(note):
 	new_click_indicator.position.y = Consts.click_y			# constant y
 	add_child(new_click_indicator)
 	
-	# spawn a timer for 2s
+	# spawn a timer for appropriate length
 	var new_click_timer = Timer.new()
 	add_child(new_click_timer)
 	new_click_timer.connect("timeout", self,"_on_click_timer_timeout", [new_click_timer])
@@ -128,7 +134,6 @@ func generate_new_note(note):
 						"click_indicator": new_click_indicator,
 						"click_timer": new_click_timer
 						})
-	print("Spawned new note. Live Notes: " + str(live_notes))
 
 
 func update_scoreboard():

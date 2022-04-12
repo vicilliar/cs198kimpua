@@ -27,5 +27,5 @@ const C4_click_position = 120
 const click_y = 980
 const key_width = 240
 
-const click_timer_length = 1.7
-const correct_click_window = 0.6
+const click_timer_length = 1.9
+const correct_click_window = 0.75
