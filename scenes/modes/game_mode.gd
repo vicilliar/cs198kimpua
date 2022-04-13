@@ -120,11 +120,11 @@ func generate_new_note(note):
 	new_click_indicator.interval_state = current_interval_state
 	new_click_indicator.position.x = Consts.C4_click_position + (Consts.key_width * 	Consts.notes.find(note_name))		# x is factor of what note it is
 	new_click_indicator.position.y = Consts.click_y			# constant y
-	add_child(new_click_indicator)
+	$keyboard.add_child(new_click_indicator)
 	
 	# spawn a timer for appropriate length
 	var new_click_timer = Timer.new()
-	add_child(new_click_timer)
+	$keyboard.add_child(new_click_timer)
 	new_click_timer.connect("timeout", self,"_on_click_timer_timeout", [new_click_timer])
 	new_click_timer.set_wait_time(Consts.click_timer_length)
 	new_click_timer.start()
