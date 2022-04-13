@@ -12,8 +12,15 @@ var is_correct_interval = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# Set curr_key for all 8 keys
+	# Set bitmap for all 8 keys
+	
+	# test = load("res://assets/images/scenes/key_bitmap/C4.png")
+	#C4/key_touch_button.set_bitmask(test)
+	var bit_folder = "res://assets/images/scenes/key_bitmap/"
 	for i in range(8):
 		get_node(Consts.notes[i]).set_curr_key(i)
+		var bitmap = load(bit_folder + Consts.notes[i] + ".png")
+		get_node(Consts.notes[i]).get_node("key_touch_button").set_bitmask(bitmap)
 	current_mode = get_parent().get_name()
 
 func check_reskin(feedback):
