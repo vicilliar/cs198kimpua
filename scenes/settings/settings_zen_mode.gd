@@ -9,6 +9,9 @@ func _ready():
 	$slider_bgm.value = db2linear(AudioServer.get_bus_volume_db(
 		AudioServer.get_bus_index("BGM")
 	))
+	$slider_sfx.value = db2linear(AudioServer.get_bus_volume_db(
+		AudioServer.get_bus_index("SFX")
+	))
 
 func _on_button_resume_pressed():
 	get_tree().get_root().get_node("persistent/sfx_button_2").play()

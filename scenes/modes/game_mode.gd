@@ -41,14 +41,10 @@ func _ready():
 
 func _process(delta):
 	# Check if there's a note to spawn
-	
-	# old approach
-	# elapsed_time = level_music_time - $level_music_timer.get_time_left()
-	
-	# new approach
 	elapsed_time = $level_bgm_player.get_playback_position() + AudioServer.get_time_since_last_mix() - AudioServer.get_output_latency()
 	
-	while (next_note_index < len(note_list)) and (abs(elapsed_time - note_list[next_note_index]["start"]) < delta*1.8):
+	# while (next_note_index < len(note_list)) and (abs(elapsed_time - note_list[next_note_index]["start"]) < delta*1.8):
+	while (next_note_index < len(note_list)) and (elapsed_time >= note_list[next_note_index]["start"]):
 		# Spawn the next note!
 		generate_new_note(note_list[next_note_index])
 		next_note_index += 1
