@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="CS198 Kim Pua"
-run/main_scene="res://scenes/home.tscn"
+run/main_scene="res://scenes/start.tscn"
 config/icon="res://icon.png"
 
 [autoload]
