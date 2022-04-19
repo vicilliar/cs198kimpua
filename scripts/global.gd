@@ -4,12 +4,43 @@ extends Node
 var current_level = 1	# level 1 by default
 var current_score
 var current_highest_streak
+var total_time_played
+var current_time = 0
+var _timer = null
 
 var high_scores = {
 	"easy": 0,
 	"medium": 0,
 	"hard": 0
 }
+
+func _ready():
+	load_time()
+	_timer = Timer.new()
+	add_child(_timer)
+	
+	_timer.connect("timeout", self, "_on_Timer_timeout")
+	_timer.set_wait_time(1.0)
+	_timer.set_one_shot(false) # Make sure it loops
+	_timer.start()
+	
+func _on_Timer_timeout():
+	current_time += 1
+	save_time()
+	
+func save_time():
+	var time_file = File.new()
+	time_file.open("user://time_played.cfg", File.WRITE)
+	time_file.store_line(str(current_time + total_time_played))
+	time_file.close()
+	
+func load_time():
+	var time_file = File.new()
+	if not time_file.file_exists("user://time_played.cfg"):
+		save_time()
+		return
+	time_file.open("user://time_played.cfg", File.READ)
+	total_time_played = int(time_file.get_as_text())
 
 func save_scores():
 	var score_file = File.new()
