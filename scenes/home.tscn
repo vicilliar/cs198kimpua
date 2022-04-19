@@ -34,7 +34,7 @@ texture = ExtResource( 2 )
 [node name="logo" type="AnimatedSprite" parent="."]
 position = Vector2( 635, 547 )
 frames = SubResource( 1 )
-frame = 7
+frame = 1
 playing = true
 
 [node name="button_game_mode" type="TouchScreenButton" parent="."]
@@ -57,8 +57,6 @@ margin_right = 1319.0
 margin_bottom = 1040.0
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
-bbcode_text = "[center]20 mins played"
-text = "20 mins played"
 __meta__ = {
 "_edit_use_anchors_": false
 }
