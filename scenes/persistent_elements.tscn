@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://assets/audio/bgm/bgm_main_menu.mp3" type="AudioStream" id=1]
+[ext_resource path="res://assets/audio/bgm/bgm_main_menu.wav" type="AudioStream" id=1]
 [ext_resource path="res://assets/audio/sound_bytes/feedback/sfx_button_click.wav" type="AudioStream" id=2]
 [ext_resource path="res://assets/audio/sound_bytes/feedback/sfx_zen_button.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/audio/sound_bytes/feedback/sfx_pause.wav" type="AudioStream" id=4]
@@ -15,7 +15,7 @@ pause_mode = 2
 
 [node name="main_menu_music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
-volume_db = -1.0
+volume_db = -5.0
 autoplay = true
 
 [node name="sfx_button_1" type="AudioStreamPlayer" parent="."]
@@ -31,24 +31,26 @@ bus = "SFX"
 
 [node name="sfx_button_3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-volume_db = -11.5
+volume_db = -13.0
 bus = "SFX"
 
 [node name="sfx_pause_button" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-volume_db = -14.0
+volume_db = -16.0
 bus = "SFX"
 
 [node name="sfx_win_1_star" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+volume_db = -10.0
 
 [node name="sfx_win_2_star" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
+volume_db = -10.0
 
 [node name="sfx_win_3_star" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
-volume_db = 0.5
+volume_db = -8.0
 
 [node name="sfx_lose_game" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
-volume_db = 0.5
+volume_db = -4.0

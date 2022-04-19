@@ -4,7 +4,8 @@ const levels = {
 	1: {
 		"name": "easy",
 		"bg_music": "res://assets/audio/bgm/bgm_level_1.wav",
-		"level_time": 134.5, 									# time before level ends
+		"volume": 2,
+		"level_time": 127, 									# time before level ends
 		"start_time_offset": -3.116,						# offset between written start times and actual start times
 		# Required scores to get star ratings
 		# TODO: Change to actual star ranges
@@ -127,8 +128,9 @@ const levels = {
 	2: {
 		"name": "medium",
 		"bg_music": "res://assets/audio/bgm/bgm_level_2.wav",
-		"level_time": 131, 									# time before level ends
-		"start_time_offset": -424.386,						# offset between written start times and actual start times
+		"volume": -4,
+		"level_time": 130, 									# time before level ends
+		"start_time_offset": -425.41,						# offset between written start times and actual start times
 		# Required scores to get star ratings
 		"max_score": 49500,
 		"star_scores": {"3_0": 0.9, "2_5": 0.8, "2_0": 0.7, "1_5": 0.6, "1_0": 0.5},
@@ -319,11 +321,12 @@ const levels = {
 	3: {
 		"name": "hard",
 		"bg_music": "res://assets/audio/bgm/bgm_level_3.wav",
-		"level_time": 152, 									# time before level ends
-		"start_time_offset": -202.536,						# offset between written start times and actual start times
+		"volume": -5,
+		"level_time": 151, 									# time before level ends
+		"start_time_offset": -202.719,						# offset between written start times and actual start times
 		# Required scores to get star ratings
 		# TODO: Change to actual star ranges
-		"max_score": 113900,
+		"max_score": 109100,
 		"star_scores": {"3_0": 0.9, "2_5": 0.8, "2_0": 0.7, "1_5": 0.6, "1_0": 0.5},
 		"notes":
 			[
@@ -339,7 +342,7 @@ const levels = {
 				{"name": "G4",	"hold": false, "start": 180 + 28.599, "length": 0},
 				{"name": "A4",	"hold": false, "start": 180 + 28.599, "length": 0},
 				
-				{"name": "B4",	"hold": false, "start": 180 + 29.538, "length": 0},
+				{"name": "B4",	"hold": false, "start": 180 + 29.778, "length": 0},
 				{"name": "A4",	"hold": false, "start": 180 + 30.083, "length": 0},
 				{"name": "G4",	"hold": false, "start": 180 + 30.325, "length": 0},
 				
@@ -412,14 +415,10 @@ const levels = {
 				{"name": "D4",	"hold": false, "start": 180 + 51.074, "length": 0},
 				{"name": "A4",	"hold": false, "start": 180 + 51.074, "length": 0},
 				{"name": "G4",	"hold": false, "start": 180 + 51.317, "length": 0},
-				{"name": "D4",	"hold": false, "start": 180 + 51.857, "length": 0},
-				{"name": "A4",	"hold": false, "start": 180 + 51.857, "length": 0},
-				{"name": "G4",	"hold": false, "start": 180 + 52.124, "length": 0},
 				{"name": "D4",	"hold": false, "start": 180 + 52.590, "length": 0},
 				{"name": "A4",	"hold": false, "start": 180 + 52.590, "length": 0},
 				{"name": "G4",	"hold": false, "start": 180 + 52.820, "length": 0},
 				
-				{"name": "D4",	"hold": false, "start": 180 + 53.337, "length": 0},
 				{"name": "B4",	"hold": false, "start": 180 + 53.337, "length": 0},
 				{"name": "D4",	"hold": false, "start": 180 + 53.842, "length": 0},
 				{"name": "A4",	"hold": false, "start": 180 + 53.842, "length": 0},
@@ -438,8 +437,8 @@ const levels = {
 				{"name": "E4",	"hold": false, "start": 180 + 57.806, "length": 0},
 				{"name": "G4",	"hold": false, "start": 180 + 58.083, "length": 0},
 				{"name": "A4",	"hold": false, "start": 180 + 58.317, "length": 0},
-				{"name": "A4",	"hold": false, "start": 180 + 58.572, "length": 0},
-				{"name": "B4",	"hold": false, "start": 180 + 58.801, "length": 0},
+				{"name": "B4",	"hold": false, "start": 180 + 58.572, "length": 0},
+				{"name": "C5",	"hold": false, "start": 180 + 58.801, "length": 0},
 				
 				# Verse 2 COPY PASTE
 				{"name": "G4",	"hold": false, "start": 31.993 + 180 + 27.103, "length": 0},
@@ -449,7 +448,7 @@ const levels = {
 				{"name": "G4",	"hold": false, "start": 31.993 + 180 + 28.599, "length": 0},
 				{"name": "A4",	"hold": false, "start": 31.993 + 180 + 28.599, "length": 0},
 				
-				{"name": "B4",	"hold": false, "start": 31.993 + 180 + 29.538, "length": 0},
+				{"name": "B4",	"hold": false, "start": 31.993 + 180 + 29.778, "length": 0},
 				{"name": "A4",	"hold": false, "start": 31.993 + 180 + 30.083, "length": 0},
 				{"name": "G4",	"hold": false, "start": 31.993 + 180 + 30.325, "length": 0},
 				
@@ -522,14 +521,10 @@ const levels = {
 				{"name": "D4",	"hold": false, "start": 31.993 + 180 + 51.074, "length": 0},
 				{"name": "A4",	"hold": false, "start": 31.993 + 180 + 51.074, "length": 0},
 				{"name": "G4",	"hold": false, "start": 31.993 + 180 + 51.317, "length": 0},
-				{"name": "D4",	"hold": false, "start": 31.993 + 180 + 51.857, "length": 0},
-				{"name": "A4",	"hold": false, "start": 31.993 + 180 + 51.857, "length": 0},
-				{"name": "G4",	"hold": false, "start": 31.993 + 180 + 52.124, "length": 0},
 				{"name": "D4",	"hold": false, "start": 31.993 + 180 + 52.590, "length": 0},
 				{"name": "A4",	"hold": false, "start": 31.993 + 180 + 52.590, "length": 0},
 				{"name": "G4",	"hold": false, "start": 31.993 + 180 + 52.820, "length": 0},
 				
-				{"name": "D4",	"hold": false, "start": 31.993 + 180 + 53.337, "length": 0},
 				{"name": "B4",	"hold": false, "start": 31.993 + 180 + 53.337, "length": 0},
 				{"name": "D4",	"hold": false, "start": 31.993 + 180 + 53.842, "length": 0},
 				{"name": "A4",	"hold": false, "start": 31.993 + 180 + 53.842, "length": 0},
@@ -596,7 +591,7 @@ const levels = {
 				{"name": "G4",	"hold": false, "start": 95.993 + 180 + 28.599, "length": 0},
 				{"name": "A4",	"hold": false, "start": 95.993 + 180 + 28.599, "length": 0},
 				
-				{"name": "B4",	"hold": false, "start": 95.993 + 180 + 29.538, "length": 0},
+				{"name": "B4",	"hold": false, "start": 95.993 + 180 + 29.778, "length": 0},
 				{"name": "A4",	"hold": false, "start": 95.993 + 180 + 30.083, "length": 0},
 				{"name": "G4",	"hold": false, "start": 95.993 + 180 + 30.325, "length": 0},
 				
@@ -669,14 +664,10 @@ const levels = {
 				{"name": "D4",	"hold": false, "start": 95.993 + 180 + 51.074, "length": 0},
 				{"name": "A4",	"hold": false, "start": 95.993 + 180 + 51.074, "length": 0},
 				{"name": "G4",	"hold": false, "start": 95.993 + 180 + 51.317, "length": 0},
-				{"name": "D4",	"hold": false, "start": 95.993 + 180 + 51.857, "length": 0},
-				{"name": "A4",	"hold": false, "start": 95.993 + 180 + 51.857, "length": 0},
-				{"name": "G4",	"hold": false, "start": 95.993 + 180 + 52.124, "length": 0},
 				{"name": "D4",	"hold": false, "start": 95.993 + 180 + 52.590, "length": 0},
 				{"name": "A4",	"hold": false, "start": 95.993 + 180 + 52.590, "length": 0},
 				{"name": "G4",	"hold": false, "start": 95.993 + 180 + 52.820, "length": 0},
 				
-				{"name": "D4",	"hold": false, "start": 95.993 + 180 + 53.337, "length": 0},
 				{"name": "B4",	"hold": false, "start": 95.993 + 180 + 53.337, "length": 0},
 				{"name": "D4",	"hold": false, "start": 95.993 + 180 + 53.842, "length": 0},
 				{"name": "A4",	"hold": false, "start": 95.993 + 180 + 53.842, "length": 0},

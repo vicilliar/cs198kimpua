@@ -95,6 +95,7 @@ func initialize(level_num):
 	
 	var curr_bgm = load(Level_maps.levels[level_num]["bg_music"])
 	$level_bgm_player.stream = curr_bgm
+	$level_bgm_player.set_volume_db(Level_maps.levels[level_num]["volume"])
 	$level_bgm_player.play()
 	
 	level_music_time = Level_maps.levels[level_num]["level_time"]
@@ -197,7 +198,10 @@ func _on_keyboard_key_played(key):
 				if current_streak in Consts.combo_meter:
 					current_combo_score = Consts.combo_meter[current_streak]['points']
 					current_combo_multiplier = Consts.combo_meter[current_streak]['multiplier']
+					# streak sound gets louder as you get higher!
+					feedback_sound_correct.set_volume_db(Consts.combo_meter[current_streak]['sfx_volume'])
 					get_node("feedback_streak_" + str(current_combo_multiplier)).play()
+					
 				
 				# Play consistent streak sound
 				if current_streak >= 10:
