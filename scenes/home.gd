@@ -1,7 +1,19 @@
 extends Node
 
+var secs_played
+var mins_played
+
 func _ready():
-	pass
+	global.load_time()
+	secs_played = global.total_time_played
+	
+	mins_played = secs_played/60
+	
+	if mins_played and mins_played > 0:
+		if mins_played == 1:
+			$time_played.set_bbcode("[center]" + str(mins_played) + " minute played[/center]")
+		else:
+			$time_played.set_bbcode("[center]" + str(mins_played) + " minutes played[/center]")
 	
 
 func on_zen_mode_pressed():
