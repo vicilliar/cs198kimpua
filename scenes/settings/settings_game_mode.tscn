@@ -116,3 +116,4 @@ visible = false
 [connection signal="cancel_end_game" from="confirm_action" to="." method="_on_confirm_action_cancel_end_game"]
 [connection signal="confirm_end_game" from="confirm_action" to="." method="_on_confirm_action_confirm_end_game"]
 [connection signal="confirm_restart" from="confirm_action" to="." method="_on_confirm_action_confirm_restart"]
+[connection signal="unpause_settings" from="confirm_action" to="." method="_on_confirm_action_unpause_settings"]

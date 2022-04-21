@@ -33,6 +33,9 @@ func _on_button_end_pressed():
 	get_tree().get_root().get_node("persistent/sfx_button_3").play()
 	exit_type = "exit"
 	get_node("confirm_action").show()
+	$slider_keys.set_pause_mode(1)
+	$slider_bgm.set_pause_mode(1)
+	$slider_sfx.set_pause_mode(1)
 
 func _on_confirm_action_cancel_end_game():
 	get_node("confirm_action").hide()
@@ -46,7 +49,22 @@ func _on_button_restart_pressed():
 	get_tree().get_root().get_node("persistent/sfx_button_3").play()
 	exit_type = "restart"
 	get_node("confirm_action").show()
+	$slider_keys.set_pause_mode(1)
+	$slider_bgm.set_pause_mode(1)
+	$slider_sfx.set_pause_mode(1)
+	$button_resume.set_pause_mode(1)
+	$button_restart.set_pause_mode(1)
+	$button_end.set_pause_mode(1)
 
 func _on_confirm_action_confirm_restart():
 	emit_signal("resume")
 	get_tree().change_scene("res://scenes/modes/game_mode.tscn")
+
+
+func _on_confirm_action_unpause_settings():
+	$slider_keys.set_pause_mode(2)
+	$slider_bgm.set_pause_mode(2)
+	$slider_sfx.set_pause_mode(2)
+	$button_resume.set_pause_mode(2)
+	$button_restart.set_pause_mode(2)
+	$button_end.set_pause_mode(2)

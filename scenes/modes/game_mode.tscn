@@ -207,7 +207,6 @@ pause_mode = 2
 visible = false
 
 [node name="confirm_action" parent="." instance=ExtResource( 13 )]
-pause_mode = 2
 visible = false
 
 [node name="keyboard_reset" type="Timer" parent="."]

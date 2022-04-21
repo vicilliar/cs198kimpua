@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/settings/confirm_action.gd" type="Script" id=5]
 
 [node name="confirm_action" type="Node2D"]
+pause_mode = 2
 script = ExtResource( 5 )
 
 [node name="Main" type="Sprite" parent="."]
@@ -14,12 +15,12 @@ position = Vector2( 960, 540 )
 texture = ExtResource( 3 )
 
 [node name="button_exit" type="TouchScreenButton" parent="."]
-position = Vector2( 544, 509 )
+position = Vector2( 544, 489 )
 normal = ExtResource( 4 )
 bitmask = ExtResource( 1 )
 
 [node name="button_cancel" type="TouchScreenButton" parent="."]
-position = Vector2( 967, 509 )
+position = Vector2( 967, 489 )
 normal = ExtResource( 2 )
 bitmask = ExtResource( 1 )
 
