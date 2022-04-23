@@ -69,7 +69,7 @@ func offset_note_timings(raw_note_list, offset):
 			{
 				"name": note["name"],
 				"hold": note["hold"],
-				"start": note["start"] + offset - (Consts.click_timer_length - (Consts.correct_click_window / 2)),
+				"start": note["start"] + offset,
 				"length": note["length"]
 			}
 		)

@@ -18,14 +18,14 @@ const intervals = {
 # Streak needed: {points to add, additional score multiplier value}
 # Following Guitar Hero streak mechanic
 const combo_meter = {
-	10: {'points': 200,		'multiplier': 2,	'sfx_volume': -18},
+	10: {'points': 200,		'multiplier': 2,	'sfx_volume': -17},
 	20: {'points': 300,		'multiplier': 3,	'sfx_volume': -15.5},
-	30: {'points': 400,		'multiplier': 4,	'sfx_volume': -12},
+	30: {'points': 400,		'multiplier': 4,	'sfx_volume': -14.5},
 }
 
 const C4_click_position = 120
 const click_y = 980
 const key_width = 240
 
-const click_timer_length = 1.9
-const correct_click_window = 0.75
+const click_timer_length = 1.75
+const correct_click_window = 0.72

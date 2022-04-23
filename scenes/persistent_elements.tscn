@@ -49,7 +49,7 @@ volume_db = -10.0
 
 [node name="sfx_win_3_star" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
-volume_db = -8.0
+volume_db = -8.5
 
 [node name="sfx_lose_game" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )

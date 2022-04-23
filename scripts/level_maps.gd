@@ -4,9 +4,9 @@ const levels = {
 	1: {
 		"name": "easy",
 		"bg_music": "res://assets/audio/bgm/bgm_level_1.wav",
-		"volume": 2,
+		"volume": 1,
 		"level_time": 127, 									# time before level ends
-		"start_time_offset": -3.116,						# offset between written start times and actual start times
+		"start_time_offset": -3.116 - 1.5,						# offset between written start times and actual start times
 		# Required scores to get star ratings
 		# TODO: Change to actual star ranges
 		"max_score": 31900,
@@ -130,7 +130,7 @@ const levels = {
 		"bg_music": "res://assets/audio/bgm/bgm_level_2.wav",
 		"volume": -4,
 		"level_time": 130, 									# time before level ends
-		"start_time_offset": -425.41,						# offset between written start times and actual start times
+		"start_time_offset": -425.41 - 1.5,						# offset between written start times and actual start times
 		# Required scores to get star ratings
 		"max_score": 49500,
 		"star_scores": {"3_0": 0.9, "2_5": 0.8, "2_0": 0.7, "1_5": 0.6, "1_0": 0.5},
@@ -323,7 +323,7 @@ const levels = {
 		"bg_music": "res://assets/audio/bgm/bgm_level_3.wav",
 		"volume": -5,
 		"level_time": 151, 									# time before level ends
-		"start_time_offset": -202.719,						# offset between written start times and actual start times
+		"start_time_offset": -202.719 - 1.5,						# offset between written start times and actual start times
 		# Required scores to get star ratings
 		# TODO: Change to actual star ranges
 		"max_score": 109100,
