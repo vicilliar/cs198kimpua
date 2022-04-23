@@ -5,7 +5,7 @@ var current_level = 1	# level 1 by default
 var current_score
 var current_highest_streak
 var total_time_played
-var current_time = 0
+#var current_time = 0
 var _timer = null
 
 var high_scores = {
@@ -25,13 +25,16 @@ func _ready():
 	_timer.start()
 	
 func _on_Timer_timeout():
-	current_time += 1
+	#current_time += 1
 	save_time()
+	print(total_time_played)
 	
 func save_time():
+	total_time_played += 1
+	
 	var time_file = File.new()
 	time_file.open("user://time_played.cfg", File.WRITE)
-	time_file.store_line(str(current_time + total_time_played))
+	time_file.store_line(str(total_time_played))
 	time_file.close()
 	
 func load_time():
