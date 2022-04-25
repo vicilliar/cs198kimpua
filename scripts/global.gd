@@ -25,8 +25,12 @@ func _ready():
 	
 func _on_Timer_timeout():
 	save_time()
+	#print(total_time_played)
 	
 func save_time():
+	if total_time_played == null:
+		total_time_played = 0
+		
 	total_time_played += 1
 	
 	var time_file = File.new()
